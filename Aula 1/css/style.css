@@ -1,0 +1,23 @@
+body{
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #0e2555;
+  color: #ffffff;
+}
+
+h1{
+  font-family: 'Indie Flower', cursive;
+  font-size: 45px;
+}
+
+table{
+  border: 1px solid white;
+}
+td{
+  border: 1px solid white;
+  
+}
+
+th{
+  border: 1px solid white;
+}

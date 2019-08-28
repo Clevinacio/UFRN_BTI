@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Atividade 1 - WEB I</title>
+</head>
+
+<body>
+  <form action="https://google.com.br">
+    <fieldset>
+      <legend>Seus dados:</legend>
+      Nome: <input type="text" name="name"><br>
+      E-mail:<input type="text" name="email">
+    </fieldset>
+
+    <fieldset>
+      <legend>Sua opinião:</legend>
+      Como ficou sabendo da loja?
+      <select name="meios">
+        <option value="google">Google</option>
+        <option value="another">Outro site</option>
+        <option value="friends">Amigo</option>
+        <option value="TV">TV</option>
+      </select><br>
+      Nos visitaria de novo? <br>
+      <input type="radio" name="optgroup" value="yes">Sim
+      <input type="radio" name="optgroup" value="no">não
+      <input type="radio" name="optgroup" value="maybe">Talvez<br>
+      Comentários <br>
+      <textarea name="message" rows="8" cols="80"></textarea><br>
+      <input type="checkbox" name="newsletter" checked> Quero receber email com novidades <br>
+      <input type="submit" name="submit" value="Enviar respostas">
+    </fieldset>
+  </form>
+</body>
+
+</html>

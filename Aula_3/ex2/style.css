@@ -1,0 +1,20 @@
+body{
+  font-family: sans-serif;
+}
+
+.header{
+  
+}
+
+p{
+  width: 10%;
+  margin: 5px;
+  float: left;
+  background-color: #b5b5b5;
+  top: 0;
+}
+
+.break{
+  z-index: auto;
+  clear: left;
+}

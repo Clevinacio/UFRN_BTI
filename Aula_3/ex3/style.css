@@ -1,0 +1,38 @@
+body{
+  font-family: sans-serif;
+  margin-bottom: 100px;
+}
+
+.container{
+  border: 2px solid rgb(150, 107, 195);
+  margin: 0 auto;
+  width: 90%;
+  align-items: center;
+}
+
+nav{
+  border: 2px solid rgb(107, 190, 195);
+  color: rgb(173, 44, 160);
+  padding: 0px 60px 30px 0px;
+  float: left;
+}
+
+
+section{
+  border: 2px solid rgb(80, 187, 103);
+  margin-left: 195px;
+
+  padding: 10px;
+  position: relative;
+}
+
+.mid{
+  background-color: rgba(201, 197, 197, 0.67);
+}
+
+footer{
+  border: 2px solid rgb(196, 201, 101);
+  bottom: 0;
+  padding: 10px;
+  position: fixed;
+}

@@ -1,0 +1,26 @@
+.container{
+  align-items: center;
+}
+.c1{
+  float: left;
+  padding: 0 10px;
+}
+
+h6{
+  margin: 5px 0;
+
+}
+
+p{
+  margin: 5px 5px;
+}
+
+.c2{
+  float: left;
+  padding: 0 10px;
+}
+
+.c3{
+  float: left;
+  padding: 0 10px;
+}

@@ -1,0 +1,24 @@
+body{
+  font-family: sans-serif;
+  border: 1px solid orange;
+  margin: 10px;
+  padding: 10px;
+}
+
+h1{
+  font-size: 30px;
+  border: 1px solid orange;
+}
+
+p{
+  border: 1px solid orange;
+  margin: 10px;
+  padding: 5px;
+
+}
+
+span{
+  border: 1px solid blue;
+  display: inline;
+  padding: 1px;
+}
