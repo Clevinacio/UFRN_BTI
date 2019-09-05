@@ -9,9 +9,12 @@ public class Hospede {
     private String RG;
     private String telefone;
 
-    public Hospede(Integer codigo, String nome) {
+    public Hospede(Integer codigo, String nome, String CPF, String RG, String telefone) {
         this.codigo = codigo;
         this.nome = nome;
+        this.CPF = CPF;
+        this.RG = RG;
+        this.telefone = telefone;
     }
 
     @Override
@@ -32,6 +35,9 @@ public class Hospede {
         StringBuffer sb = new StringBuffer();
         sb.append("Codigo : " + this.codigo + "\n");
         sb.append("Nome : " + this.nome + "\n");
+        sb.append("CPF : " + this.CPF + "\n");
+        sb.append("RG : " + this.RG + "\n");
+        sb.append("Telefone : " + this.telefone + "\n");
         return sb.toString();
     }
 }
