@@ -1,21 +1,20 @@
 package br.ufrn.imd.lpii;
-
 import java.util.Arrays;
 
 public class FilaBanco {
 
-    private Pessoa[] pessoas;
-    private int size; //Quantos tem
-    private int capacity; //Quantos pode ter
+    private Pessoa [] pessoas;
+    private int size; //quantos elementos tem
+    private int capacity; //wuantos elementos pode ter
 
-    public FilaBanco() {
+    public FilaBanco () {
         this(10);
     }
 
-    public FilaBanco(int capacity) {
+    public FilaBanco (int capacity) {
         pessoas = new Pessoa[capacity];
-        this.size = 8;
         this.capacity = capacity;
+        this.size = 0;
     }
 
     public void addPessoa(String nome, int idade) {
@@ -25,29 +24,32 @@ public class FilaBanco {
     public void addPessoa(Pessoa pessoa) {
         this.ensureCapacity();
         this.pessoas[getSize()] = pessoa;
+        heapfyUp(getSize());
         size++;
-        heapifyUp(getSize());
     }
 
-    private void heapifyUp(int index) {
+    private void heapfyUp (int index) {
         if (!hasParent(index)) {
             return;
         }
-        int parentIndex = gerParentIndex(index);
+
+        int parentIndex = getParendIndex(index);
+
         Pessoa node = pessoas[index];
         Pessoa pai = pessoas[parentIndex];
 
         if (node.getIdade() > pai.getIdade()) {
             pessoas[index] = pai;
             pessoas[parentIndex] = node;
+            heapfyUp(parentIndex);
         }
     }
 
-    private boolean hasParent(int index) {
-        return gerParentIndex(index) >= 0 && gerParentIndex(index) < size;
+    private boolean hasParent (int index) {
+        return getParendIndex(index) >= 0 && getParendIndex(index) < size;
     }
 
-    private int gerParentIndex(int index) {
+    private int getParendIndex(int index) {
         return (int) Math.floor((index - 1) / 2);
     }
 
@@ -66,10 +68,42 @@ public class FilaBanco {
         if (getSize() == 0) {
             return null;
         }
+
         return pessoas[0];
     }
 
     public void remove() {
+        pessoas[0] = pessoas[getSize() - 1];
+        pessoas[getSize()] = null;
+        size--;
+        heafyDown(0);
+    }
+
+    private void heafyDown(int index) {
+        int leftChild = index * 2 + 1;
+        int rightChild = index*2+2;
+
+        int ChildIndex = -1;
+        if (leftChild < getSize()) {
+            ChildIndex = leftChild;
+        }
+
+        if (ChildIndex < 0) {
+            return;
+        }
+
+        if (rightChild < getSize()) {
+            if (pessoas[rightChild].getIdade() > pessoas[leftChild].getIdade()) {
+                ChildIndex = rightChild;
+            }
+        }
+
+        if (pessoas[index].getIdade() < pessoas[ChildIndex].getIdade()) {
+            Pessoa tmp = pessoas[index];
+            pessoas[index] = pessoas[ChildIndex];
+            pessoas[ChildIndex] = tmp;
+            heafyDown(ChildIndex);
+        }
 
     }
 }
