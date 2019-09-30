@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         ArvoreBinariaBusca arvore = new ArvoreBinariaBusca();
         Random rd = new Random();
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 10; i++) {
             arvore.insert(i);
         }
 

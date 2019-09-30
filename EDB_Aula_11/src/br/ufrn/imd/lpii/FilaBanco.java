@@ -1,7 +1,7 @@
 package br.ufrn.imd.lpii;
 import java.util.Arrays;
 
-public class FilaBanco {
+public class FilaBanco implements CatchEvent {
 
     private Pessoa [] pessoas;
     private int size; //quantos elementos tem
@@ -17,6 +17,7 @@ public class FilaBanco {
         this.size = 0;
     }
 
+
     public void addPessoa(String nome, int idade) {
         addPessoa(new Pessoa(nome, idade));
     }
@@ -24,16 +25,17 @@ public class FilaBanco {
     public void addPessoa(Pessoa pessoa) {
         this.ensureCapacity();
         this.pessoas[getSize()] = pessoa;
-        heapfyUp(getSize());
+        pessoa.addCatchEvent(this);
+        heapifyUp(getSize());
         size++;
     }
 
-    private void heapfyUp (int index) {
+    private void heapifyUp(int index) {
         if (!hasParent(index)) {
             return;
         }
 
-        int parentIndex = getParendIndex(index);
+        int parentIndex = getParentIndex(index);
 
         Pessoa node = pessoas[index];
         Pessoa pai = pessoas[parentIndex];
@@ -41,15 +43,15 @@ public class FilaBanco {
         if (node.getIdade() > pai.getIdade()) {
             pessoas[index] = pai;
             pessoas[parentIndex] = node;
-            heapfyUp(parentIndex);
+            heapifyUp(parentIndex);
         }
     }
 
     private boolean hasParent (int index) {
-        return getParendIndex(index) >= 0 && getParendIndex(index) < size;
+        return getParentIndex(index) >= 0 && getParentIndex(index) < size;
     }
 
-    private int getParendIndex(int index) {
+    private int getParentIndex(int index) {
         return (int) Math.floor((index - 1) / 2);
     }
 
@@ -73,15 +75,16 @@ public class FilaBanco {
     }
 
     public void remove() {
-        pessoas[0] = pessoas[getSize() - 1];
-        pessoas[getSize()] = null;
+        pessoas[0] = pessoas[this.getSize() - 1];
+        pessoas[getSize() - 1].removeCatchEvent(this);
+        pessoas[getSize() - 1] = null;
         size--;
-        heafyDown(0);
+        heapifyDown(0);
     }
 
-    private void heafyDown(int index) {
+    private void heapifyDown(int index) {
         int leftChild = index * 2 + 1;
-        int rightChild = index*2+2;
+        int rightChild = index * 2 + 2;
 
         int ChildIndex = -1;
         if (leftChild < getSize()) {
@@ -102,8 +105,25 @@ public class FilaBanco {
             Pessoa tmp = pessoas[index];
             pessoas[index] = pessoas[ChildIndex];
             pessoas[ChildIndex] = tmp;
-            heafyDown(ChildIndex);
+            heapifyDown(ChildIndex);
         }
 
     }
+
+    @Override
+    public void capture(Pessoa p, int old) {
+        int index = -1;
+        for (int i = 0; i < getSize(); i++) {
+            if (pessoas[i].getNome() == p.getNome()) {
+                index = i;
+                break;
+            }
+        }
+        if (p.getIdade() > old) {
+            heapifyUp(index);
+        } else {
+            heapifyDown(index);
+        }
+    }
+
 }

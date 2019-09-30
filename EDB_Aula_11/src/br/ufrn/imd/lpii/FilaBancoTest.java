@@ -59,9 +59,9 @@ public class FilaBancoTest {
     @Test
     public void mustReoderWhenPriorityChange() {
         //Arrange
-        Pessoa pessoa1 = new Pessoa("Teste", 20);
-        Pessoa pessoa2 = new Pessoa("Teste", 30);
-        Pessoa pessoa3 = new Pessoa("Teste", 60);
+        Pessoa pessoa1 = new Pessoa("Teste1", 20);
+        Pessoa pessoa2 = new Pessoa("Teste2", 30);
+        Pessoa pessoa3 = new Pessoa("Teste3", 60);
         fila.addPessoa(pessoa1);
         fila.addPessoa(pessoa2);
         fila.addPessoa(pessoa3);
