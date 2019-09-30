@@ -56,4 +56,26 @@ public class Node {
 
         return null;
     }
+
+    public int height(Node node) {
+        int height = -1;
+        
+        if (node == null) {
+            return height;
+        }
+
+        if (node.getRight() == null && node.getLeft() == null) {
+            return height;
+        }
+
+        if (node.getRight() != null) {
+            height = 1 + height(node.getRight());
+        }
+
+        if (node.getLeft() != null) {
+            height = 1 + height(node.getLeft());
+        }
+
+        return height;
+    }
 }

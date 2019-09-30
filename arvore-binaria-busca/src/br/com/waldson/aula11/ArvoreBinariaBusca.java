@@ -31,4 +31,15 @@ public class ArvoreBinariaBusca {
         return raiz.search(key);
     }
 
+    public boolean isBalanced() {
+        if (raiz.height(raiz.getLeft()) >= raiz.height(raiz.getRight())) {
+            return raiz.height(raiz.getLeft()) - raiz.height(raiz.getRight()) <= 1;
+        }
+
+        if (raiz.height(raiz.getLeft()) <= raiz.height(raiz.getRight())) {
+            return raiz.height(raiz.getRight()) - raiz.height(raiz.getLeft()) <= 1;
+        }
+        return false;
+    }
+
 }
