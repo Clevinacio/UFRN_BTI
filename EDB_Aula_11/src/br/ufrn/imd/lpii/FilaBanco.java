@@ -1,7 +1,7 @@
 package br.ufrn.imd.lpii;
 import java.util.Arrays;
 
-public class FilaBanco implements CatchEvent {
+public class FilaBanco implements CapturaEventos {
 
     private Pessoa [] pessoas;
     private int size; //quantos elementos tem
@@ -25,7 +25,7 @@ public class FilaBanco implements CatchEvent {
     public void addPessoa(Pessoa pessoa) {
         this.ensureCapacity();
         this.pessoas[getSize()] = pessoa;
-        pessoa.addCatchEvent(this);
+        pessoa.addCapturador(this);
         heapifyUp(getSize());
         size++;
     }
@@ -76,7 +76,7 @@ public class FilaBanco implements CatchEvent {
 
     public void remove() {
         pessoas[0] = pessoas[this.getSize() - 1];
-        pessoas[getSize() - 1].removeCatchEvent(this);
+        pessoas[getSize() - 1].removeCapturador(this);
         pessoas[getSize() - 1] = null;
         size--;
         heapifyDown(0);
@@ -110,8 +110,10 @@ public class FilaBanco implements CatchEvent {
 
     }
 
+    //Realiza as alterações necessárias com o método implementado de
+    //CapturaEventos
     @Override
-    public void capture(Pessoa p, int old) {
+    public void realizarEvento(Pessoa p, int old) {
         int index = -1;
         for (int i = 0; i < getSize(); i++) {
             if (pessoas[i].getNome() == p.getNome()) {
@@ -119,11 +121,9 @@ public class FilaBanco implements CatchEvent {
                 break;
             }
         }
-        if (p.getIdade() > old) {
-            heapifyUp(index);
-        } else {
-            heapifyDown(index);
-        }
+        if (p.getIdade() > old) heapifyUp(index);
+
+        heapifyDown(index);
     }
 
 }

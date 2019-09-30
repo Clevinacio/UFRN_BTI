@@ -6,7 +6,7 @@ import java.util.List;
 public class Pessoa{
     private String nome;
     private int idade;
-    private final List<CatchEvent> catches = new ArrayList<>();
+    private List<CapturaEventos> catches = new ArrayList<>();
 
     public Pessoa(String nome, int idade) {
         this.nome = nome;
@@ -25,19 +25,21 @@ public class Pessoa{
         return idade;
     }
 
-    public void addCatchEvent(FilaBanco f) {
+    //Adiciona a fila responsável por realizar os eventos da pessoa
+    public void addCapturador(FilaBanco f) {
         catches.add(f);
     }
-
-    public void removeCatchEvent(FilaBanco f) {
+    //remove a fila responsável por realizar os eventos da pessoa
+    public void removeCapturador(FilaBanco f) {
         catches.remove(f);
     }
 
+
     public void setIdade(int idade) {
-        int old = this.getIdade();
+        int old = getIdade();
         this.idade = idade;
-        for (CatchEvent c : catches) {
-            c.capture(this, old);
+        for (CapturaEventos c : catches) {
+            c.realizarEvento(this, old);
 
         }
     }
