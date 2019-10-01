@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c56b5d8-b3e5-4594-bcc4-37e7fb926fc5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/waldson/aula11/ArvoreBinariaBusca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/waldson/aula11/ArvoreBinariaBusca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/waldson/aula11/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/waldson/aula11/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/waldson/aula11/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/waldson/aula11/Node.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,7 +143,8 @@
       <workItem from="1568326176420" duration="5289000" />
       <workItem from="1569536497986" duration="134000" />
       <workItem from="1569771377679" duration="156000" />
-      <workItem from="1569855294956" duration="3310000" />
+      <workItem from="1569855294956" duration="4655000" />
+      <workItem from="1569969691486" duration="27000" />
     </task>
     <servers />
   </component>

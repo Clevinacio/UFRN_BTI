@@ -59,7 +59,7 @@ public class Node {
 
     public int height(Node node) {
         int height = -1;
-        
+
         if (node == null) {
             return height;
         }
