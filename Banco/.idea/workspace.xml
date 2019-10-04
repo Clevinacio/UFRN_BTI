@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a2aea38-b69c-4211-a8e7-7a5b95b1008f" name="Default Changelist" comment="" />
+    <list default="true" id="3a2aea38-b69c-4211-a8e7-7a5b95b1008f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/.idea/Projeto_Av2_EDB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contabancaria/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Banco/banco/Banco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banco/banco/Banco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Banco/banco/ContaBancaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banco/banco/ContaBancaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Banco/banco/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banco/banco/ContaCorrente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Banco/banco/ContaPoupanca.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banco/banco/ContaPoupanca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Banco/banco/Imprimivel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banco/banco/Imprimivel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Banco/banco/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banco/banco/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Banco/banco/Relatorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Banco/banco/Relatorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/Banco.class" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/Banco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/ContaBancaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/ContaBancaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/ContaCorrente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/ContaPoupanca.class" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/ContaPoupanca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/out/production/contabancaria/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/src/com/company/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/src/com/company/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/src/com/company/ContaBancaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/src/com/company/ContaBancaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contabancaria/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contabancaria/src/com/company/Main.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +37,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1R4rMbUpKL530N6RhzV8OfOBz28" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EDB_AULA_12" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -69,7 +97,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568937161523</updated>
+      <workItem from="1569970462450" duration="105000" />
+      <workItem from="1570139698285" duration="992000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

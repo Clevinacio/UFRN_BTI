@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
-public abstract class  ContaBancaria implements Imprimivel {
+public abstract class  ContaBancaria implements Imprimivel, Comparable<ContaBancaria>{
     protected int numero = 0;
     private double saldo;
     private String cpfTitular;
@@ -83,8 +83,6 @@ public abstract class  ContaBancaria implements Imprimivel {
         this.ativa = true;
     }
 
-
-
     public abstract boolean sacar(double valor);
 
     public abstract void depositar(double valor);
@@ -96,5 +94,10 @@ public abstract class  ContaBancaria implements Imprimivel {
         }else{
             System.out.println("Não é possível efetuar a transferência");
         }
+    }
+
+    @Override
+    public int compareTo(ContaBancaria contaBancaria) {
+        return nomeTitular.compareTo(contaBancaria.nomeTitular);
     }
 }

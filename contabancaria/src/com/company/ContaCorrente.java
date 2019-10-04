@@ -1,5 +1,7 @@
 package com.company;
 
+import java.time.format.DateTimeFormatter;
+
 public class ContaCorrente extends ContaBancaria {
     private double taxaOp = 5;
 
@@ -20,7 +22,16 @@ public class ContaCorrente extends ContaBancaria {
         System.out.println("Numero da Conta: " + this.getNumero());
         System.out.println("Saldo: R$"         + this.getSaldo());
         System.out.println("Taxa de operação: R$"         + this.getTaxaOp());
-
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        System.out.println("Data de Cadastro é: " +
+                getDataCadastro().format(formatter));
+        if(this.isAtiva())
+            System.out.println("Conta ativa");
+        else {
+            System.out.println("Conta Desativada");
+            System.out.println("Data de Encerramento é: " +
+                    getDataEncerramento().format(formatter));
+        }
     }
 
 
