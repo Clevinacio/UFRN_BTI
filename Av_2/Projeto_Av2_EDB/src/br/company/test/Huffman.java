@@ -19,8 +19,8 @@ public class Huffman {
         }
 
         // Mostra na tela
-//        for (Map.Entry entry : map.entrySet()) {
-//            System.out.println(entry.getKey() + " " + entry.getValue());
-//        }
+        for (Map.Entry entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
     }
 }
