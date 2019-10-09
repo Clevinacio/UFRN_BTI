@@ -1,6 +1,7 @@
 package br.ufrn.imd.edb2;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 public class Main {
 
@@ -12,7 +13,12 @@ public class Main {
         } else {
             String file = "teste.txt";
             Huffman huff = new Huffman();
-            huff.characterFrequency(file);
+
+            //Guarda o map que determina o numero de repeticoes de cada char
+            HashMap<Character, Integer> map = huff.characterFrequency(file);
+
+            //O mapa é passado para a arvore de codificacao
+            huff.heapCode(map);
         }
 
 

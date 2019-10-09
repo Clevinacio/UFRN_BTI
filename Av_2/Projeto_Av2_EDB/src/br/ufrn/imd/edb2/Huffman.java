@@ -29,12 +29,25 @@ public class Huffman {
             }
         }
 
-        map.put((char)10,counterBreak);
+//        map.put((char)10,counterBreak);
 
         // Mostra na tela
         for (Map.Entry entry : map.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
+        System.out.println("");
+
         return map;
+    }
+
+    public void heapCode(HashMap<Character, Integer> map) {
+
+        /* Passo 1 - Criar minHeap e adicionar itens do map*/
+        MinHeap fila = new MinHeap();
+        for (Map.Entry entry : map.entrySet()) {
+            fila.addNode(new Node((Character)entry.getKey(), (int)entry.getValue()));
+        }
+
+        fila.print(); //Verifica como ficou a fila
     }
 }
