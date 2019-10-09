@@ -71,11 +71,20 @@ public class MinHeap {
         return node[0];
     }
 
-    public void remove() {
-        node[0] = node[getSize() - 1];
-        node[getSize() - 1] = null;
-        size--;
-        heapfyDown(0);
+    public Node remove() {
+        Node nodeRemove = node[0];
+
+        if(getSize() == 1){
+            node[0] = null;
+            size--;
+        }else{
+            node[0] = node[getSize() - 1];
+            node[getSize() - 1] = null;
+            size--;
+            heapfyDown(0);
+        }
+
+        return nodeRemove;
     }
 
     private void heapfyDown(int index) {
