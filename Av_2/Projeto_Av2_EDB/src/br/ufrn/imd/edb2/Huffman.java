@@ -1,8 +1,7 @@
 package br.ufrn.imd.edb2;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 public class Huffman {
@@ -29,7 +28,7 @@ public class Huffman {
             }
         }
 
-//        map.put((char)10,counterBreak);
+        map = sort(map);
 
         // Mostra na tela
         for (Map.Entry entry : map.entrySet()) {
@@ -49,5 +48,34 @@ public class Huffman {
         }
 
         fila.print(); //Verifica como ficou a fila
+    }
+
+    public HashMap<Character, Integer> sort(HashMap<Character, Integer> map) {
+        //Lista com as chaves de map
+        List<Map.Entry<Character, Integer>> list = new LinkedList<Map.Entry<Character, Integer>>(map.entrySet());
+
+        //Ordena chaves da maior para menor quantiade de repetições
+        Collections.sort(list, new Comparator<Map.Entry<Character, Integer>>() {
+            @Override
+            public int compare(Map.Entry<Character, Integer> v1, Map.Entry<Character, Integer> v2) {
+                if (v1.getValue() > v2.getValue()) {
+                    return -1;
+                }
+                if (v1.getValue() < v2.getValue()) {
+                    return 1;
+                }
+                return 0;
+            }
+        });
+
+        //Cria hashMap temporário para armazenar o ordenado
+        HashMap<Character, Integer> ordered = new LinkedHashMap<Character, Integer>();
+
+        //Salva dados da lista ordenada em ordered
+        for (Map.Entry<Character, Integer> item : list) {
+            ordered.put(item.getKey(), item.getValue());
+        }
+
+        return ordered;
     }
 }

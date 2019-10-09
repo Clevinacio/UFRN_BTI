@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MinHeap {
     private Node [] node;
     private int size; //quantos elementos tem
-    private int capacity; //wuantos elementos pode ter
+    private int capacity; //quantos elementos pode ter
 
     public MinHeap() {
         this(10);
