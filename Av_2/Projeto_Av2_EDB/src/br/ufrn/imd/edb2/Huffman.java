@@ -1,11 +1,23 @@
-package br.company.test;
+package br.ufrn.imd.edb2;
 
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Huffman {
-    public void characterFrequency(String text){
+    //Coloquei pra retornar uma hashmap para poder fazer o teste
+    public HashMap<Character, Integer> characterFrequency(String fileName) throws IOException {
+        //Adiciona leitura de arquivo para contagem
+        String text = "";
+
+        BufferedReader br = new BufferedReader(new FileReader(fileName));
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+
+        while (br.ready()) {
+            text = text.concat(br.readLine());
+        }
+        //Termina aqui
 
         char[] strArray = text.toCharArray();
 
@@ -22,5 +34,10 @@ public class Huffman {
         for (Map.Entry entry : map.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
+
+        return map;
+
     }
+
+
 }
