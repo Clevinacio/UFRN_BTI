@@ -19,4 +19,10 @@ public class HuffmanTest {
         //Assert
         assertTrue(result.containsKey('c'));
     }
+
+    @org.junit.Test
+    public void peekMustBetheBiggest() {
+        //Arrange
+    }
+
 }
