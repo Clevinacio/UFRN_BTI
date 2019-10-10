@@ -15,12 +15,10 @@ public class Main {
             Huffman huff = new Huffman();
 
             //Guarda o map que determina o numero de repeticoes de cada char
-            HashMap<Character, Integer> map = huff.characterFrequency(file);
+            huff.characterFrequency(file);
 
             //O mapa é passado para a arvore de codificacao
-            huff.heapCode(map);
+            huff.heapCode();
         }
-
-
     }
 }
