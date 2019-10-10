@@ -7,10 +7,12 @@ import java.util.*;
 public class Huffman {
 
     HashMap<Character, Integer> mapFrequency;
+    HashMap<Character, String> mapCodeTable;
     Node heapCode;
 
     public Huffman() {
         mapFrequency = new HashMap<Character, Integer>();
+        mapCodeTable = new HashMap<Character, String>();
         heapCode = null;
     }
 
@@ -71,15 +73,23 @@ public class Huffman {
             fila.addNode(current);
         }
 
-        System.out.println("Qtd elementos da fila: " + fila.getSize());
-        System.out.println("Raiz: " + fila.peek().getCount());
-
         heapCode = fila.peek();
     }
 
-    public void tableCode () {
-
+    public void CodificationTable () {
+        setCode(heapCode, "");
     }
+
+    public void setCode (Node index, String code) {
+        if (index.getLeft() == null && index.getRight() == null) {
+            mapCodeTable.put(index.getLetter(), code);
+            return;
+        }
+
+        setCode(index.getLeft(), code + "0");
+        setCode(index.getRight(), code + "1");
+    }
+
 
     public HashMap<Character, Integer> sort() {
         //Lista com as chaves de map
@@ -112,8 +122,14 @@ public class Huffman {
         return ordered;
     }
 
-    public void print(HashMap<Character, Integer> map) {
-        for (Map.Entry entry : map.entrySet()) {
+    public void printMapFrequency() {
+        for (Map.Entry entry : mapFrequency.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+    }
+
+    public void printMapCode() {
+        for (Map.Entry entry : mapCodeTable.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
     }
