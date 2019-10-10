@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="exec">
+  <artifact type="jar" name="exec">
     <output-path>$PROJECT_DIR$/out/artifacts/exec</output-path>
     <properties id="ant-preprocessing">
       <options enabled="true" />
