@@ -53,6 +53,8 @@ public class Huffman {
             int count = left.getCount() + right.getCount();
             Node current = new Node('\u0000', count);
 
+            current.setLeft(left);
+            current.setRight(right);
             fila.addNode(current);
         }
 

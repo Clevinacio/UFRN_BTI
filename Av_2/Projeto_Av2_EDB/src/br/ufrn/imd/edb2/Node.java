@@ -17,6 +17,22 @@ public class Node {
         return letter;
     }
 
+    public Node getLeft() {
+        return left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
+
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
+    public void setRight(Node right) {
+        this.right = right;
+    }
+
     public int getCount() {
         return count;
     }
