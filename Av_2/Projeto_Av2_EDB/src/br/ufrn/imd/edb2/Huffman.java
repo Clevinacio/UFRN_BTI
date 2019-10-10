@@ -47,7 +47,7 @@ public class Huffman {
         }
 
         //ordena o map
-        sort();
+        mapFrequency = sort(mapFrequency);
 
         return mapFrequency;
     }
@@ -91,9 +91,9 @@ public class Huffman {
     }
 
 
-    public HashMap<Character, Integer> sort() {
+    public HashMap<Character, Integer> sort(HashMap<Character, Integer> map) {
         //Lista com as chaves de map
-        List<Map.Entry<Character, Integer>> list = new LinkedList<Map.Entry<Character, Integer>>(mapFrequency.entrySet());
+        List<Map.Entry<Character, Integer>> list = new LinkedList<Map.Entry<Character, Integer>>(map.entrySet());
 
         //Ordena chaves da maior para menor quantiade de repetições
         Collections.sort(list, new Comparator<Map.Entry<Character, Integer>>() {
@@ -117,7 +117,7 @@ public class Huffman {
             ordered.put(item.getKey(), item.getValue());
         }
 
-        mapFrequency = ordered;
+        map = ordered;
 
         return ordered;
     }
