@@ -27,6 +27,8 @@ public class Main {
             System.out.println("");
             System.out.println("Codigo dos caracteres: ");
             huff.printMapCode();
+
+            huff.codeText("teste.txt");
         }
     }
 }
