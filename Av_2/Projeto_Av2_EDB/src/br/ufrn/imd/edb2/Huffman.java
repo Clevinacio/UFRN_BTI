@@ -77,8 +77,7 @@ public class Huffman {
     }
 
     public void CodificationTable () {
-        BitSet code = new BitSet(4);
-
+        //cria tabala de codificacao
         setCode(heapCode, "");
     }
 
@@ -100,17 +99,18 @@ public class Huffman {
         int cont = 0;
         int position = 0;
 
-        while((cont = br.read()) != -1) {
-            code = mapCodeTable.get((char) cont);
+        while((cont = br.read()) != -1) {                   //leitura dos caracteres do arquivo
+            code = mapCodeTable.get((char) cont);           //busca pelo codigo do caracter corrente
 
-            for (int i = 0; i < code.length(); i++) {
+            for (int i = 0; i < code.length(); i++) {       //percorre caracteres do codigo
                 if (code.charAt(i) == '1') {
-                    txtCode.set(position, true);
+                    txtCode.set(position, true);            //atribui valor 1 no bitset
                 }
                 position++;
             }
         }
 
+        //exibe texto codificado
         String value = "";
         for (int i = 0; i < txtCode.length(); i++) {
             if(txtCode.get(i) == false) {
@@ -120,7 +120,6 @@ public class Huffman {
             }
         }
         System.out.println(value);
-        
     }
 
 
