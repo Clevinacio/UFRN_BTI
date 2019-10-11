@@ -7,12 +7,12 @@ import java.util.*;
 public class Huffman {
 
     HashMap<Character, Integer> mapFrequency;
-    HashMap<Character, String> mapCodeTable;
+    HashMap<Character, BitSet> mapCodeTable;
     Node heapCode;
 
     public Huffman() {
         mapFrequency = new HashMap<Character, Integer>();
-        mapCodeTable = new HashMap<Character, String>();
+        mapCodeTable = new HashMap<Character, BitSet>();
         heapCode = null;
     }
 
@@ -77,17 +77,26 @@ public class Huffman {
     }
 
     public void CodificationTable () {
-        setCode(heapCode, "");
+        BitSet code = new BitSet(4);
+
+        setCode(heapCode, code, 0);
     }
 
-    public void setCode (Node index, String code) {
+    public void setCode (Node index, BitSet code, int position) {
         if (index.getLeft() == null && index.getRight() == null) {
+            System.out.println(index.getLetter() + " " + code.length());
             mapCodeTable.put(index.getLetter(), code);
             return;
         }
 
-        setCode(index.getLeft(), code + "0");
-        setCode(index.getRight(), code + "1");
+        BitSet codeLeft = (BitSet) code.clone();
+        BitSet codeRight = (BitSet) code.clone();
+
+        codeRight.set(position, false);
+        setCode(index.getLeft(), codeLeft, position+1);
+
+        codeRight.set(position);
+        setCode(index.getRight(), codeRight, position+1);
     }
 
 
@@ -130,7 +139,18 @@ public class Huffman {
 
     public void printMapCode() {
         for (Map.Entry entry : mapCodeTable.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            BitSet current = (BitSet) entry.getValue();
+            String value = "";
+
+            for (int i = 0; i < current.length(); i++) {
+                if(current.get(i) == false) {
+                    value += "0";
+                }else{
+                    value += "1";
+                }
+            }
+
+            System.out.println(entry.getKey() + " " + value);
         }
     }
 }
