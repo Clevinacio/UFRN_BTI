@@ -110,7 +110,7 @@ public class Huffman {
             }
         }
 
-        PrintWriter writer = new PrintWriter("table.txt");
+        PrintWriter writer = new PrintWriter("symbolTable.edt");
         for (Map.Entry entry : mapCodeTable.entrySet()) {
             writer.println(entry.getKey() + "" + entry.getValue());
         }
@@ -127,7 +127,6 @@ public class Huffman {
         }
         System.out.println(value);
     }
-
 
     public HashMap<Character, Integer> sort(HashMap<Character, Integer> map) {
         //Lista com as chaves de map
