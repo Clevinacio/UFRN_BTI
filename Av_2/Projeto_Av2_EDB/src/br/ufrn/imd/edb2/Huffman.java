@@ -6,9 +6,10 @@ import java.util.*;
 
 public class Huffman {
 
-    HashMap<Character, Integer> mapFrequency;
-    HashMap<Character, String> mapCodeTable;
-    Node heapCode;
+    private HashMap<Character, Integer> mapFrequency;
+    private HashMap<Character, String> mapCodeTable;
+    private Node heapCode;
+    private String fileName;
 
     public Huffman() {
         mapFrequency = new HashMap<Character, Integer>();
@@ -20,7 +21,9 @@ public class Huffman {
         return mapFrequency;
     }
 
-    public  HashMap<Character, Integer> characterFrequency(String fileName) throws IOException {
+    public HashMap<Character, Integer> characterFrequency(String fileName) throws IOException {
+        this.fileName = fileName;
+
         String text = ""; //concatena linhas do arquivo
         int counterBreak = 0; //verifica quebras de linhas
 
@@ -53,6 +56,10 @@ public class Huffman {
     }
 
     public void heapCode() {
+        if(mapFrequency.isEmpty()) {
+            return;
+        }
+
         /* Passo 1 - Criar minHeap e adicionar itens do map */
         MinHeap fila = new MinHeap();
         for (Map.Entry entry : mapFrequency.entrySet()) {
@@ -77,17 +84,21 @@ public class Huffman {
     }
 
     public void CodificationTable () {
+        if(mapFrequency.isEmpty()) {
+            return;
+        }
+
         if(heapCode.isLeaf()){
             mapCodeTable.put((char)heapCode.getLetter(), "1");
             return;
         }
+
         //cria tabala de codificacao
         setCode(heapCode, "");
     }
 
     public void setCode (Node index, String code) {
         if (index.getLeft() == null && index.getRight() == null) {
-            System.out.println(index.getLetter() + " " + code.length());
             mapCodeTable.put((char) index.getLetter(), code);
             return;
         }
@@ -96,8 +107,8 @@ public class Huffman {
         setCode(index.getRight(), code + "1");
     }
 
-    public void codeText (String fileName) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
+    public void codeText () throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(this.fileName));
         BitSet txtCode = new BitSet();
         String code;
         int charCurrent = 0;

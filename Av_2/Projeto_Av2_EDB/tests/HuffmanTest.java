@@ -10,7 +10,7 @@ public class HuffmanTest {
     @org.junit.Test
     public void characterFrequency() throws IOException {
         //Arrange
-        String texto = "teste.txt";
+        String texto = "teste1.txt";
         Huffman h = new Huffman();
 
         //Act
