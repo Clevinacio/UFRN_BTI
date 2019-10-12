@@ -110,6 +110,12 @@ public class Huffman {
             }
         }
 
+        PrintWriter writer = new PrintWriter("table.txt");
+        for (Map.Entry entry : mapCodeTable.entrySet()) {
+            writer.println(entry.getKey() + "" + entry.getValue());
+        }
+        writer.close();
+
         //exibe texto codificado
         String value = "";
         for (int i = 0; i < txtCode.length(); i++) {
