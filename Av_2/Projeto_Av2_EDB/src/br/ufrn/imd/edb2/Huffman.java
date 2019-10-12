@@ -77,6 +77,10 @@ public class Huffman {
     }
 
     public void CodificationTable () {
+        if(heapCode.isLeaf()){
+            mapCodeTable.put((char)heapCode.getLetter(), "1");
+            return;
+        }
         //cria tabala de codificacao
         setCode(heapCode, "");
     }

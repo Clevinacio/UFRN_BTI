@@ -36,4 +36,8 @@ public class Node {
     public int getCount() {
         return count;
     }
+
+    public boolean isLeaf() {
+        return this.left == null && this.right == null;
+    }
 }
