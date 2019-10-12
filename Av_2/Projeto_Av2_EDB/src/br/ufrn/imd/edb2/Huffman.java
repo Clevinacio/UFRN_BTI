@@ -84,7 +84,7 @@ public class Huffman {
     public void setCode (Node index, String code) {
         if (index.getLeft() == null && index.getRight() == null) {
             System.out.println(index.getLetter() + " " + code.length());
-            mapCodeTable.put(index.getLetter(), code);
+            mapCodeTable.put((char) index.getLetter(), code);
             return;
         }
 
