@@ -100,11 +100,17 @@ public class Huffman {
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         BitSet txtCode = new BitSet();
         String code;
-        int cont = 0;
+        int charCurrent = 0;
         int position = 0;
 
-        while((cont = br.read()) != -1) {                   //leitura dos caracteres do arquivo
-            code = mapCodeTable.get((char) cont);           //busca pelo codigo do caracter corrente
+        while((charCurrent = br.read()) != -1) {                    //leitura char - char no arquivo
+            code = mapCodeTable.get((char) charCurrent);            //busca pelo codigo do caracter corrente
+
+          /*Se náo encontrar o código no map, o retorno será null. Isso ocorre quando
+            o SO reconhece o /r/n. Só está sendo adicionado o codigo do /n.*/
+            if(code == null) {
+                continue;
+            }
 
             for (int i = 0; i < code.length(); i++) {       //percorre caracteres do codigo
                 if (code.charAt(i) == '1') {
