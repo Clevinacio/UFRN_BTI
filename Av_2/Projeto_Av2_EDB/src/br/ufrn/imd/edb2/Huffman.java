@@ -31,7 +31,7 @@ public class Huffman {
 
     public HashMap<Character, Integer> characterFrequency(String text, int counter) {
         char[] strArray = text.toCharArray();
-
+        int contado = 0;
         for (char caracter : strArray) {
             if (mapFrequency.containsKey(caracter)) {
                 mapFrequency.put(caracter, mapFrequency.get(caracter) + 1);
@@ -87,6 +87,9 @@ public class Huffman {
 
         MinHeap fila = makeMinHeap();
 
+        fila.addNode(new Node(300, 1)); //add EOF
+
+        /* Passo 2 - Construir arvore binaria */
         while (fila.getSize() != 1) {
             Node left = fila.remove();
             Node right = fila.remove();
@@ -151,13 +154,40 @@ public class Huffman {
             }
         }
 
+        code = mapCodeTable.get((char) 300);            //Busca EOF
+        for (int i = 0; i < code.length(); i++) {       //Adiciona ao binario
+            if (code.charAt(i) == '1') {
+                txtCode.set(position, true);
+            }
+            position++;
+        }
+
+        while (position % 8 != 0)  {
+            txtCode.set(position, true);
+            position++;
+        }
+
+        //Salva no arquivo
         PrintWriter writer = new PrintWriter("symbolTable.edt");
         for (Map.Entry entry : mapCodeTable.entrySet()) {
             writer.println(entry.getKey() + "" + entry.getValue());
         }
         writer.close();
 
+        OutputStream os = new FileOutputStream(new File("convert.edz"));
+        byte[] teste = txtCode.toByteArray();
+        os.write(txtCode.toByteArray());
+        os.close();
+
+        System.out.println("");
+        System.out.println("Imprime o que ira pro arquivo");
+        for (byte b : teste) {
+            System.out.print(Integer.toBinaryString(b & 255 | 256).substring(1));
+        }
+        System.out.println("");
+
         //exibe texto codificado
+        System.out.println("Imprime como esta no BitSet");
         String value = "";
         for (int i = 0; i < txtCode.length(); i++) {
             if(txtCode.get(i) == false) {
