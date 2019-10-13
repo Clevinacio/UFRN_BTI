@@ -21,6 +21,36 @@ public class Huffman {
         return mapFrequency;
     }
 
+    public Node getHeapCode() {
+        return heapCode;
+    }
+
+    public void setHeapCode(Node heapCode) {
+        this.heapCode = heapCode;
+    }
+
+    public HashMap<Character, Integer> characterFrequency(String text, int counter) {
+        char[] strArray = text.toCharArray();
+
+        for (char caracter : strArray) {
+            if (mapFrequency.containsKey(caracter)) {
+                mapFrequency.put(caracter, mapFrequency.get(caracter) + 1);
+            } else {
+                mapFrequency.put(caracter, 1);
+            }
+        }
+
+        //Verifica as quebras de linha e, se houver mais de uma, adiciona ao map
+        if (counter > 1) {
+            mapFrequency.put((char) 10, counter - 1);
+        }
+
+        //Ordena o map
+        mapFrequency = sort(mapFrequency);
+
+        return mapFrequency;
+    }
+
     public HashMap<Character, Integer> characterFrequency(String fileName) throws IOException {
         this.fileName = fileName;
 
@@ -34,25 +64,20 @@ public class Huffman {
             counterBreak++;
         }
 
-        char[] strArray = text.toCharArray();
+        return characterFrequency(text, counterBreak);
+    }
 
-        for (char caracter : strArray) {
-            if (mapFrequency.containsKey(caracter)) {
-                mapFrequency.put(caracter, mapFrequency.get(caracter) + 1);
-            } else {
-                mapFrequency.put(caracter, 1);
-            }
+    public MinHeap makeMinHeap() {
+        if(mapFrequency.isEmpty()) {
+            return null;
         }
 
-        //Verifica as quebras de linha e, se houver mais de uma, adiciona ao map
-        if (counterBreak > 1) {
-            mapFrequency.put((char) 10, counterBreak - 1);
+        MinHeap fila = new MinHeap();
+        for (Map.Entry entry : mapFrequency.entrySet()) {
+            fila.addNode(new Node((Character) entry.getKey(), (int) entry.getValue()));
         }
 
-        //ordena o map
-        mapFrequency = sort(mapFrequency);
-
-        return mapFrequency;
+        return fila;
     }
 
     public void heapCode() {
@@ -60,13 +85,8 @@ public class Huffman {
             return;
         }
 
-        /* Passo 1 - Criar minHeap e adicionar itens do map */
-        MinHeap fila = new MinHeap();
-        for (Map.Entry entry : mapFrequency.entrySet()) {
-            fila.addNode(new Node((Character) entry.getKey(), (int) entry.getValue()));
-        }
+        MinHeap fila = makeMinHeap();
 
-        /* Passo 2 - Construir arvore binaria */
         while (fila.getSize() != 1) {
             Node left = fila.remove();
             Node right = fila.remove();
@@ -80,7 +100,7 @@ public class Huffman {
             fila.addNode(current);
         }
 
-        heapCode = fila.peek();
+        setHeapCode(fila.peek());
     }
 
     public void CodificationTable () {

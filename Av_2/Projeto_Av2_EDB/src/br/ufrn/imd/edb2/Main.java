@@ -11,7 +11,7 @@ public class Main {
             Huffman huff = new Huffman();
             huff.characterFrequency(args[0]);
         } else {
-            String file = "teste5.txt";
+            String file = "teste6.txt";
             Huffman huff = new Huffman();
 
             //Guarda o map que determina o numero de repeticoes de cada char

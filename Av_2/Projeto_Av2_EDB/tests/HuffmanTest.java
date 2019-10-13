@@ -12,9 +12,10 @@ public class HuffmanTest {
         //Arrange
         String texto = "teste1.txt";
         Huffman h = new Huffman();
+        HashMap<Character,Integer> result;
 
-        //Act
-        HashMap<Character,Integer> result = h.characterFrequency(texto);
+                //Act
+        result = h.characterFrequency(texto);
 
         //Assert|
         assertTrue(result.containsKey('c'));
@@ -40,6 +41,25 @@ public class HuffmanTest {
 
         //Assert
         assertTrue(ordered!=unordered);
+
+    }
+
+    @org.junit.Test
+    public void nodeMustBeTheSmallest() {
+
+    }
+
+    @org.junit.Test
+    public void heapCode() throws IOException {
+//      Arrange
+        Huffman huff = new Huffman();
+        HashMap<Character,Integer> result;
+
+//      Act
+        result = huff.characterFrequency("abreu", 0);
+        huff.heapCode();
+        System.out.println(huff.getHeapCode().getLetter());
+//      Assert
 
     }
 
