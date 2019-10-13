@@ -1,5 +1,6 @@
 import br.ufrn.imd.edb2.Huffman;
 import br.ufrn.imd.edb2.MinHeap;
+import br.ufrn.imd.edb2.Node;
 
 import java.io.*;
 import java.util.*;
@@ -50,17 +51,20 @@ public class HuffmanTest {
 //      Arrange
         Huffman h = new Huffman();
         MinHeap result = new MinHeap();
-
+        Node v1,v2;
 //      Act
-        h.characterFrequency("teste",0);
+        h.characterFrequency("teste1.txt");
         result = h.makeMinHeap();
+        v1 = result.remove();
+        v2 = result.remove();
+
 
 //      Assert
-        assertTrue(result.peek().getCount()==1);
+        assertTrue(v1.getCount()<=v2.getCount());
     }
 
     @org.junit.Test
-    public void heapCode() throws IOException {
+    public void sumMustEqualHeapCodeCountValue() throws IOException {
 //      Arrange
         Huffman huff = new Huffman();
         HashMap<Character,Integer> result;
@@ -70,7 +74,7 @@ public class HuffmanTest {
         huff.heapCode();
 
 //      Assert
-        assertTrue(huff.getHeapCode().getCount()==13);
+        assertTrue(huff.getHeapCode().getLeft().getCount()+huff.getHeapCode().getRight().getCount()==huff.getHeapCode().getCount());
     }
 
 }
