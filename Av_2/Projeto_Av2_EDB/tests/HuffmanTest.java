@@ -1,4 +1,5 @@
 import br.ufrn.imd.edb2.Huffman;
+import br.ufrn.imd.edb2.MinHeap;
 
 import java.io.*;
 import java.util.*;
@@ -45,8 +46,16 @@ public class HuffmanTest {
     }
 
     @org.junit.Test
-    public void nodeMustBeTheSmallest() {
+    public void nodeMustBeTheSmallest() throws IOException {
+//      Arrange
+        Huffman h = new Huffman();
+        MinHeap result = new MinHeap();
 
+//      Act
+        h.characterFrequency("teste",0);
+        result = h.makeMinHeap();
+//      Assert
+        assertTrue(result.peek().getCount()==1);
     }
 
     @org.junit.Test
