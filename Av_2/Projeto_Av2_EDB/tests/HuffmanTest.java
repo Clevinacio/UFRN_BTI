@@ -54,6 +54,7 @@ public class HuffmanTest {
 //      Act
         h.characterFrequency("teste",0);
         result = h.makeMinHeap();
+
 //      Assert
         assertTrue(result.peek().getCount()==1);
     }
@@ -65,11 +66,11 @@ public class HuffmanTest {
         HashMap<Character,Integer> result;
 
 //      Act
-        result = huff.characterFrequency("abreu", 0);
+        result = huff.characterFrequency("teste1.txt");
         huff.heapCode();
-        System.out.println(huff.getHeapCode().getLetter());
-//      Assert
 
+//      Assert
+        assertTrue(huff.getHeapCode().getCount()==13);
     }
 
 }
