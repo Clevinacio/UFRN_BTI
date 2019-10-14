@@ -1,8 +1,6 @@
 package br.ufrn.imd.edb2;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,5 +40,12 @@ public class Extractor {
 
             mapCodeTable.put(code, letter);             //o codigo e o caracter sao adicionados ao dicionario
         }
+    }
+
+    /*
+        Cria BitSet a partir do arquivo codificado
+     */
+    public void makeBitSet() throws FileNotFoundException {
+        FileInputStream fis = new FileInputStream("convert.edz");
     }
 }
