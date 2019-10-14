@@ -77,6 +77,8 @@ public class Huffman {
             fila.addNode(new Node((Character) entry.getKey(), (int) entry.getValue()));
         }
 
+        fila.addNode(new Node(300, 1)); //add EOF
+
         return fila;
     }
 
@@ -87,9 +89,6 @@ public class Huffman {
 
         MinHeap fila = makeMinHeap();
 
-        fila.addNode(new Node(300, 1)); //add EOF
-
-        /* Passo 2 - Construir arvore binaria */
         while (fila.getSize() != 1) {
             Node left = fila.remove();
             Node right = fila.remove();
