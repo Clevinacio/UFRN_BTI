@@ -68,7 +68,7 @@ public class Compressor {
     }
 
     public MinHeap makeMinHeap() {
-        if(mapFrequency.isEmpty()) {
+        if (mapFrequency.isEmpty()) {
             return null;
         }
 
@@ -83,7 +83,7 @@ public class Compressor {
     }
 
     public void heapCode() {
-        if(mapFrequency.isEmpty()) {
+        if (mapFrequency.isEmpty()) {
             return;
         }
 
@@ -105,21 +105,21 @@ public class Compressor {
         setHeapCode(fila.peek());
     }
 
-    public void CodificationTable () {
-        if(mapFrequency.isEmpty()) {
+    public void CodificationTable() {
+        if (mapFrequency.isEmpty()) {
             return;
         }
 
-        if(heapCode.isLeaf()){
-            mapCodeTable.put((char)heapCode.getLetter(), "1");
+        if (heapCode.isLeaf()) {
+            mapCodeTable.put((char) heapCode.getLetter(), "1");
             return;
         }
 
-        //cria tabala de codificacao
+        //cria tabela de codificacao
         setCode(heapCode, "");
     }
 
-    public void setCode (Node index, String code) {
+    public void setCode(Node index, String code) {
         if (index.getLeft() == null && index.getRight() == null) {
             mapCodeTable.put((char) index.getLetter(), code);
             return;
@@ -129,19 +129,19 @@ public class Compressor {
         setCode(index.getRight(), code + "1");
     }
 
-    public void codeText () throws IOException {
+    public void codeText() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(this.fileName));
         BitSet txtCode = new BitSet();
         String code;
         int charCurrent = 0;
         int position = 0;
 
-        while((charCurrent = br.read()) != -1) {                    //leitura char - char no arquivo
+        while ((charCurrent = br.read()) != -1) {                    //leitura char - char no arquivo
             code = mapCodeTable.get((char) charCurrent);            //busca pelo codigo do caracter corrente
 
           /*Se náo encontrar o código no map, o retorno será null. Isso ocorre quando
             o SO reconhece o /r/n. Só está sendo adicionado o codigo do /n.*/
-            if(code == null) {
+            if (code == null) {
                 continue;
             }
 
@@ -161,31 +161,37 @@ public class Compressor {
             position++;
         }
 
-        while (position % 8 != 0)  {                    //para que seja multiplo de 8, as posicioes que sobrarem depois do EOF sao preenchidas com 1
+        while (position % 8 != 0) {                    //para que seja multiplo de 8, as posicioes que sobrarem depois do EOF sao preenchidas com 1
             txtCode.set(position, true);
             position++;
         }
 
-        //Salva a tabela de simbolos
+        saveBinaryFile();
+
+        OutputStream os = new FileOutputStream(new File("convert.edz"));
+        os.write(convertBitSetToArray(txtCode));
+        os.close();
+    }
+
+    public void saveBinaryFile() throws FileNotFoundException {
         PrintWriter writer = new PrintWriter("symbolTable.edt");
         for (Map.Entry entry : mapCodeTable.entrySet()) {
             writer.println(entry.getKey() + "" + entry.getValue());
         }
         writer.close();
+    }
 
-        //converte o BitSet em um array de bytes
+    public byte[] convertBitSetToArray(BitSet txtCode) {
         byte[] bytes = new byte[(txtCode.length() + 7) / 8];
-        for (int i=0; i<txtCode.length(); i++) {
+        for (int i = 0; i < txtCode.length(); i++) {
             if (txtCode.get(i)) {
-                bytes [i / 8] |= 1 << (7-i% 8);
+                bytes[i / 8] |= 1 << (7 - i % 8);
             }
         }
 
-        //adiciona o array de bytes no arquivo
-        OutputStream os = new FileOutputStream(new File("convert.edz"));
-        os.write(bytes);
-        os.close();
+        return bytes;
     }
+
 
     public HashMap<Character, Integer> sort(HashMap<Character, Integer> map) {
         //Lista com as chaves de map
@@ -216,17 +222,5 @@ public class Compressor {
         map = ordered;
 
         return ordered;
-    }
-
-    public void printMapFrequency() {
-        for (Map.Entry entry : mapFrequency.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
-    }
-
-    public void printMapCode() {
-        for (Map.Entry entry : mapCodeTable.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
-        }
     }
 }
