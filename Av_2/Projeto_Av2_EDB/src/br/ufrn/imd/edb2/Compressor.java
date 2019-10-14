@@ -46,7 +46,7 @@ public class Compressor {
 
         //Verifica as quebras de linha e, se houver mais de uma, adiciona ao map
         if (counter > 1) {
-            mapFrequency.put((char) 10, counter - 1);
+            mapFrequency.put((char) 280, counter - 1);
         }
 
         //Ordena o map
@@ -141,7 +141,11 @@ public class Compressor {
         int position = 0;
 
         while ((charCurrent = br.read()) != -1) {                    //leitura char - char no arquivo
-            code = mapCodeTable.get((char) charCurrent);            //busca pelo codigo do caracter corrente
+            if (charCurrent == (char)10) {                           //Se for uma quebra de linha, busca pelo codigo predeterminado
+                code = mapCodeTable.get((char) 280);
+            } else {
+                code = mapCodeTable.get((char) charCurrent);         //senao, busca pelo codigo do caracter corrente
+            }
 
           /*Se náo encontrar o código no map, o retorno será null. Isso ocorre quando
             o SO reconhece o /r/n. Só está sendo adicionado o codigo do /n.*/

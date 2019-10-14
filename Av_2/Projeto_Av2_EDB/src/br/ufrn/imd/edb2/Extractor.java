@@ -13,12 +13,14 @@ public class Extractor {
     private BitSet codedText;
     private String fileName;
     private char EOF;
+    private int breakLine;
 
     public Extractor(String fileName){
         this.mapCodeTable = new HashMap<String, Character>();
         this.fileName = fileName;
-        codedText = new BitSet();
-        EOF = (char) 300;
+        this.codedText = new BitSet();
+        this.EOF = (char) 300;
+        this.breakLine = 280;
     }
 
     /*
@@ -115,11 +117,15 @@ public class Extractor {
 
             if (mapCodeTable.get(code) != null) {                   //Se nao encontrar referencia no map (null) devecontinuar adicionando bits em code
                 letter = mapCodeTable.get(code);                    //Caso encontre, o caracter é guardado
-                if (letter == EOF) {                                //É feira a verificacao se o caracter é o EOF
+                if (letter == this.EOF) {                                //É feira a verificacao se o caracter é o EOF
                     break;
                 }
 
-                buffer = buffer + letter;                           //Se não for o EOF, o caracter é incluso ao buffer
+                if (letter == (char)breakLine) {                         //Se não for o EOF, verifica quebra de linhas
+                    buffer = buffer + "\n";
+                } else {
+                    buffer = buffer + letter;
+                }
                 code = "";
             }
         }

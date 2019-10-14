@@ -11,7 +11,7 @@ public class Main {
             huff.characterFrequency(args[0]);
         } else {
 
-            String file = "teste1.txt";
+            String file = "teste9.txt";
 
             Compressor huff = new Compressor();
 
