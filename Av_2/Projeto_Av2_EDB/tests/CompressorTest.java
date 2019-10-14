@@ -96,4 +96,21 @@ public class CompressorTest {
         assertEquals(letter, "1");
     }
 
+    @org.junit.Test
+    public void MapCodeTableMustValueMustReturn1() {
+//      Arrange
+        Node heap = new Node('h',1);
+        Compressor c = new Compressor();
+        String letter;
+
+//      Act
+        c.setHeapCode(heap);
+        c.CodificationTable();
+//        letter = c.getMapCodeTable().size();
+        System.out.println(c.getMapCodeTable().size());
+
+//      Assert
+//        assertTrue(c.getMapCodeTable().get('c').equals("1"));
+    }
+
 }
