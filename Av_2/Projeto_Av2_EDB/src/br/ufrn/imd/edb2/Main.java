@@ -28,7 +28,7 @@ public class Main {
 
             System.out.println("Frequencia de repeticao dos caracteres: ");
             huff.printMapFrequency();
-            System.out.println("");
+            System.out.println();
             System.out.println("Codigo dos caracteres: ");
             huff.printMapCode();
 
