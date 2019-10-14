@@ -102,7 +102,7 @@ public class Extractor {
     /*
         Converte BitSet em String - (decodificacao)
      */
-    public void convertBitSetToString () {
+    public void convertBitSetToString () throws FileNotFoundException {
         String buffer = "";                                         //Guarda texto decodificado
         String code = "";                                           //Guarda codigo para busca no map
         char letter;                                                //Guarda resultado do map
@@ -130,6 +130,8 @@ public class Extractor {
             }
         }
 
-        System.out.println(buffer);
+        PrintWriter writer = new PrintWriter("arquivo.txt");
+        writer.println(buffer);
+        writer.close();
     }
 }
