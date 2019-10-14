@@ -77,4 +77,23 @@ public class CompressorTest {
         assertTrue(huff.getHeapCode().getLeft().getCount()+huff.getHeapCode().getRight().getCount()==huff.getHeapCode().getCount());
     }
 
+    @org.junit.Test
+    public void codeMustReturn1() {
+//      Arrange
+        Node root = new Node('c', 1);
+        Node left = new Node('d', 2);
+        Node right = new Node('a', 3);
+        Compressor c = new Compressor();
+        String letter;
+
+//      Act
+        root.setLeft(left);
+        root.setRight(right);
+        c.setCode(root, "");
+        letter = c.getMapCodeTable().get('a');
+
+//      Arrange
+        assertEquals(letter, "1");
+    }
+
 }

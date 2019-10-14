@@ -21,6 +21,10 @@ public class Compressor {
         return mapFrequency;
     }
 
+    public HashMap<Character, String> getMapCodeTable() {
+        return mapCodeTable;
+    }
+
     public Node getHeapCode() {
         return heapCode;
     }

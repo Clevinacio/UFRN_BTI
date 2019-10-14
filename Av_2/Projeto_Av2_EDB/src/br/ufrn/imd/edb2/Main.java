@@ -25,10 +25,10 @@ public class Main {
             huff.CodificationTable();
 
             System.out.println("Frequencia de repeticao dos caracteres: ");
-            huff.printMapFrequency();
+//            huff.printMapFrequency();
             System.out.println();
             System.out.println("Codigo dos caracteres: ");
-            huff.printMapCode();
+//            huff.printMapCode();
 
             //Codifica o texto
             huff.codeText();
