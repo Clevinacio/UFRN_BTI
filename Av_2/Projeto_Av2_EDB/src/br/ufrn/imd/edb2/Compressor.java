@@ -110,14 +110,15 @@ public class Compressor {
     }
 
     public void CodificationTable() {
-        if (mapFrequency.isEmpty()) {
-            return;
-        }
-
         if (heapCode.isLeaf()) {
             mapCodeTable.put((char) heapCode.getLetter(), "1");
             return;
         }
+
+        if (mapFrequency.isEmpty()) {
+            return;
+        }
+
 
         //cria tabela de codificacao
         setCode(heapCode, "");

@@ -1,6 +1,7 @@
 import br.ufrn.imd.edb2.Compressor;
 import br.ufrn.imd.edb2.MinHeap;
 import br.ufrn.imd.edb2.Node;
+import org.junit.Test;
 
 import java.io.*;
 import java.util.*;
@@ -9,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class CompressorTest {
 //  Teste função contagem frequência
-    @org.junit.Test
+    @Test
     public void characterFrequency() throws IOException {
         //Arrange
         String texto = "teste";
@@ -23,7 +24,7 @@ public class CompressorTest {
         assertTrue(result.containsKey('e'));
     }
 
-    @org.junit.Test
+    @Test
     public void peekMustBeTheBiggest() throws IOException {
         //Arrange
         Compressor h = new Compressor();
@@ -46,7 +47,7 @@ public class CompressorTest {
 
     }
 
-    @org.junit.Test
+    @Test
     public void nodeMustBeTheSmallest() throws IOException {
 //      Arrange
         Compressor h = new Compressor();
@@ -63,7 +64,7 @@ public class CompressorTest {
         assertTrue(v1.getCount()<=v2.getCount());
     }
 
-    @org.junit.Test
+    @Test
     public void sumMustEqualHeapCodeCountValue() throws IOException {
 //      Arrange
         Compressor huff = new Compressor();
@@ -77,7 +78,7 @@ public class CompressorTest {
         assertTrue(huff.getHeapCode().getLeft().getCount()+huff.getHeapCode().getRight().getCount()==huff.getHeapCode().getCount());
     }
 
-    @org.junit.Test
+    @Test
     public void codeMustReturn1() {
 //      Arrange
         Node root = new Node('c', 1);
@@ -96,7 +97,7 @@ public class CompressorTest {
         assertEquals(letter, "1");
     }
 
-    @org.junit.Test
+    @Test
     public void MapCodeTableMustValueMustReturn1() {
 //      Arrange
         Node heap = new Node('h',1);
@@ -106,11 +107,24 @@ public class CompressorTest {
 //      Act
         c.setHeapCode(heap);
         c.CodificationTable();
-//        letter = c.getMapCodeTable().size();
-        System.out.println(c.getMapCodeTable().size());
 
 //      Assert
-//        assertTrue(c.getMapCodeTable().get('c').equals("1"));
+        assertTrue(c.getMapCodeTable().get('h').equals("1"));
+    }
+
+    @Test
+    public void MusthaveEdzArchive() {
+//      Arrange
+        Node heap = new Node('h',1);
+        Compressor c = new Compressor();
+        String letter;
+
+//      Act
+        c.setHeapCode(heap);
+        c.CodificationTable();
+
+//      Assert
+        assertTrue(c.getMapCodeTable().get('h').equals("1"));
     }
 
 }
