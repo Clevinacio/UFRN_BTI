@@ -1,21 +1,19 @@
 package br.ufrn.imd.edb2;
 
 import java.io.IOException;
-import java.util.BitSet;
-import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 //      Adiciona verificação de parâmetros escritos no terminal (por enquanto só aceitando um arquivo)
         if (args.length > 0) {
-            Huffman huff = new Huffman();
+            Compress huff = new Compress();
             huff.characterFrequency(args[0]);
         } else {
 
             String file = "teste10.txt";
 
-            Huffman huff = new Huffman();
+            Compress huff = new Compress();
 
             //Determina mapa de frequencia (quantas vezes cada caracter aparece)
             huff.characterFrequency(file);

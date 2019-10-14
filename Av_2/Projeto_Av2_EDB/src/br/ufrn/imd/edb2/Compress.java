@@ -4,14 +4,14 @@ import java.io.*;
 import java.util.*;
 
 
-public class Huffman {
+public class Compress {
 
     private HashMap<Character, Integer> mapFrequency;
     private HashMap<Character, String> mapCodeTable;
     private Node heapCode;
     private String fileName;
 
-    public Huffman() {
+    public Compress() {
         mapFrequency = new HashMap<Character, Integer>();
         mapCodeTable = new HashMap<Character, String>();
         heapCode = null;
