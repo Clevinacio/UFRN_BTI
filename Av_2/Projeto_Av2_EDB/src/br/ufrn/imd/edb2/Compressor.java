@@ -4,14 +4,14 @@ import java.io.*;
 import java.util.*;
 
 
-public class Compress {
+public class Compressor {
 
     private HashMap<Character, Integer> mapFrequency;
     private HashMap<Character, String> mapCodeTable;
     private Node heapCode;
     private String fileName;
 
-    public Compress() {
+    public Compressor() {
         mapFrequency = new HashMap<Character, Integer>();
         mapCodeTable = new HashMap<Character, String>();
         heapCode = null;

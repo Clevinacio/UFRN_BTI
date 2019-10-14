@@ -1,4 +1,4 @@
-import br.ufrn.imd.edb2.Compress;
+import br.ufrn.imd.edb2.Compressor;
 import br.ufrn.imd.edb2.MinHeap;
 import br.ufrn.imd.edb2.Node;
 
@@ -7,13 +7,13 @@ import java.util.*;
 
 import static org.junit.Assert.*;
 
-public class CompressTest {
+public class CompressorTest {
 //  Teste função contagem frequência
     @org.junit.Test
     public void characterFrequency() throws IOException {
         //Arrange
         String texto = "teste";
-        Compress h = new Compress();
+        Compressor h = new Compressor();
         HashMap<Character,Integer> result;
 
         //Act
@@ -26,7 +26,7 @@ public class CompressTest {
     @org.junit.Test
     public void peekMustBeTheBiggest() throws IOException {
         //Arrange
-        Compress h = new Compress();
+        Compressor h = new Compressor();
         HashMap<Character, Integer> map = new HashMap<>();
         List<Map.Entry<Character, Integer>> unordered;
         List<Map.Entry<Character, Integer>> ordered;
@@ -49,7 +49,7 @@ public class CompressTest {
     @org.junit.Test
     public void nodeMustBeTheSmallest() throws IOException {
 //      Arrange
-        Compress h = new Compress();
+        Compressor h = new Compressor();
         MinHeap result = new MinHeap();
         Node v1,v2;
 //      Act
@@ -66,7 +66,7 @@ public class CompressTest {
     @org.junit.Test
     public void sumMustEqualHeapCodeCountValue() throws IOException {
 //      Arrange
-        Compress huff = new Compress();
+        Compressor huff = new Compressor();
         HashMap<Character,Integer> result;
 
 //      Act

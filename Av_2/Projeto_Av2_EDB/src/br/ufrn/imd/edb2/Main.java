@@ -7,13 +7,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
 //      Adiciona verificação de parâmetros escritos no terminal (por enquanto só aceitando um arquivo)
         if (args.length > 0) {
-            Compress huff = new Compress();
+            Compressor huff = new Compressor();
             huff.characterFrequency(args[0]);
         } else {
 
             String file = "teste10.txt";
 
-            Compress huff = new Compress();
+            Compressor huff = new Compressor();
 
             //Determina mapa de frequencia (quantas vezes cada caracter aparece)
             huff.characterFrequency(file);
