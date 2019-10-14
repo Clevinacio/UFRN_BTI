@@ -11,7 +11,7 @@ public class Main {
             huff.characterFrequency(args[0]);
         } else {
 
-            String file = "teste10.txt";
+            String file = "teste1.txt";
 
             Compressor huff = new Compressor();
 
@@ -24,14 +24,11 @@ public class Main {
             //Determina a tabela de codificacao (com base no posicionamento do caracter, é atribuido um codigo)
             huff.CodificationTable();
 
-            System.out.println("Frequencia de repeticao dos caracteres: ");
-            huff.printMapFrequency();
-            System.out.println();
-            System.out.println("Codigo dos caracteres: ");
-            huff.printMapCode();
-
             //Codifica o texto
             huff.codeText();
+
+            Extractor ex = new Extractor("symbolTable.edt");
+            ex.makeCodificationTable();
         }
     }
 }
