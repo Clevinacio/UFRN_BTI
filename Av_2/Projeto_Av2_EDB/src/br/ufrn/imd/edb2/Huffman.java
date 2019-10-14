@@ -162,41 +162,30 @@ public class Huffman {
             position++;
         }
 
-        while (position % 8 != 0)  {
+        while (position % 8 != 0)  {                    //para que seja multiplo de 8, as posicioes que sobrarem depois do EOF sao preenchidas com 1
             txtCode.set(position, true);
             position++;
         }
 
-        //Salva no arquivo
+        //Salva a tabela de simbolos
         PrintWriter writer = new PrintWriter("symbolTable.edt");
         for (Map.Entry entry : mapCodeTable.entrySet()) {
             writer.println(entry.getKey() + "" + entry.getValue());
         }
         writer.close();
 
-        OutputStream os = new FileOutputStream(new File("convert.edz"));
-        byte[] teste = txtCode.toByteArray();
-        os.write(txtCode.toByteArray());
-        os.close();
-
-        System.out.println("");
-        System.out.println("Imprime o que ira pro arquivo");
-        for (byte b : teste) {
-            System.out.print(Integer.toBinaryString(b & 255 | 256).substring(1));
-        }
-        System.out.println("");
-
-        //exibe texto codificado
-        System.out.println("Imprime como esta no BitSet");
-        String value = "";
-        for (int i = 0; i < txtCode.length(); i++) {
-            if(txtCode.get(i) == false) {
-                value += "0";
-            }else{
-                value += "1";
+        //converte o BitSet em um array de bytes
+        byte[] bytes = new byte[(txtCode.length() + 7) / 8];
+        for (int i=0; i<txtCode.length(); i++) {
+            if (txtCode.get(i)) {
+                bytes [i / 8] |= 1 << (7-i% 8);
             }
         }
-        System.out.println(value);
+
+        //adiciona o array de bytes no arquivo
+        OutputStream os = new FileOutputStream(new File("convert.edz"));
+        os.write(bytes);
+        os.close();
     }
 
     public HashMap<Character, Integer> sort(HashMap<Character, Integer> map) {
