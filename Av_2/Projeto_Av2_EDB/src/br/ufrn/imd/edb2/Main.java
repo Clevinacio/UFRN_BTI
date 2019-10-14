@@ -11,7 +11,7 @@ public class Main {
             huff.characterFrequency(args[0]);
         } else {
 
-            String file = "teste10.txt";
+            String file = "teste1.txt";
 
             Compressor huff = new Compressor();
 
@@ -32,6 +32,9 @@ public class Main {
 
             //Codifica o texto
             huff.codeText();
+
+            Extractor ex = new Extractor("symbolTable.edt");
+            ex.makeCodificationTable();
         }
     }
 }
