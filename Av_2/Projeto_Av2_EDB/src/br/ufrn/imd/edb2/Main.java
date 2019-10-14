@@ -29,8 +29,8 @@ public class Main {
 
             Extractor ex = new Extractor("symbolTable.edt");
             ex.makeCodificationTable();
-
             ex.makeBitSet();
+            ex.convertBitSetToString();
         }
     }
 }

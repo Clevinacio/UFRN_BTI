@@ -12,11 +12,13 @@ public class Extractor {
     private HashMap<String, Character> mapCodeTable;
     private BitSet codedText;
     private String fileName;
+    private char EOF;
 
     public Extractor(String fileName){
         this.mapCodeTable = new HashMap<String, Character>();
         this.fileName = fileName;
         codedText = new BitSet();
+        EOF = (char) 300;
     }
 
     /*
@@ -80,5 +82,34 @@ public class Extractor {
 //            }
 //        }
 //        System.out.println(value);
+    }
+
+    /*
+        Converte BitSet em String - (decodificacao)
+     */
+    public void convertBitSetToString () {
+        String buffer = "";                                         //Guarda texto decodificado
+        String code = "";                                           //Guarda codigo para busca no map
+        char letter;                                                //Guarda resultado do map
+
+        for (int i = 0; i < this.codedText.length(); i++) {         //Percorre BitSet
+            if(codedText.get(i) == false) {
+                code += "0";
+            }else{
+                code += "1";
+            }
+
+            if (mapCodeTable.get(code) != null) {                   //Se nao encontrar referencia no map (null) devecontinuar adicionando bits em code
+                letter = mapCodeTable.get(code);                    //Caso encontre, o caracter é guardado
+                if (letter == EOF) {                                //É feira a verificacao se o caracter é o EOF
+                    break;
+                }
+
+                buffer = buffer + letter;                           //Se não for o EOF, o caracter é incluso ao buffer
+                code = "";
+            }
+        }
+
+        System.out.println(buffer);
     }
 }
