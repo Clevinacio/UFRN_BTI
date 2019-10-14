@@ -13,7 +13,7 @@ public class Main {
             huff.characterFrequency(args[0]);
         } else {
 
-            String file = "teste1.txt";
+            String file = "teste10.txt";
 
             Huffman huff = new Huffman();
 
