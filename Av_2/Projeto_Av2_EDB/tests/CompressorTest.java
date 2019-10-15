@@ -113,18 +113,22 @@ public class CompressorTest {
     }
 
     @Test
-    public void MusthaveEdzArchive() {
+    public void MusthaveEdzArchive() throws IOException {
 //      Arrange
-        Node heap = new Node('h',1);
         Compressor c = new Compressor();
-        String letter;
+        File file;
+        String fileName = "teste1.txt";
 
 //      Act
-        c.setHeapCode(heap);
+        c.characterFrequency(fileName);
+        c.heapCode();
         c.CodificationTable();
+        c.codeText("convert.edz","symbolTable.edt");
+
+        file = new File("convert.edz");
 
 //      Assert
-        assertTrue(c.getMapCodeTable().get('h').equals("1"));
+        assertTrue(file.exists());
     }
 
 }

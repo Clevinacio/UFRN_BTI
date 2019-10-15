@@ -54,8 +54,8 @@ public class Extractor {
     /*
         Cria BitSet a partir do arquivo codificado
      */
-    public void makeBitSet() throws IOException {
-        byte[] array = Files.readAllBytes(Paths.get("convert.edz"));                //guarda todos os byste do arquivo em um array
+    public void makeBitSet(String compressedFile) throws IOException {
+        byte[] array = Files.readAllBytes(Paths.get(compressedFile));                //guarda todos os byste do arquivo em um array
 //
 //        System.out.println("Imprime o array de bytes");
 //        for (byte b : array) {
@@ -102,7 +102,7 @@ public class Extractor {
     /*
         Converte BitSet em String - (decodificacao)
      */
-    public void convertBitSetToString () throws FileNotFoundException {
+    public void convertBitSetToString (String outPutFile) throws FileNotFoundException {
         String buffer = "";                                         //Guarda texto decodificado
         String code = "";                                           //Guarda codigo para busca no map
         char letter;                                                //Guarda resultado do map
@@ -130,7 +130,7 @@ public class Extractor {
             }
         }
 
-        PrintWriter writer = new PrintWriter("arquivo.txt");
+        PrintWriter writer = new PrintWriter(outPutFile);
         writer.println(buffer);
         writer.close();
     }

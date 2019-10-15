@@ -134,7 +134,7 @@ public class Compressor {
         setCode(index.getRight(), code + "1");
     }
 
-    public void codeText() throws IOException {
+    public void codeText(String outPutFile, String symbolTable) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(this.fileName));
         BitSet txtCode = new BitSet();
         String code;
@@ -175,15 +175,15 @@ public class Compressor {
             position++;
         }
 
-        saveBinaryFile();
+        saveBinaryFile(symbolTable);
 
-        OutputStream os = new FileOutputStream(new File("convert.edz"));
+        OutputStream os = new FileOutputStream(new File(outPutFile));
         os.write(convertBitSetToArray(txtCode));
         os.close();
     }
 
-    public void saveBinaryFile() throws FileNotFoundException {
-        PrintWriter writer = new PrintWriter("symbolTable.edt");
+    public void saveBinaryFile(String symbolTable) throws FileNotFoundException {
+        PrintWriter writer = new PrintWriter(symbolTable);
         for (Map.Entry entry : mapCodeTable.entrySet()) {
             writer.println(entry.getKey() + "" + entry.getValue());
         }

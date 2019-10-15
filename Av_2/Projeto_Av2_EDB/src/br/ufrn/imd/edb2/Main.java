@@ -5,32 +5,31 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-//      Adiciona verificação de parâmetros escritos no terminal (por enquanto só aceitando um arquivo)
         if (args.length > 0) {
-            Compressor huff = new Compressor();
-            huff.characterFrequency(args[0]);
+            if (args[0].equals("compress")) {
+                Compressor c = new Compressor();
+                c.characterFrequency(args[1]);
+                c.heapCode();
+                c.CodificationTable();
+                c.codeText(args[2], args[3]);
+            }
+            if (args[0].equals("extract")) {
+                Extractor ex = new Extractor(args[2]);
+                ex.makeCodificationTable();
+                ex.makeBitSet(args[1]);
+                ex.convertBitSetToString(args[3]);
+
+            }
+            
         } else {
+            System.out.println("Nenhum argumento passado");
 
-            String file = "teste10.txt";
-
-            Compressor huff = new Compressor();
-
-            //Determina mapa de frequencia (quantas vezes cada caracter aparece)
-            huff.characterFrequency(file);
-
-            //Determina a arvore de codificacao (cada caracter se torna uma folha)
-            huff.heapCode();
-
-            //Determina a tabela de codificacao (com base no posicionamento do caracter, é atribuido um codigo)
-            huff.CodificationTable();
-
-            //Codifica o texto
-            huff.codeText();
-
+/*
             Extractor ex = new Extractor("symbolTable.edt");
             ex.makeCodificationTable();
             ex.makeBitSet();
             ex.convertBitSetToString();
+*/
         }
     }
 }
