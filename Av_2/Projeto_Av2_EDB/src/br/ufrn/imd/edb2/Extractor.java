@@ -56,14 +56,6 @@ public class Extractor {
      */
     public void makeBitSet(String compressedFile) throws IOException {
         byte[] array = Files.readAllBytes(Paths.get(compressedFile));                //guarda todos os byste do arquivo em um array
-//
-//        System.out.println("Imprime o array de bytes");
-//        for (byte b : array) {
-//            System.out.print(Integer.toBinaryString(b & 255 | 256).substring(1));
-//        }
-//        System.out.println("");
-//        System.out.println(array.length);
-//        System.out.println();
 
         BitSet temp = new BitSet();                                                  //converte os bytes para BitSet temporario
         for (int i = 0; i < array.length * 8; i++) {
@@ -84,19 +76,6 @@ public class Extractor {
         for(int i = 0; i < temp.length(); i++){                                      //inverte a ordem do BitSet temporario e armazena no BitSet da classe
             this.codedText.set(i+valor, temp.get(temp.length() - i - 1));
         }
-
-//        System.out.println("Imprime o BitSet");
-//        String value = "";
-//        for (int i = 0; i < codedText.length(); i++) {
-//            if(codedText.get(i) == false) {
-//                value += "0";
-//            }else{
-//                value += "1";
-//            }
-//        }
-//
-//        System.out.println(codedText.length());
-//        System.out.println(value);
     }
 
     /*
@@ -107,7 +86,6 @@ public class Extractor {
         String code = "";                                           //Guarda codigo para busca no map
         char letter;                                                //Guarda resultado do map
 
-//        System.out.println(this.codedText.length());
         for (int i = 0; i < this.codedText.length(); i++) {         //Percorre BitSet
             if(codedText.get(i) == false) {
                 code += "0";
