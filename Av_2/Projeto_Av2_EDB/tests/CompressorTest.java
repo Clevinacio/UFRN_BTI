@@ -54,11 +54,10 @@ public class CompressorTest {
         MinHeap result = new MinHeap();
         Node v1,v2;
 //      Act
-        h.characterFrequency("teste1.txt");
+        h.characterFrequency("teste",0);
         result = h.makeMinHeap();
         v1 = result.remove();
         v2 = result.remove();
-
 
 //      Assert
         assertTrue(v1.getCount()<=v2.getCount());
@@ -71,7 +70,7 @@ public class CompressorTest {
         HashMap<Character,Integer> result;
 
 //      Act
-        result = huff.characterFrequency("teste1.txt");
+        result = huff.characterFrequency("teste",0);
         huff.heapCode();
 
 //      Assert
@@ -106,29 +105,62 @@ public class CompressorTest {
 
 //      Act
         c.setHeapCode(heap);
-        c.CodificationTable();
+        c.makeCodificationTable();
 
 //      Assert
         assertTrue(c.getMapCodeTable().get('h').equals("1"));
     }
 
     @Test
-    public void MusthaveEdzArchive() throws IOException {
+    public void MustHaveEdzFile() throws Exception {
 //      Arrange
-        Compressor c = new Compressor();
+        Compressor c = new Compressor("teste1.txt");
         File file;
-        String fileName = "teste1.txt";
 
 //      Act
-        c.characterFrequency(fileName);
+        c.characterFrequency();
         c.heapCode();
-        c.CodificationTable();
-        c.codeText("convert.edz","symbolTable.edt");
+        c.makeCodificationTable();
+        c.CompressTextToFile("convert.edz","symbolTable.edt");
 
         file = new File("convert.edz");
 
 //      Assert
+//        assertTrue(file.exists());
+    }
+
+    @Test
+    public void MustHaveEdtFile() throws Exception {
+//      Arrange
+        Compressor c = new Compressor("teste1.txt");
+        File file;
+
+//      Act
+        c.characterFrequency();
+        c.heapCode();
+        c.makeCodificationTable();
+        c.CompressTextToFile("convert.edz","symbolTable.edt");
+
+        file = new File("symbolTable.edt");
+
+//      Assert
         assertTrue(file.exists());
+    }
+
+    @Test
+    public void ArrayMustHaveSameSizeOfBitSet() {
+//      Arrange
+        BitSet bs = new BitSet();
+        Compressor c = new Compressor();
+        byte[] bytes;
+//      Act
+        bs.set(7);
+        bs.set(26);
+        bytes = c.convertBitSetToArray(bs);
+
+//      Assert
+        assertTrue(bytes.length==4);
+
     }
 
 }

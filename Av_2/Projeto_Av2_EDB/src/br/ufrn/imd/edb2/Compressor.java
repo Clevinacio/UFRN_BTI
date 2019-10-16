@@ -9,13 +9,26 @@ public class Compressor {
     private HashMap<Character, Integer> mapFrequency;
     private HashMap<Character, String> mapCodeTable;
     private Node heapCode;
+
+    public String getFileName() {
+        return fileName;
+    }
+
     private String fileName;
+
+    public Compressor(String fileName) throws FileNotFoundException{
+        this.fileName = fileName;
+        mapFrequency = new HashMap<Character, Integer>();
+        mapCodeTable = new HashMap<Character, String>();
+        heapCode = null;
+    }
 
     public Compressor() {
         mapFrequency = new HashMap<Character, Integer>();
         mapCodeTable = new HashMap<Character, String>();
         heapCode = null;
     }
+
 
     public HashMap<Character, Integer> getMapFrequency() {
         return mapFrequency;
@@ -33,13 +46,13 @@ public class Compressor {
         this.heapCode = heapCode;
     }
 
-    public HashMap<Character, Integer> characterFrequency(String text, int counter) {
+    public HashMap<Character, Integer> characterFrequency(String text, int counter) throws IOException,FileNotFoundException{
         char[] strArray = text.toCharArray();
-        for (char caracter : strArray) {
-            if (mapFrequency.containsKey(caracter)) {
-                mapFrequency.put(caracter, mapFrequency.get(caracter) + 1);
+        for (char character : strArray) {
+            if (mapFrequency.containsKey(character)) {
+                mapFrequency.put(character, mapFrequency.get(character) + 1);
             } else {
-                mapFrequency.put(caracter, 1);
+                mapFrequency.put(character, 1);
             }
         }
 
@@ -54,13 +67,11 @@ public class Compressor {
         return mapFrequency;
     }
 
-    public HashMap<Character, Integer> characterFrequency(String fileName) throws IOException {
-        this.fileName = fileName;
-
+    public HashMap<Character, Integer> characterFrequency() throws IOException,FileNotFoundException {
         String text = ""; //concatena linhas do arquivo
         int counterBreak = 0; //verifica quebras de linhas
 
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
+        BufferedReader br = new BufferedReader(new FileReader(this.fileName));
 
         while (br.ready()) {
             text = text.concat(br.readLine());
@@ -108,7 +119,7 @@ public class Compressor {
         setHeapCode(fila.peek());
     }
 
-    public void CodificationTable() {
+    public void makeCodificationTable() {
         if (heapCode.isLeaf()) {
             mapCodeTable.put((char) heapCode.getLetter(), "1");
             return;
@@ -133,7 +144,7 @@ public class Compressor {
         setCode(index.getRight(), code + "1");
     }
 
-    public void codeText(String outPutFile, String symbolTable) throws IOException {
+    public void CompressTextToFile(String outPutFile, String symbolTable) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(this.fileName));
         BitSet txtCode = new BitSet();
         String code;
@@ -233,10 +244,10 @@ public class Compressor {
         return ordered;
     }
 
-    public String porcent(String fileConvert) {
+    public void porcent(String fileConvert) {
         File fileBinary = new File(fileConvert);
         File fileTxt = new File(this.fileName);
         float porcent = (fileBinary.length() * 100)/fileTxt.length();
-        return  "O arquivo possui " + porcent + "% do seu tamanho original!";
+        System.out.printf("arquivo foi possui %.1f%% do seu tamanho original\n", porcent);
     }
 }
