@@ -178,6 +178,7 @@ public class Compressor {
 
         OutputStream os = new FileOutputStream(new File(outPutFile));
         os.write(convertBitSetToArray(txtCode));
+
         os.close();
     }
 
@@ -230,5 +231,12 @@ public class Compressor {
         map = ordered;
 
         return ordered;
+    }
+
+    public String porcent(String fileConvert) {
+        File fileBinary = new File(fileConvert);
+        File fileTxt = new File(this.fileName);
+        float porcent = (fileBinary.length() * 100)/fileTxt.length();
+        return  "O arquivo possui " + porcent + "% do seu tamanho original!";
     }
 }
