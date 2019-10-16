@@ -23,13 +23,6 @@ public class Main {
             
         } else {
             System.out.println("Nenhum argumento passado");
-
-/*
-            Extractor ex = new Extractor("symbolTable.edt");
-            ex.makeCodificationTable();
-            ex.makeBitSet();
-            ex.convertBitSetToString();
-*/
         }
     }
 }

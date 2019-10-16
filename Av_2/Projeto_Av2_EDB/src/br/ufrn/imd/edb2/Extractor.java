@@ -109,7 +109,7 @@ public class Extractor {
         }
 
         PrintWriter writer = new PrintWriter(outPutFile);
-        writer.println(buffer);
+        writer.print(buffer);
         writer.close();
     }
 }

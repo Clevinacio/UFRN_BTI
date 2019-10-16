@@ -35,7 +35,6 @@ public class Compressor {
 
     public HashMap<Character, Integer> characterFrequency(String text, int counter) {
         char[] strArray = text.toCharArray();
-        int contado = 0;
         for (char caracter : strArray) {
             if (mapFrequency.containsKey(caracter)) {
                 mapFrequency.put(caracter, mapFrequency.get(caracter) + 1);
@@ -45,7 +44,7 @@ public class Compressor {
         }
 
         //Verifica as quebras de linha e, se houver mais de uma, adiciona ao map
-        if (counter > 1) {
+        if (counter >= 1) {
             mapFrequency.put((char) 280, counter - 1);
         }
 
