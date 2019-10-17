@@ -4,10 +4,190 @@
 <head>
   <meta charset="utf-8">
   <title>Biblioteca - WEB I</title>
+  <!-- Bootstrap Style -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Personal Style  -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Biblioteca</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Livros
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" onclick="Mudarestado('cadastroLivro','cadastroFilmes')">Cadastro</a>
+            <a class="dropdown-item" href="#">Consulta</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filmes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Cadastro</a>
+            <a class="dropdown-item" href="#">Consulta</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Jogos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Cadastro</a>
+            <a class="dropdown-item" href="#">Consulta</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Tela inicial -->
+  <section id="home" class="visible">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <h1 class="">Bem vindo à Biblioteca!</h1>
+          <h2>Escolha uma opção abaixo</h2>
+          <div class="button-group">
+            <button type="button" class="btn btn-light">Cadastrar livro</button>
+            <button type="button" class="btn btn-dark">Cadastrar Filme</button>
+            <button type="button" class="btn btn-light">Cadastrar jogo</button><br>
+            <button type="button" class="btn btn-dark">Ver acervo de livros</button>
+            <button type="button" class="btn btn-light">Ver acervo de filmes</button>
+            <button type="button" class="btn btn-dark">Ver acervo de jogos</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cadastro Livros -->
+  <section id="cadastroLivro" class="visible">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <h1 class="">Cadastro Livros</h1>
+          <form class="cadLivro" action="">
+            Título<br>
+            <input type="text" name="" value=""><br>
+            Autor<br>
+            <input type="text" name="" value=""><br>
+            Páginas<br>
+            <input type="text" name="" value=""><br>
+            Status<br>
+            <select name="">
+              <option value="">Lido</option>
+              <option value="">Não lido</option>
+            </select><br>
+            <input type="submit" name="submitLivro" value="Adicionar">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulta Livros -->
+  <!-- <section id="consultaLivro" class="visible">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <h1 class="">Livros cadastrados</h1>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Cadastro Filmes -->
+  <!-- <section id="cadastroFilmes" class="visible">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <h1 class="">Cadastro Filmes</h1>
+          <form class="cadFilme" action="">
+            Título<br>
+            <input type="text" name="" value=""><br>
+            Autor<br>
+            <input type="text" name="" value=""><br>
+            Páginas<br>
+            <input type="text" name="" value=""><br>
+            Status<br>
+            <select name="">
+              <option value="">Lido</option>
+              <option value="">Não lido</option>
+            </select><br>
+            <input type="submit" name="" value="Adicionar">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Consulta Filmes -->
+  <!-- <section id="consultaFilmes" class="visible">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <h1 class="">Filmes cadastrados</h1>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Cadastro Jogos -->
+  <!-- <section id="cadastroJogo" class="visible">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <h1 class="">Cadastro Jogos</h1>
+          <form class="cadJogo" action="">
+            Título<br>
+            <input type="text" name="" value=""><br>
+            Autor<br>
+            <input type="text" name="" value=""><br>
+            Páginas<br>
+            <input type="text" name="" value=""><br>
+            Status<br>
+            <select name="">
+              <option value="">Lido</option>
+              <option value="">Não lido</option>
+            </select><br>
+            <input type="submit" name="" value="Adicionar">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Consulta Jogos -->
+  <!-- <section id="cadastroLivro" class="visible">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <h1 class="">Jogos cadastrados</h1>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- JS Bootstrap import  -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Personal JS -->
+  <script type="text/javascript" src="js/functions.js">
+
+  </script>
+
+  </script>
 </body>
 
 </html>
