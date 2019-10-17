@@ -82,11 +82,12 @@ public class Compressor {
     }
 
     public MinHeap makeMinHeap() {
+        MinHeap fila = new MinHeap();
         if (mapFrequency.isEmpty()) {
-            return null;
+            fila.addNode(new Node(300, 1)); //add EOF
+            return fila;
         }
 
-        MinHeap fila = new MinHeap();
         for (Map.Entry entry : mapFrequency.entrySet()) {
             fila.addNode(new Node((Character) entry.getKey(), (int) entry.getValue()));
         }
@@ -97,10 +98,6 @@ public class Compressor {
     }
 
     public void heapCode() {
-        if (mapFrequency.isEmpty()) {
-            return;
-        }
-
         MinHeap fila = makeMinHeap();
 
         while (fila.getSize() != 1) {
@@ -124,11 +121,6 @@ public class Compressor {
             mapCodeTable.put((char) heapCode.getLetter(), "1");
             return;
         }
-
-        if (mapFrequency.isEmpty()) {
-            return;
-        }
-
 
         //cria tabela de codificacao
         setCode(heapCode, "");

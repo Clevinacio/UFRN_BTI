@@ -22,7 +22,11 @@ public class Main {
                 c.heapCode();
                 c.makeCodificationTable();
                 c.CompressTextToFile(args[2], args[3]);
-                c.porcent(args[2]);
+                try {
+                    c.porcent(args[2]);
+                } catch (ArithmeticException e) {
+                    System.out.println("Arquivo vazio. Mesmo tamanho do original");
+                }
 
             } else if (args[0].equals("extract")) {
                 ex = new Extractor(args[2]);

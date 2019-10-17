@@ -8,6 +8,7 @@
       <element id="module-output" name="Projeto_Av2_EDB" />
       <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/hamcrest-core-1.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit-4.12.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/exec/dicionario.edt" />
     </root>
   </artifact>
 </component>
