@@ -1,11 +1,23 @@
-body {
-  background-color: rgb(16, 19, 40);
-  min-height: 100%;
-  color: white;
-  text-align: : center;
+html {
+  scroll-behavior: smooth;
 }
 
-.container {}
+body {
+  background-image: linear-gradient(to bottom right, #11253b, #181617);
+  height: 100%;
+  width: 100%;
+  text-align: : center;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+body h1 {
+  color: white;
+}
+
+body h2 {
+  color: white;
+}
 
 .center {
   margin-left: auto;

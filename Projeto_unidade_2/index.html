@@ -26,43 +26,43 @@
             Livros
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" onclick="Mudarestado('cadastroLivro','cadastroFilmes')">Cadastro</a>
-            <a class="dropdown-item" href="#">Consulta</a>
+            <a class="dropdown-item" data-toggle="modal" href="#modalCadastroLivro">Cadastro</a>
+            <a class="dropdown-item" href="#consultaLivros">Consulta</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Filmes
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Cadastro</a>
-            <a class="dropdown-item" href="#">Consulta</a>
+            <a class="dropdown-item" data-toggle="modal" href="#modalCadastroFilme">Cadastro</a>
+            <a class="dropdown-item" href="#consultaFilmes">Consulta</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Jogos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Cadastro</a>
-            <a class="dropdown-item" href="#">Consulta</a>
+            <a class="dropdown-item" data-toggle="modal" href="#modalCadastroJogo">Cadastro</a>
+            <a class="dropdown-item" href="#consultaJogos">Consulta</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <!-- Tela inicial -->
-  <section id="home" class="visible">
+  <section id="home">
     <div class="container">
       <div class="row">
         <div class="center">
           <h1 class="">Bem vindo à Biblioteca!</h1>
           <h2>Escolha uma opção abaixo</h2>
           <div class="button-group">
-            <button type="button" class="btn btn-light">Cadastrar livro</button>
-            <button type="button" class="btn btn-dark">Cadastrar Filme</button>
-            <button type="button" class="btn btn-light">Cadastrar jogo</button><br>
-            <button type="button" class="btn btn-dark">Ver acervo de livros</button>
-            <button type="button" class="btn btn-light">Ver acervo de filmes</button>
-            <button type="button" class="btn btn-dark">Ver acervo de jogos</button>
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroLivro">Cadastrar livro</button>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalCadastroFilme">Cadastrar Filme</button>
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroJogo">Cadastrar jogo</button><br>
+            <button type="button" class="btn btn-dark" data-target="#consultaLivros">Ver acervo de livros</button>
+            <button type="button" class="btn btn-light" href="#consultaFilmes">Ver acervo de filmes</button>
+            <button type="button" class="btn btn-dark" href="#consultaJogos">Ver acervo de jogos</button>
           </div>
 
         </div>
@@ -71,24 +71,42 @@
   </section>
 
   <!-- Cadastro Livros -->
-  <section id="cadastroLivro" class="visible">
-    <div class="container">
-      <div class="row">
-        <div class="center">
-          <h1 class="">Cadastro Livros</h1>
-          <form class="cadLivro" action="">
-            Título<br>
-            <input type="text" name="" value=""><br>
-            Autor<br>
-            <input type="text" name="" value=""><br>
-            Páginas<br>
-            <input type="text" name="" value=""><br>
-            Status<br>
-            <select name="">
-              <option value="">Lido</option>
-              <option value="">Não lido</option>
-            </select><br>
-            <input type="submit" name="submitLivro" value="Adicionar">
+  <section id="cadastroLivro">
+    <div class="modal fade" id="modalCadastroLivro" tabindex="-1" role="dialog" aria-labelledby="cadastroLivroModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cadastroLivroLabel">Cadastro de livro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="tituloLivroLabel">Título</label>
+                <input type="text" class="form-control" id="tituloLivro" aria-describedby="tituloLivro" placeholder="Título">
+              </div>
+              <div class="form-group">
+                <label for="autorLabel">Autor</label>
+                <input type="text" class="form-control" id="autor" aria-describedby="autorLivro" placeholder="Autor">
+              </div>
+              <div class="form-group">
+                <label for="paginasLabel">Páginas</label>
+                <input type="text" class="form-control" id="paginas" aria-describedby="paginasLivro" placeholder="Páginas">
+              </div>
+              <div class="form-group">
+                <label for="statusLivroLabel">Status</label>
+                <select class="form-control" id="statusLivro">
+                  <option>Lido</option>
+                  <option>Não lido</option>
+                </select>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" action="cadastrarLivro()">Enviar</button>
+          </div>
           </form>
         </div>
       </div>
@@ -96,98 +114,194 @@
   </section>
 
   <!-- Consulta Livros -->
-  <!-- <section id="consultaLivro" class="visible">
+  <section id="consultaLivros" class="visible">
     <div class="container">
       <div class="row">
         <div class="center">
           <h1 class="">Livros cadastrados</h1>
         </div>
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Título</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Páginas</th>
+              <th scope="col">Status</th>
+              <th scope="col">Apagar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- Cadastro Filmes -->
-  <!-- <section id="cadastroFilmes" class="visible">
-    <div class="container">
-      <div class="row">
-        <div class="center">
-          <h1 class="">Cadastro Filmes</h1>
-          <form class="cadFilme" action="">
-            Título<br>
-            <input type="text" name="" value=""><br>
-            Autor<br>
-            <input type="text" name="" value=""><br>
-            Páginas<br>
-            <input type="text" name="" value=""><br>
-            Status<br>
-            <select name="">
-              <option value="">Lido</option>
-              <option value="">Não lido</option>
-            </select><br>
-            <input type="submit" name="" value="Adicionar">
+  <section id="cadastroFilme">
+    <div class="modal fade" id="modalCadastroFilme" tabindex="-1" role="dialog" aria-labelledby="cadastroFilmeModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cadastroFilme">Cadastro de filme</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="tituloFilmeLabel">Título</label>
+                <input type="text" class="form-control" id="tituloFilme" aria-describedby="tituloFilme" placeholder="Título">
+              </div>
+              <div class="form-group">
+                <label for="diretorLabel">Diretor</label>
+                <input type="text" class="form-control" id="diretor" aria-describedby="diretorFilme" placeholder="Diretor">
+              </div>
+              <div class="form-group">
+                <label for="duracaoLabel">Duração</label>
+                <input type="text" class="form-control" id="duracao" aria-describedby="duracaoFilme" placeholder="Duração">
+              </div>
+              <div class="form-group">
+                <label for="statusFilmeLabel">Status</label>
+                <select class="form-control" id="statusFilme">
+                  <option>Assistido</option>
+                  <option>Não assistido</option>
+                </select>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" action="cadastrarFilme()">Enviar</button>
+          </div>
           </form>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- Consulta Filmes -->
-  <!-- <section id="consultaFilmes" class="visible">
+  <section id="consultaFilmes" class="visible">
     <div class="container">
       <div class="row">
         <div class="center">
           <h1 class="">Filmes cadastrados</h1>
         </div>
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Título</th>
+              <th scope="col">Diretor</th>
+              <th scope="col">Duração</th>
+              <th scope="col">Status</th>
+              <th scope="col">Apagar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- Cadastro Jogos -->
-  <!-- <section id="cadastroJogo" class="visible">
-    <div class="container">
-      <div class="row">
-        <div class="center">
-          <h1 class="">Cadastro Jogos</h1>
-          <form class="cadJogo" action="">
-            Título<br>
-            <input type="text" name="" value=""><br>
-            Autor<br>
-            <input type="text" name="" value=""><br>
-            Páginas<br>
-            <input type="text" name="" value=""><br>
-            Status<br>
-            <select name="">
-              <option value="">Lido</option>
-              <option value="">Não lido</option>
-            </select><br>
-            <input type="submit" name="" value="Adicionar">
+  <section id="cadastroJogo">
+    <div class="modal fade" id="modalCadastroJogo" tabindex="-1" role="dialog" aria-labelledby="cadastroJogoModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cadastroJogo">Cadastro de Jogo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="tituloJogoLabel">Título</label>
+                <input type="text" class="form-control" id="tituloJogo" aria-describedby="tituloJogo" placeholder="Título">
+              </div>
+              <div class="form-group">
+                <label for="desenvolvedoraLabel">Desenvolvedora</label>
+                <input type="text" class="form-control" id="diretor" aria-describedby="desenvolvedoraJogo" placeholder="Desenvolvedora">
+              </div>
+              <div class="form-group">
+                <label for="plataformaJogo">Plataforma</label>
+                <select class="form-control" id="plataforma">
+                  <option>PC</option>
+                  <option>Mobile</option>
+                  <option>Console (Xbox,PS4,Switch)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="statusJogoLabel">Status</label>
+                <select class="form-control" id="statusJogo">
+                  <option>Finalizado</option>
+                  <option>Não finalizado</option>
+                </select>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark" action="cadastrarFilme()">Enviar</button>
+          </div>
           </form>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- Consulta Jogos -->
-  <!-- <section id="cadastroLivro" class="visible">
+  <section id="consultaJogos">
     <div class="container">
       <div class="row">
         <div class="center">
           <h1 class="">Jogos cadastrados</h1>
         </div>
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Título</th>
+              <th scope="col">Desenvolvedora</th>
+              <th scope="col">Plataforma</th>
+              <th scope="col">Status</th>
+              <th scope="col">Apagar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- JS Bootstrap import  -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- Personal JS -->
-  <script type="text/javascript" src="js/functions.js">
-
-  </script>
-
-  </script>
+  <script type="text/javascript" src="js/functions.js"></script>
 </body>
 
 </html>
