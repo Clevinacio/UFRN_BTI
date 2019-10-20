@@ -1,4 +1,4 @@
-package br.ufrn.imd.dicionario;
+package com.company;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -10,13 +10,12 @@ public class Extractor {
 
     private HashMap<String, Character> mapCodeTable;
     private BitSet codedText;
-    private String fileName;
     private char EOF;
     private int breakLine;
 
-    public Extractor(String fileName){
+    public Extractor() throws IOException {
         this.mapCodeTable = new HashMap<String, Character>();
-        this.fileName = fileName;
+        makeCodificationTable();
         this.codedText = new BitSet();
         this.EOF = (char) 300;
         this.breakLine = 280;
@@ -31,7 +30,8 @@ public class Extractor {
         String code = "";                   //guarda o codigo para o caracter
         int position = 0;                   //utilizado para verificacao da primeira posicao do array
 
-        BufferedReader br = new BufferedReader(new FileReader(this.fileName));
+        InputStream is = getClass().getResourceAsStream("/dicionario.edt");
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
         while (br.ready()) {
             charArray = br.readLine().toCharArray();

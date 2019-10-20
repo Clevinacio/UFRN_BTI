@@ -1,4 +1,4 @@
-package br.ufrn.imd.dicionario;
+package com.company;
 
 import java.io.*;
 import java.util.*;
@@ -8,8 +8,9 @@ public class Compressor {
     private HashMap<Character, String> mapCodeTable;
     private String fileName;
 
-    public Compressor(String fileName) throws FileNotFoundException{
+    public Compressor(String fileName) throws IOException {
         mapCodeTable = new HashMap<Character, String>();
+        makeCodificationMap();
         this.fileName = fileName;
     }
 
@@ -21,12 +22,13 @@ public class Compressor {
         return mapCodeTable;
     }
 
-    public void makeCodificationMap(String symbolTable) throws IOException {
+    public void makeCodificationMap() throws IOException {
         char[] charArray;                   //array para guardar cada linha do arquivo
         char letter = '0';                  //guarda caracter ao qual o codigo se refere
         String code = "";                   //guarda o codigo para o caracter
         int position = 0;                   //utilizado para verificacao da primeira posicao do array
-        BufferedReader br = new BufferedReader(new FileReader(symbolTable));
+        InputStream is = getClass().getResourceAsStream("/dicionario.edt");
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
         while (br.ready()) {
             charArray = br.readLine().toCharArray();
