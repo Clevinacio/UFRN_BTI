@@ -22,9 +22,9 @@ function cadastrarLivro() {
   cell5.innerHTML = status;
   cell6.innerHTML = "<input id='deleteButton' type='button' class='btn btn-light' value='Apagar' >";
 
-  titulo.value = "";
-  autor.value = "";
-  paginas.value = "";
+  document.getElementById("tituloLivro").value = '';
+  document.getElementById("autor").value = '';
+  document.getElementById("paginas").value = '';
 }
 
 function cadastrarFilme() {
@@ -51,9 +51,9 @@ function cadastrarFilme() {
   cell5.innerHTML = status;
   cell6.innerHTML = "<input id='deleteButton' type='button' class='btn btn-light' value='Apagar'>";
 
-  titulo.value = '';
-  diretor.value = '';
-  duracao.value = '';
+  document.getElementById("tituloFilme").value = '';
+  document.getElementById("diretor").value = '';
+  document.getElementById("duracao").value = '';
 }
 
 function cadastrarJogo() {
@@ -80,16 +80,10 @@ function cadastrarJogo() {
   cell5.innerHTML = status;
   cell6.innerHTML = "<input type='button' id='deleteButton' class='btn btn-light' value='Apagar'>";
 
-  titulo.value = "";
-  diretor.value = "";
-  duracao.value = "";
+  document.getElementById("tituloJogo").value = '';
+  document.getElementById("desenvolvedora").value = '';
 }
 
-// $(document).ready(function() {
-//   $('tbody tr').click(function() {
-//     $(this).remove();
-//   });
-// });
 $(document).ready(function() {
   $(document).on('click', '#deleteButton', function() {
     $(this).closest('tr').remove();
