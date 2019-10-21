@@ -9,6 +9,7 @@
 
   <!-- Personal Style  -->
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -60,9 +61,6 @@
             <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroLivro">Cadastrar livro</button>
             <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalCadastroFilme">Cadastrar Filme</button>
             <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroJogo">Cadastrar jogo</button><br>
-            <button type="button" class="btn btn-dark" data-target="#consultaLivros">Ver acervo de livros</button>
-            <button type="button" class="btn btn-light" href="#consultaFilmes">Ver acervo de filmes</button>
-            <button type="button" class="btn btn-dark" href="#consultaJogos">Ver acervo de jogos</button>
           </div>
 
         </div>
@@ -85,15 +83,15 @@
             <form>
               <div class="form-group">
                 <label for="tituloLivroLabel">Título</label>
-                <input type="text" class="form-control" id="tituloLivro" aria-describedby="tituloLivro" placeholder="Título">
+                <input type="text" class="form-control" id="tituloLivro" aria-describedby="tituloLivro" placeholder="Título" required>
               </div>
               <div class="form-group">
                 <label for="autorLabel">Autor</label>
-                <input type="text" class="form-control" id="autor" aria-describedby="autorLivro" placeholder="Autor">
+                <input type="text" class="form-control" id="autor" aria-describedby="autorLivro" placeholder="Autor" required>
               </div>
               <div class="form-group">
                 <label for="paginasLabel">Páginas</label>
-                <input type="text" class="form-control" id="paginas" aria-describedby="paginasLivro" placeholder="Páginas">
+                <input type="text" class="form-control" id="paginas" aria-describedby="paginasLivro" placeholder="Páginas" required>
               </div>
               <div class="form-group">
                 <label for="statusLivroLabel">Status</label>
@@ -105,7 +103,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-dark" action="cadastrarLivro()">Enviar</button>
+            <button type="button" class="btn btn-dark" onclick="cadastrarLivro()" data-dismiss="modal">Enviar</button>
           </div>
           </form>
         </div>
@@ -120,7 +118,7 @@
         <div class="center">
           <h1 class="">Livros cadastrados</h1>
         </div>
-        <table class="table table-striped table-dark">
+        <table id="tableLivros" class="table table-striped table-dark">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -131,13 +129,7 @@
               <th scope="col">Apagar</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
+          <tbody id="bodyTableLivro">
           </tbody>
         </table>
       </div>
@@ -159,15 +151,15 @@
             <form>
               <div class="form-group">
                 <label for="tituloFilmeLabel">Título</label>
-                <input type="text" class="form-control" id="tituloFilme" aria-describedby="tituloFilme" placeholder="Título">
+                <input type="text" class="form-control" id="tituloFilme" aria-describedby="tituloFilme" placeholder="Título" required>
               </div>
               <div class="form-group">
                 <label for="diretorLabel">Diretor</label>
-                <input type="text" class="form-control" id="diretor" aria-describedby="diretorFilme" placeholder="Diretor">
+                <input type="text" class="form-control" id="diretor" aria-describedby="diretorFilme" placeholder="Diretor" required>
               </div>
               <div class="form-group">
                 <label for="duracaoLabel">Duração</label>
-                <input type="text" class="form-control" id="duracao" aria-describedby="duracaoFilme" placeholder="Duração">
+                <input type="text" class="form-control" id="duracao" aria-describedby="duracaoFilme" placeholder="Duração" required>
               </div>
               <div class="form-group">
                 <label for="statusFilmeLabel">Status</label>
@@ -179,7 +171,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-dark" action="cadastrarFilme()">Enviar</button>
+            <button type="button" class="btn btn-dark" onclick="cadastrarFilme()" data-dismiss="modal">Enviar</button>
           </div>
           </form>
         </div>
@@ -194,7 +186,7 @@
         <div class="center">
           <h1 class="">Filmes cadastrados</h1>
         </div>
-        <table class="table table-striped table-dark">
+        <table id="tableFilmes" class="table table-striped table-dark">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -205,13 +197,7 @@
               <th scope="col">Apagar</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
+          <tbody id="bodyTableFilmes">
           </tbody>
         </table>
       </div>
@@ -222,7 +208,7 @@
   <section id="cadastroJogo">
     <div class="modal fade" id="modalCadastroJogo" tabindex="-1" role="dialog" aria-labelledby="cadastroJogoModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content" <div class="modal-content">>
           <div class="modal-header">
             <h5 class="modal-title" id="cadastroJogo">Cadastro de Jogo</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -233,11 +219,11 @@
             <form>
               <div class="form-group">
                 <label for="tituloJogoLabel">Título</label>
-                <input type="text" class="form-control" id="tituloJogo" aria-describedby="tituloJogo" placeholder="Título">
+                <input type="text" class="form-control" id="tituloJogo" aria-describedby="tituloJogo" placeholder="Título" required>
               </div>
               <div class="form-group">
                 <label for="desenvolvedoraLabel">Desenvolvedora</label>
-                <input type="text" class="form-control" id="diretor" aria-describedby="desenvolvedoraJogo" placeholder="Desenvolvedora">
+                <input type="text" class="form-control" id="desenvolvedora" aria-describedby="desenvolvedoraJogo" placeholder="Desenvolvedora" required>
               </div>
               <div class="form-group">
                 <label for="plataformaJogo">Plataforma</label>
@@ -257,7 +243,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-dark" action="cadastrarFilme()">Enviar</button>
+            <button type="button" class="btn btn-dark" onclick="cadastrarJogo()" data-dismiss="modal">Enviar</button>
           </div>
           </form>
         </div>
@@ -272,10 +258,11 @@
         <div class="center">
           <h1 class="">Jogos cadastrados</h1>
         </div>
-        <table class="table table-striped table-dark">
+        <table id="tableJogos" class="table table-striped table-dark">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">#</th> <!-- jquery -->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
               <th scope="col">Título</th>
               <th scope="col">Desenvolvedora</th>
               <th scope="col">Plataforma</th>
@@ -283,13 +270,7 @@
               <th scope="col">Apagar</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-            </tr>
+          <tbody id="bodyTableJogos">
           </tbody>
         </table>
       </div>
@@ -302,6 +283,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- Personal JS -->
   <script type="text/javascript" src="js/functions.js"></script>
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
 </html>
