@@ -21,6 +21,18 @@ public class Node<T extends Indexable> {
         return value;
     }
 
+    public void setLeft(Node<T> left) {
+        this.left = left;
+    }
+
+    public void setRight(Node<T> right) {
+        this.right = right;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
+
     public void insert(Node<T> node) {
         if (node.value.getKey() < this.value.getKey()) {
             if (this.left == null) {
@@ -55,5 +67,25 @@ public class Node<T extends Indexable> {
         }
 
         return null;
+    }
+
+    public int getBalanceFactor() {
+        int leftHeight = getLeft() == null ? 0 : 1 + getLeft().getHeight();
+        int rightHeight = getRight() == null ? 0 : 1 + getRight().getHeight();
+
+        return leftHeight - rightHeight;
+    }
+
+    private int getHeight() {
+        if (getLeft() == null && getRight() == null) {
+            return 0;
+        }
+        if (getLeft() == null) {
+            return 1 + getRight().getHeight();
+        }
+        if (getRight() == null) {
+            return 1 + getLeft().getHeight();
+        }
+        return Math.max(1 + getLeft().getHeight(), 1 + getRight().getHeight());
     }
 }
