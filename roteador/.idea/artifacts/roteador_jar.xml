@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="roteador:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/roteador_jar</output-path>
+    <root id="archive" name="roteador.jar">
+      <element id="module-output" name="roteador" />
+    </root>
+  </artifact>
+</component>
