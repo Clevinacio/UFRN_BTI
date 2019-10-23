@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="254b226b-44a4-4840-a54b-a831c80da505" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/arquivo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/convert.edz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/dicionario.edt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/dicionario.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/LICENSE-junit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/br/ufrn/imd/edb2/Compressor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/br/ufrn/imd/edb2/Compressor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/br/ufrn/imd/edb2/Extractor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/br/ufrn/imd/edb2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/br/ufrn/imd/edb2/MinHeap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/br/ufrn/imd/edb2/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/dicionario.edt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/extensions/ActiveTestSuite$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/extensions/ActiveTestSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/extensions/RepeatedTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/extensions/TestDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/extensions/TestSetup$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/extensions/TestSetup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/Assert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/AssertionFailedError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/ComparisonCompactor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/ComparisonFailure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/JUnit4TestAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/JUnit4TestAdapterCache$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/JUnit4TestAdapterCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/JUnit4TestCaseFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/Protectable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/TestCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/TestFailure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/TestListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/TestResult$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/TestResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/TestSuite$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/framework/TestSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/runner/BaseTestRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/runner/TestRunListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/runner/Version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/runner/logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/runner/smalllogo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/textui/ResultPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/junit/textui/TestRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/BaseDescription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/BaseMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Condition$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Condition$Matched.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Condition$NotMatched.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Condition$Step.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Condition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/CoreMatchers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/CustomMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/CustomTypeSafeMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Description$NullDescription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Description.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/DiagnosingMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Factory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/FeatureMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/Matcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/MatcherAssert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/SelfDescribing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/StringDescription.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/TypeSafeDiagnosingMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/TypeSafeMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/AllOf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/AnyOf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/CombinableMatcher$CombinableBothMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/CombinableMatcher$CombinableEitherMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/CombinableMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/DescribedAs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/Every.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/Is.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/IsAnything.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/IsCollectionContaining.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/IsEqual.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/IsInstanceOf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/IsNot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/IsNull.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/IsSame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/ShortcutCombination.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/StringContains.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/StringEndsWith.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/StringStartsWith.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/core/SubstringMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/internal/ArrayIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/internal/ReflectiveTypeFinder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/internal/SelfDescribingValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/hamcrest/internal/SelfDescribingValueIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/After.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/AfterClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/Assert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/Assume.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/AssumptionViolatedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/Before.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/BeforeClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/ClassRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/ComparisonFailure$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/ComparisonFailure$ComparisonCompactor$DiffExtractor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/ComparisonFailure$ComparisonCompactor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/ComparisonFailure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/FixMethodOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/Ignore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/Rule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/Test$None.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/ParallelComputer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/ParallelComputer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/Categories$CategoryFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/Categories$ExcludeCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/Categories$IncludeCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/Categories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/CategoryFilterFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/CategoryValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/ExcludeCategories$ExcludesAny.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/ExcludeCategories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/IncludeCategories$IncludesAny.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/categories/IncludeCategories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/CouldNotReadCoreException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/MaxCore$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/MaxCore$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/MaxCore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/MaxHistory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/MaxHistory$RememberingListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/MaxHistory$TestComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/max/MaxHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/results/FailureList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/results/PrintableResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/results/ResultMatchers$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/results/ResultMatchers$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/results/ResultMatchers$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/results/ResultMatchers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/runners/Enclosed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/DataPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/DataPoints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/FromDataPoints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/ParameterSignature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/ParameterSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/ParametersSuppliedBy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/PotentialAssignment$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/PotentialAssignment$CouldNotGenerateValueException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/PotentialAssignment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/Theories$TheoryAnchor$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/Theories$TheoryAnchor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/Theories$TheoryAnchor$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/Theories$TheoryAnchor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/Theories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/Theory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/AllMembersSupplier$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/AllMembersSupplier$MethodParameterValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/AllMembersSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/Assignments.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/BooleanSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/EnumSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/ParameterizedAssertionError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/internal/SpecificDataPointsSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/suppliers/TestedOn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/experimental/theories/suppliers/TestedOnSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/ArrayComparisonFailure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/AssumptionViolatedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/Classes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/ComparisonCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/ExactComparisonCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/InexactComparisonCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/JUnitSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/MethodSorter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/MethodSorter$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/MethodSorter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/RealSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/TextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/Throwables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/AllDefaultPossibilitiesBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/AnnotatedBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/IgnoredBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/IgnoredClassRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/JUnit3Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/JUnit4Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/NullBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/builders/SuiteMethodBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/matchers/StacktracePrintingMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/matchers/ThrowableCauseMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/matchers/ThrowableMessageMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/matchers/TypeSafeMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/requests/ClassRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/requests/FilterRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/requests/SortingRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/ClassRoadie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/ErrorReportingRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/FailedBefore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/InitializationError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/JUnit38ClassRunner$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/JUnit38ClassRunner$OldTestClassAdaptingListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/JUnit38ClassRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/JUnit4ClassRunner$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/JUnit4ClassRunner$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/JUnit4ClassRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/MethodRoadie$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/MethodRoadie$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/MethodRoadie$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/MethodRoadie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/MethodValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/SuiteMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/TestClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/TestMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/model/EachTestNotifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/model/MultipleFailureException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/model/ReflectiveCallable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$DeclaringClassMustBePublic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$FieldMustBeARule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$FieldMustBeATestRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBeNonStaticOrAlsoClassRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBePublic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$MemberMustBeStatic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$MethodMustBeARule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$MethodMustBeATestRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator$RuleValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/RuleMemberValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/rules/ValidationError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/ExpectException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/Fail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/FailOnTimeout$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/FailOnTimeout$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/FailOnTimeout$CallableStatement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/FailOnTimeout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/InvokeMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/RunAfters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/internal/runners/statements/RunBefores.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/matchers/JUnitMatchers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/DisableOnDebug.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/ErrorCollector$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/ErrorCollector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/ExpectedException$ExpectedExceptionStatement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/ExpectedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/ExpectedExceptionMatcherBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/ExternalResource$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/ExternalResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/MethodRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/RuleChain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/RunRules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Stopwatch$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Stopwatch$Clock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Stopwatch$InternalWatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Stopwatch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/TemporaryFolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/TestName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/TestRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/TestWatcher$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/TestWatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/TestWatchman$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/TestWatchman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Timeout$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Timeout$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Timeout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Verifier$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/rules/Verifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Computer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Computer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Describable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Description.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/FilterFactories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/FilterFactory$FilterNotCreatedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/FilterFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/FilterFactoryParams.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/JUnitCommandLineParseResult$CommandLineParserError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/JUnitCommandLineParseResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/JUnitCore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Request$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Result$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Result$Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Result$SerializedForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/RunWith.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/Runner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Filter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Filter$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Filter$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Filterable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/NoTestsRemainException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Sortable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Sorter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/manipulation/Sorter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/Failure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunListener$ThreadSafe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier$SafeNotifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/RunNotifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/StoppedByUserException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runner/notification/SynchronizedRunListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/AllTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/BlockJUnit4ClassRunner$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/BlockJUnit4ClassRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/JUnit4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/MethodSorters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/Parameterized$Parameter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/Parameterized$Parameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/Parameterized$UseParametersRunnerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/Parameterized.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/ParentRunner$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/ParentRunner$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/ParentRunner$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/ParentRunner$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/ParentRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/Suite$SuiteClasses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/Suite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/Annotatable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/FrameworkField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/FrameworkMember.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/FrameworkMethod$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/FrameworkMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/InitializationError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/MultipleFailureException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/NoGenericTypeParametersValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/RunnerBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/RunnerScheduler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/Statement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/TestClass$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/TestClass$FieldComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/TestClass$MethodComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/TestClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/model/TestTimedOutException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/parameterized/BlockJUnit4ClassRunnerWithParametersFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/parameterized/ParametersRunnerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/runners/parameterized/TestWithParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationValidatorFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationsValidator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationsValidator$AnnotatableValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationsValidator$ClassValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationsValidator$FieldValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationsValidator$MethodValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/AnnotationsValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/PublicClassValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/TestClassValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/out/artifacts/exec/Projeto_Av2_EDB/org/junit/validator/ValidateWith.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/symbolTable.edt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/Projeto_Av2_EDB/teste9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/projeto_com_dicionario/dicionario.edz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/Projeto_Av2_EDB.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/arquivo1.edt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/arquivo1.edz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/arquivo10.edt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/arquivo10.edz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/arquivo9.edt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/arquivo9.edz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/dicionario.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/saida1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/saida10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/saida9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Av_2/saida/teste9.txt" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SVwTPo1uKi7PO9diLxeqBdWcUk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Aula_AVL" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="254b226b-44a4-4840-a54b-a831c80da505" name="Default Changelist" comment="" />
+      <created>1571662077684</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571662077684</updated>
+      <workItem from="1571662084064" duration="32000" />
+      <workItem from="1571662153031" duration="276000" />
+      <workItem from="1571662620602" duration="914000" />
+      <workItem from="1571783073387" duration="191000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
