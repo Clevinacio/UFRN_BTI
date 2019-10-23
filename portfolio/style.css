@@ -1,0 +1,279 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header{
+  position: relative;
+  background: url(img/header-background.jpg) no-repeat fixed;
+  background-;
+  height: 750px;
+}
+
+.color{
+  background-color: rgba(61, 61, 61, 0.65);
+  height: 750px;
+}
+
+#main-header{
+  display: block;
+}
+
+.nav-header{
+  background-color: rgba(61, 61, 61, 0.65);
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  clear: both;
+  position: fixed;
+}
+
+.container{
+    clear: both;
+    display: table;
+    width: 1100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo{
+  position: absolute;
+  float: left;
+  display: table;
+}
+
+.logo a{
+  color: white;
+  display: table;
+  margin-left: -15px;
+  margin-top: 15px;
+  outline: none;
+  font-size: 35px;
+  font-family: 'Righteous', cursive;
+  text-decoration: none;
+  line-height: 5px;
+}
+
+.menu-header{
+  clear: both;
+  display: table;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  max-height: 400px;
+}
+
+.menu-header ul{
+  clear: both;
+  padding: 0;
+  margin: 0;
+  display: table;
+  list-style: none;
+}
+
+.menu-header ul li{
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.menu-header ul li a{
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  outline: none;
+  padding: 10px 15px;
+  line-height: 20px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.banner{
+  border-right: 5px solid rgb(123, 24, 24);
+  border-left: 5px solid rgb(123, 24, 24);
+  padding: 15px 40px;
+  text-align: center;
+  color: white;
+  margin-top: 250px;
+  position: relative;
+}
+
+.banner h2{
+  font-family: 'Righteous', cursive;
+  font-size: 80px;
+  margin: 0;
+}
+
+.banner p{
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.banner span{
+  color: rgb(123, 24, 24);
+  font-family: 'Righteous', cursive;
+}
+
+.banner a i{
+  font-size: 40px;
+  color: rgb(123, 24, 24);
+  padding: 0 10px;
+}
+
+#about{
+  background-color: #f7f7f7;
+}
+
+.centralized-div{
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 40px 0 ;
+}
+
+.main-about{
+  clear: both;
+  display: table;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.main-about h2{
+  font-family: 'Righteous', cursive;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 100;
+  border-bottom: 2px solid rgb(166, 31, 31);
+}
+
+
+.row{
+  width: 100%;
+  width: 1110px;
+  display: flex;
+  padding: 10px;
+}
+
+.text-about{
+  float: left;
+  padding: 10px;
+  text-align: justify;
+}
+
+.text-about p{
+  color: #4f4f4f;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.image{
+
+  padding: 0 10px;
+}
+
+.image img{
+    border-radius: 5px;
+    width: 300px;
+}
+
+.items{
+  position: relative;
+}
+
+.items span{
+  position: relative;
+  font-size: 25px;
+  width: 160px;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(210, 0, 1);
+  margin: 0;
+  padding: 0;
+  left: 35px;
+  top: 15px;
+}
+
+.seta{
+  position: relative;
+  width: 200px;
+  right: 30px;
+}
+
+#interests{
+  background-color: #f7f7f7;
+}
+
+.text-exp{
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.text-exp p{
+  color: #4f4f4f;
+  margin: 30px 0;
+}
+
+.text-exp a i{
+  color: rgb(166, 31, 31);
+  font-size: 40px;
+}
+
+.box-interests{
+  width: auto;
+  display: flex;
+  position: relative;
+  padding-left: 100px;
+}
+
+.text-interests{
+  width: 30%;
+  margin-right: 50px;
+}
+
+.text-interests i{
+  color: rgb(166, 31, 31);
+  font-size: 40px;
+}
+
+.text-interests h5{
+  margin: 2px 0;
+}
+
+.text-interests p{
+  color: #4f4f4f;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.footer{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer p{
+  font-size: 20px;
+}
+
+.footer span{
+  font-family: 'Righteous', cursive;
+  color: rgb(166, 31, 31);
+}
+
+.footer-text{
+  text-align: center;
+  width: 100%;
+  padding: 0 15px;
+}

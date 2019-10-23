@@ -9,7 +9,8 @@
 
   <!-- Personal Style  -->
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -58,9 +59,16 @@
           <h1 class="">Bem vindo à Biblioteca!</h1>
           <h2>Escolha uma opção abaixo</h2>
           <div class="button-group">
-            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroLivro">Cadastrar livro</button>
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalCadastroFilme">Cadastrar Filme</button>
-            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroJogo">Cadastrar jogo</button><br>
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroLivro">
+              Cadastrar livro
+            </button>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalCadastroFilme">
+              Cadastrar Filme
+            </button>
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalCadastroJogo">
+              Cadastrar jogo
+            </button>
+            <br>
           </div>
 
         </div>
@@ -100,12 +108,13 @@
                   <option>Não lido</option>
                 </select>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" onclick="cadastrarLivro()" data-dismiss="modal">Enviar
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-dark" onclick="cadastrarLivro()" data-dismiss="modal">Enviar</button>
-          </div>
-          </form>
         </div>
       </div>
     </div>
@@ -142,7 +151,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="cadastroFilme">Cadastro de filme</h5>
+            <h5 class="modal-title" id="cadastroFilmeHead">Cadastro de filme</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -168,12 +177,14 @@
                   <option>Não assistido</option>
                 </select>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" onclick="cadastrarFilme()" data-dismiss="modal">
+                  Enviar
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-dark" onclick="cadastrarFilme()" data-dismiss="modal">Enviar</button>
-          </div>
-          </form>
         </div>
       </div>
     </div>
@@ -208,9 +219,9 @@
   <section id="cadastroJogo">
     <div class="modal fade" id="modalCadastroJogo" tabindex="-1" role="dialog" aria-labelledby="cadastroJogoModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content" <div class="modal-content">>
+        <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="cadastroJogo">Cadastro de Jogo</h5>
+            <h5 class="modal-title" id="cadastroJogoHead">Cadastro de Jogo</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -226,7 +237,7 @@
                 <input type="text" class="form-control" id="desenvolvedora" aria-describedby="desenvolvedoraJogo" placeholder="Desenvolvedora" required>
               </div>
               <div class="form-group">
-                <label for="plataformaJogo">Plataforma</label>
+                <label for="plataformaJogoLabel">Plataforma</label>
                 <select class="form-control" id="plataforma">
                   <option>PC</option>
                   <option>Mobile</option>
@@ -240,12 +251,13 @@
                   <option>Não finalizado</option>
                 </select>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark" onclick="cadastrarJogo()" data-dismiss="modal">Enviar
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-dark" onclick="cadastrarJogo()" data-dismiss="modal">Enviar</button>
-          </div>
-          </form>
         </div>
       </div>
     </div>
@@ -283,8 +295,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- Personal JS -->
   <script type="text/javascript" src="js/functions.js"></script>
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
 </html>
