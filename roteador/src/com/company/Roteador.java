@@ -25,12 +25,8 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
 
     //Buffers - Atributo
 
-    public Pacote roteamento(Pacote Pacote) {
-        return Pacote;
+    public Porta roteamento(Pacote Pacote) {
+        return null;
     }
 
-    /* QUANDO O PACOTE CHEGA NO ROTEADOR DESTINO1:
-     Quando os pacotes chegarem no seu respectivo destino, devem sair pela porta correspondente e ter o conteúdo
-     de cada pacote que chega gravado em um arquivo com o nome ip.txt, onde ip é o número IP do roteador corresponde.
-     */
 }
