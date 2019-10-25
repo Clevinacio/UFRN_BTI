@@ -11,7 +11,6 @@ public class Main {
         f1.inicializar(roteadores);
         f1.atribuirIps(roteadores);
         f1.atribuirCoordenadas(roteadores);
-        System.out.println();
 
 
     }
