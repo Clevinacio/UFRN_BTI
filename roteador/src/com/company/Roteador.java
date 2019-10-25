@@ -1,6 +1,7 @@
 package com.company;
 
 public class Roteador extends DispositivoDeRede implements Roteamento {
+    public String getLocal; // Aqui é a posiçao do roteador para que seja registrado no pacote por onde ele passou.
     Porta portas[] = new Porta[5];
     int colX, colY;
 
