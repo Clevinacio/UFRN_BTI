@@ -78,10 +78,16 @@ public class FuncoesAuxiliares {
         }
     }
 
+    /**
+     * Nessa função, as portas estão buscando referência do seu roteador. Nos 'ifs' será sempre mostrado '-1' para ilustrar
+     * o caminho feito na matriz para fazer as referências, pois matrizes, na matemática iniciam do âmbito 1x1, mas no caso
+     * de nossa matriz,por causa do 'for', eles iniciam no 0x0.
+     * @param roteadores
+     */
     public void setarPortas(Roteador[][] roteadores) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (roteadores[i][j].getX() == 1 && roteadores[i][j].getY() == 1) {
+                if (roteadores[i][j].getX() == 1 -1 && roteadores[i][j].getY() == 1-1) {
 
                     roteadores[i][j].getDireita().setReferencia(roteadores[i][j + 1]); //1,1 -> 1,2
                     roteadores[i][j].getBaixo().setReferencia(roteadores[i + 1][j]);   //1,1 -> 2,1
@@ -90,7 +96,7 @@ public class FuncoesAuxiliares {
                     roteadores[i + 1][j].getEsquerda().setReferencia(roteadores[i][j]);//2,1 -> 1,1
 
                 }
-                if (roteadores[i][j].getX() == 1 && roteadores[i][j].getY() == 2) {
+                if (roteadores[i][j].getX() == 1-1 && roteadores[i][j].getY() == 2-1) {
 
                     roteadores[i][j].getDireita().setReferencia(roteadores[i][j + 1]); //1,2 -> 1,3
                     roteadores[i][j].getBaixo().setReferencia(roteadores[i + 1][j]); //1,2 -> 2,2
@@ -99,13 +105,13 @@ public class FuncoesAuxiliares {
                     roteadores[i + 1][j].getCima().setReferencia(roteadores[i][j]); //2,2 -> 1,2
 
                 }
-                if (roteadores[i][j].getX() == 1 && roteadores[i][j].getY() == 3) {
+                if (roteadores[i][j].getX() == 1-1 && roteadores[i][j].getY() == 3-1) {
 
                     roteadores[i][j].getBaixo().setReferencia(roteadores[1 + i][j]); //1,3 -> 2,3
                     roteadores[1 + i][j].getCima().setReferencia(roteadores[i][j]); //2,3 -> 1,3
 
                 }
-                if (roteadores[i][j].getX() == 2 && roteadores[i][j].getY() == 1) {
+                if (roteadores[i][j].getX() == 2-1 && roteadores[i][j].getY() == 1-1) {
 
                     roteadores[i][j].getDireita().setReferencia(roteadores[i][j + 1]); //2,1 -> 2,2
                     roteadores[i][j].getBaixo().setReferencia(roteadores[i + 1][j]);   //2,1 -> 3,1
@@ -114,7 +120,7 @@ public class FuncoesAuxiliares {
                     roteadores[i + 1][j].getCima().setReferencia(roteadores[i][j]); //3,1 -> 2,1
 
                 }
-                if (roteadores[i][j].getX() == 2 && roteadores[i][j].getY() == 3) {
+                if (roteadores[i][j].getX() == 2-1 && roteadores[i][j].getY() == 3-1) {
 
                     roteadores[i][j].getEsquerda().setReferencia(roteadores[i][j - 1]); //2,3 -> 2,2
                     roteadores[i][j].getBaixo().setReferencia(roteadores[i + 1][j]);   //2,3 -> 3,3
@@ -123,13 +129,13 @@ public class FuncoesAuxiliares {
                     roteadores[i + 1][j].getCima().setReferencia(roteadores[i][j]); //3,1 -> 2,1
 
                 }
-                if (roteadores[i][j].getX() == 3 && roteadores[i][j].getY() == 1) {
+                if (roteadores[i][j].getX() == 3-1 && roteadores[i][j].getY() == 1-1) {
 
                     roteadores[i][j].getDireita().setReferencia(roteadores[i][j + 1]); //3,1 -> 3,2
                     roteadores[i][j + 1].getEsquerda().setReferencia(roteadores[i][j]); //3,2 -> 3,1
 
                 }
-                if (roteadores[i][j].getX() == 3 && roteadores[i][j].getY() == 2) {
+                if (roteadores[i][j].getX() == 3-1 && roteadores[i][j].getY() == 2-1) {
 
                     roteadores[i][j].getDireita().setReferencia(roteadores[i][j + 1]); //3,2 -> 3,3
                     roteadores[i][j].getCima().setReferencia(roteadores[i - 1][j]); //3,2 -> 2,2
@@ -140,5 +146,6 @@ public class FuncoesAuxiliares {
                 }
             }
         }
+        System.out.println("Portas Setadas com sucesso");
     }
 }

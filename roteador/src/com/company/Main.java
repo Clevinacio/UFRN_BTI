@@ -11,7 +11,7 @@ public class Main {
         f1.inicializar(roteadores);
         f1.atribuirIps(roteadores);
         f1.atribuirCoordenadas(roteadores);
-        /*f1.setarPortas(roteadores);*/ //Dando ERRO
+        f1.setarPortas(roteadores); //Dando ERRO
 
         f1.atribuirPacotes(roteadores);
     }
