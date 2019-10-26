@@ -26,7 +26,7 @@ public class Pacote {
      * @param roteador
      */
     public void registrarPath(Roteador roteador){
-        String tmp = roteador.getLocal;
+        String tmp = roteador.getLocal();
         String tmp2 = this.caminho;
         this.caminho = tmp2 +","+ tmp;
     }
