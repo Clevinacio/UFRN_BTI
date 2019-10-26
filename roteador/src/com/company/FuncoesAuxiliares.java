@@ -54,7 +54,6 @@ public class FuncoesAuxiliares {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 roteadores[i][j].setEnderecoIp(reader.readLine());
-                System.out.println(roteadores[i][j].getEnderecoIp());
             }
         }
     }
@@ -73,7 +72,6 @@ public class FuncoesAuxiliares {
             for (int j = 0; j < 3; j++) {
                 roteadores[i][j].setX(i);
                 roteadores[i][j].setY(j);
-                System.out.println(roteadores[i][j].getX() + "," + roteadores[i][j].getY());
             }
         }
     }

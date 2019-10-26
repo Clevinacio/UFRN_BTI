@@ -1,5 +1,8 @@
 package com.company;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -43,6 +46,15 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
     public void incluirPacote(Pacote pacote) {
         rede.setBufferEntrada(pacote);
         adicionarPacote(pacote);
+    }
+
+    public void escrevePacote(Pacote pacotinho) throws IOException {
+        String ip = pacotinho.getDestino().getEnderecoIp()+".txt";
+        BufferedWriter destino = new BufferedWriter(new FileWriter(ip, true));
+        String mensagem = pacotinho.getDados();
+        destino.write(mensagem);
+        destino.newLine();
+        destino.close();
     }
 
     public String getLocal() {
