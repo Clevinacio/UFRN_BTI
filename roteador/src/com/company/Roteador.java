@@ -6,7 +6,6 @@ import java.util.Queue;
 public class Roteador extends DispositivoDeRede implements Roteamento {
     private String local; // Aqui é a posiçao do roteador para que seja registrado no pacote por onde ele passou.
 
-
     //As portas laterais recebem e jogam tudo para a entrada (buffer de pacotes)
     private Porta cima;
     private Porta baixo;
@@ -17,12 +16,21 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
     /*
       Haverão 4 portas para comunicação entre eles mesmos + 1 porta rede (quando chegar no roteador destino
       é por essa porta que esses pacotes deverão passar)*/
+    private Porta rede;
 
+    public Roteador(String enderecoIP) {
+        this.setEnderecoIp(enderecoIP);
+    }
+
+    public Roteador(){}
 
     public Porta roteamento(Pacote Pacote) {
         return null;
     }
 
+    public void adicionarPacote(Pacote pacote) {
+        entrada.add(pacote);
+    }
 
     public String getLocal() {
         return local;

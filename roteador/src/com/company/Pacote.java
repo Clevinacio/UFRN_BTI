@@ -5,6 +5,11 @@ public class Pacote {
     private Roteador destino;
     private String caminho; // Registro da tragetória feita pelo pacote até chegar no seu destino.
 
+    public Pacote(String dados, Roteador destino) {
+        this.dados = dados;
+        this.destino = destino;
+    }
+
     public String getDados() {
         return dados;
     }

@@ -12,6 +12,7 @@ public class Main {
         f1.atribuirIps(roteadores);
         f1.atribuirCoordenadas(roteadores);
 
+        f1.atribuirPacotes(roteadores);
 
     }
 }
