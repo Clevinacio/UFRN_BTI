@@ -29,7 +29,7 @@ public class FuncoesAuxiliares {
 
             /*Adiciona pacote a fila do roteador de origem*/
             for (int i = 0; i < Integer.parseInt(arrayLinha[2]); i++) {
-                roteadorOrigem.adicionarPacote(pacote);
+                roteadorOrigem.incluirPacote(pacote);
             }
 
         }

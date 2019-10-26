@@ -20,16 +20,29 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
 
     public Roteador(String enderecoIP) {
         this.setEnderecoIp(enderecoIP);
+        cima = new Porta();
+        baixo = new Porta();
+        direita = new Porta();
+        esquerda = new Porta();
+        rede = new Porta();
     }
 
-    public Roteador(){}
+    public Roteador(){
+        cima = new Porta();
+        baixo = new Porta();
+        direita = new Porta();
+        esquerda = new Porta();
+        rede = new Porta();
+    }
 
     public Porta roteamento(Pacote Pacote) {
         return null;
     }
 
-    public void adicionarPacote(Pacote pacote) {
-        entrada.add(pacote);
+    /*Utilizado apenas quando o roteador é a origem*/
+    public void incluirPacote(Pacote pacote) {
+        rede.setBufferEntrada(pacote);
+        adicionarPacote(pacote);
     }
 
     public String getLocal() {
@@ -88,4 +101,7 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
         this.y = y;
     }
 
+    public void adicionarPacote(Pacote pacote) {
+        entrada.add(pacote);
+    }
 }
