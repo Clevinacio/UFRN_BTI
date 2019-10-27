@@ -146,4 +146,40 @@ public class FuncoesAuxiliares {
         }
         System.out.println("Portas Setadas com sucesso");
     }
+
+    public void rotear(Roteador[][] roteadores) {
+        int cont = 9;
+
+        while (cont != 0) {
+            cont = 9;
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    Roteador current = roteadores[i][j];
+                    if (current.getEntrada().size() > 0) {
+                        while (current.getEntrada().peek() != null) {
+                            Pacote pct = current.getEntrada().poll();
+                            if (pct.getDestino().getEnderecoIp().equals(current.getEnderecoIp())) {
+                                try {
+                                    current.escrevePacote(pct);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                if (pct == null) {
+                                    return;
+                                }
+                                Porta destino = current.roteamento(pct);
+                                destino.getReferencia().adicionarPacote(pct);
+                            }
+                        }
+
+                    }else {
+                        System.out.println("Nenhum pacote a ser enviado no roteador "+current.getEnderecoIp());
+                        cont--;
+                    }
+                }
+            }
+        }
+
+    }
 }

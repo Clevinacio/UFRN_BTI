@@ -38,7 +38,24 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
         rede = new Porta();
     }
 
-    public Porta roteamento(Pacote Pacote) {
+    public Porta roteamento(Pacote pacote) {
+        String destino = pacote.getDestino().getEnderecoIp();
+        char digitoOrigem = this.getEnderecoIp().charAt(this.getEnderecoIp().length() - 1);
+        char digitoDestino = destino.charAt(destino.length() - 1);
+
+        if (digitoDestino > digitoOrigem) {
+            if (this.getDireita().getReferencia() == null) {
+                return this.getBaixo();
+            }
+            return this.getDireita();
+        }
+
+        if (digitoDestino < digitoOrigem) {
+            if (this.getEsquerda().getReferencia() == null) {
+                return this.getCima();
+            }
+            return this.getEsquerda();
+        }
         return null;
     }
 
@@ -48,10 +65,10 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
         adicionarPacote(pacote);
     }
 
-    public void escrevePacote(Pacote pacotinho) throws IOException {
-        String ip = pacotinho.getDestino().getEnderecoIp()+".txt";
+    public void escrevePacote(Pacote pacote) throws IOException {
+        String ip = pacote.getDestino().getEnderecoIp()+".txt";
         BufferedWriter destino = new BufferedWriter(new FileWriter(ip, true));
-        String mensagem = pacotinho.getDados();
+        String mensagem = pacote.getDados();
         destino.write(mensagem);
         destino.newLine();
         destino.close();
@@ -113,7 +130,12 @@ public class Roteador extends DispositivoDeRede implements Roteamento {
         this.y = y;
     }
 
+    public Queue<Pacote> getEntrada() {
+        return entrada;
+    }
+
     public void adicionarPacote(Pacote pacote) {
         entrada.add(pacote);
     }
+
 }
