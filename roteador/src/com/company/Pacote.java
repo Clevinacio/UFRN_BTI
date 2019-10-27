@@ -26,13 +26,4 @@ public class Pacote {
         this.destino = destino;
     }
 
-    /**
-     * Essa função será acionada sempre que um pacote chegar a um roteador com o fito de registrar por quais roteadores ela já passou.
-     * @param roteador
-     */
-    public void registrarPath(Roteador roteador){
-        String tmp = roteador.getLocal();
-        String tmp2 = this.caminho;
-        this.caminho = tmp2 +","+ tmp;
-    }
 }
