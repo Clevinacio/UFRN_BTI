@@ -7,7 +7,7 @@ O que foi feito:
 Roteamento), além dos gets e sets dos atributos que foram necessários;
 - Classe Pacote com os métodos setDados e getDados;
 - Classe Porta com os atributos BufferSaida e BufferEntrada e seus 
-respectivos gets e sets;
+respectivos gets e sets,atributo Referência e seus respectivos gets e sets;
 - Interface roteamento com método roteamento;
 - Definição das 5 portas em cada roteador (portas definidas como atributos
 da classe Roteador);
@@ -25,6 +25,7 @@ O que faria de forma diferente:
 entrega de pacote a um, salvar esse caminho e utiliza-lo sempre para
 diminuir o tempo de execução, tendo sempre que verificar o mesmo caminho
 várias vezes.
+
 
 Como compilar:
 executar arquivo .jar que está dentro do anexo no terminal com o comando
@@ -44,4 +45,5 @@ método de atribuicao dos pacotes aos respectivos roteadores de origem
 
 Raul Santos:
 Criação do projeto e escrita de classes definidas no documento;
+Método setarPortas().
 
