@@ -144,7 +144,6 @@ public class FuncoesAuxiliares {
                 }
             }
         }
-        System.out.println("Portas Setadas com sucesso");
     }
 
     public void rotear(Roteador[][] roteadores) {
@@ -174,7 +173,6 @@ public class FuncoesAuxiliares {
                         }
 
                     }else {
-                        System.out.println("Nenhum pacote a ser enviado no roteador "+current.getEnderecoIp());
                         cont--;
                     }
                 }

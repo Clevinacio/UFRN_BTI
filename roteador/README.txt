@@ -40,6 +40,7 @@ Hilton Carvalho:
 método escrevePacote.
 
 Jordevá Lucas:
+método de atribuicao dos pacotes aos respectivos roteadores de origem
 
 Raul Santos:
 Criação do projeto e escrita de classes definidas no documento;
