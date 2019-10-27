@@ -33,6 +33,7 @@ java -jar roteador.jar
 Autores e tarefas realizadas:
 Cleverton Inácio:
 Métodos atribuirIP, inicializar e atribuirCoordenadas.
+Métodos roteamento e rotear.
 Criação de .jar para execução do projeto.
 
 Hilton Carvalho:
