@@ -46,7 +46,7 @@ public class Main {
                 System.out.println("Resposta de Chat Action Enviada?" + baseResponse.isOk());
 
                 //envio da mensagem de resposta
-                sendResponse = bot.execute(new SendMessage(update.message().chat().id(), "Não entendi..."));
+                sendResponse = bot.execute(new SendMessage(update.message().chat().id(), "Você enviou "+update.message().text()));
                 //verificação de mensagem enviada com sucesso
                 System.out.println("Mensagem Enviada?" + sendResponse.isOk());
             }
