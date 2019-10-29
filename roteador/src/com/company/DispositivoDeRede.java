@@ -1,6 +1,6 @@
 package com.company;
 
-public  abstract class DispositivoDeRede {
+public abstract class DispositivoDeRede {
     private String enderecoIp;
     private String enderecoMac;
 
