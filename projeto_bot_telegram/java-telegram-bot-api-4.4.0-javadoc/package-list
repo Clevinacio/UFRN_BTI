@@ -1,0 +1,9 @@
+com.pengrad.telegrambot
+com.pengrad.telegrambot.impl
+com.pengrad.telegrambot.login
+com.pengrad.telegrambot.model
+com.pengrad.telegrambot.model.request
+com.pengrad.telegrambot.passport
+com.pengrad.telegrambot.passport.decrypt
+com.pengrad.telegrambot.request
+com.pengrad.telegrambot.response

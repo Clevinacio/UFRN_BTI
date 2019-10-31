@@ -15,8 +15,10 @@ public class Main {
 
         //objeto responsável por receber as mensagens
         GetUpdatesResponse updatesResponse;
+
         //objeto responsável por gerenciar o envio de respostas
         SendResponse sendResponse;
+        
         //objeto responsável por gerenciar o envio de ações do chat
         BaseResponse baseResponse;
 
