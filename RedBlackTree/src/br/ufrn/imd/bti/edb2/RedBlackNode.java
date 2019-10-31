@@ -5,7 +5,7 @@ public class RedBlackNode<T extends Comparable<T>> {
     private RedBlackNode<T> parent = null;
     private RedBlackNode<T> left = null;
     private RedBlackNode<T> rigt = null;
-    private  NodeColor color;
+    private NodeColor color;
 
     public RedBlackNode(T value) {
         this.value = value;
@@ -44,7 +44,7 @@ public class RedBlackNode<T extends Comparable<T>> {
         this.rigt = rigt;
     }
 
-    public NodeColor getColor() {
+    public br.ufrn.imd.bti.edb2.NodeColor getColor() {
         return color;
     }
 

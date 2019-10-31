@@ -1,4 +1,4 @@
-package ufrn.imd.bti.edb2;
+package br.ufrn.imd.bti.edb2;
 
 public class Main {
 
