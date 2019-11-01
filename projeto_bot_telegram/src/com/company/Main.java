@@ -18,7 +18,7 @@ public class Main {
 
         //objeto responsável por gerenciar o envio de respostas
         SendResponse sendResponse;
-        
+
         //objeto responsável por gerenciar o envio de ações do chat
         BaseResponse baseResponse;
 
