@@ -22,6 +22,9 @@ public class Main {
         //objeto responsável por gerenciar o envio de ações do chat
         BaseResponse baseResponse;
 
+        CommandController commandCurrent = null;
+        String mensagem = "";
+
         //controle de off-set, isto é, a partir deste ID será lido as mensagens pendentes na fila
         int m=0;
 
@@ -47,10 +50,26 @@ public class Main {
                 //verificação de ação de chat foi enviada com sucesso
                 System.out.println("Resposta de Chat Action Enviada?" + baseResponse.isOk());
 
+                if(commandCurrent == null) {
+                    if(update.message().text().equals("/addlocal")){
+                        commandCurrent = new CadastroLocalizacaoController();
+                        mensagem = commandCurrent.conversar(update.message().text());
+                    }
+                }else{
+                    if(update.message().text().equals("/cancelar")){
+                        mensagem = "Operacao cancelada";
+                        commandCurrent = null;
+                    }else{
+                        mensagem = commandCurrent.conversar(update.message().text());
+                    }
+                }
+
                 //envio da mensagem de resposta
-                sendResponse = bot.execute(new SendMessage(update.message().chat().id(), "Você enviou "+update.message().text()));
+                sendResponse = bot.execute(new SendMessage(update.message().chat().id(), mensagem));
                 //verificação de mensagem enviada com sucesso
                 System.out.println("Mensagem Enviada?" + sendResponse.isOk());
+
+                mensagem = "";
             }
         }
     }
