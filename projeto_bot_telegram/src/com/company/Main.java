@@ -50,17 +50,19 @@ public class Main {
                 //verificação de ação de chat foi enviada com sucesso
                 System.out.println("Resposta de Chat Action Enviada?" + baseResponse.isOk());
 
-                if(commandCurrent == null) {
-                    if(update.message().text().equals("/addlocal")){
-                        commandCurrent = new CadastroLocalizacaoController();
-                        mensagem = commandCurrent.conversar(update.message().text());
+
+                if(commandCurrent == null) {                                            /*Verifica se existe algum comendo em andamendo*/
+                    if(update.message().text().equals("/addlocal")){                    /*Verifica se a mensagem que o usuario forneceu é de cadastro de localizacao*/
+                        commandCurrent = new CadastroLocalizacaoController();           /*O cadastro em andamendo torna-se o de cadastro de localizacao*/
+                        mensagem = commandCurrent.conversar(update.message().text());   /*Inicia a troca de mensagens*/
                     }
                 }else{
-                    if(update.message().text().equals("/cancelar")){
+                    if(update.message().text().equals("/cancelar")){                    /*Verifica se o usuario solicitou cancelamento da operacao em andamento*/
                         mensagem = "Operacao cancelada";
                         commandCurrent = null;
                     }else{
-                        mensagem = commandCurrent.conversar(update.message().text());
+                        mensagem = commandCurrent.conversar(update.message().text());   /*A mensagem que o usuario enviou é tratada pelo
+                                                                                        controlador da tarefa em andamento*/
                     }
                 }
 
