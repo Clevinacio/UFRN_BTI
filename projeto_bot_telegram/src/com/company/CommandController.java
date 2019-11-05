@@ -3,9 +3,11 @@ package com.company;
 public abstract class CommandController {
     private final String comando;
     private int etapaAtual;
+    private int totalEtapas;
 
-    public CommandController(String comando) {
+    public CommandController(String comando, int totalEtapas) {
         this.comando = comando;
+        this.totalEtapas = totalEtapas;
         etapaAtual = 1;
     }
 
@@ -24,4 +26,10 @@ public abstract class CommandController {
     }
 
     protected abstract String confirmarOperacao();
+
+    protected abstract void reset();
+
+    public int getTotalEtapas() {
+        return totalEtapas;
+    }
 }

@@ -5,7 +5,7 @@ public class CadastroLocalizacaoController extends CommandController {
     Localizacao localizacao;                             /*Objeto que o controlador trata*/
 
     public CadastroLocalizacaoController() {
-        super("/addlocal");                     /*Determina o comando do controlador*/
+        super("/addlocal", 6);                     /*Determina o comando do controlador e quantas etapas possui*/
         localizacao = new Localizacao();
     }
 
@@ -62,5 +62,9 @@ public class CadastroLocalizacaoController extends CommandController {
         return texto;
     }
 
-
+    @Override
+    protected void reset() {                        /*Limpa todos os dados do controlador*/
+        localizacao = new Localizacao();
+        setEtapaAtual(1);
+    }
 }
