@@ -42,7 +42,7 @@ public class CadastroLocalizacaoController extends CommandController {
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 6:
-                if(mensagemRecebida.equals("s")){               /*Verifica se o usuario aprovou a insercao de dados=*/
+                if(mensagemRecebida.toLowerCase().equals("s")){               /*Verifica se o usuario aprovou a insercao de dados=*/
 
                     /*Salva informacoes no arquivo*/
                     BufferedWriter arq = new BufferedWriter(new FileWriter("localicazao.txt", true));
@@ -52,7 +52,7 @@ public class CadastroLocalizacaoController extends CommandController {
 
                     texto = "Fim do processo";
                     setEtapaAtual(getEtapaAtual() + 1);
-                }else if(mensagemRecebida.equals("n")){
+                }else if(mensagemRecebida.toLowerCase().equals("n")){
                     texto = "Processo cancelado";
                     setEtapaAtual(getEtapaAtual() + 1);
                 }else {

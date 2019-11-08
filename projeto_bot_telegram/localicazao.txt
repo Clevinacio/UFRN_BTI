@@ -4,3 +4,6 @@ Laboratório
 B115
 Sala de aula
 **********
+A107
+Laboratório
+**********
