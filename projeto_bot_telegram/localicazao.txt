@@ -7,3 +7,6 @@ Sala de aula
 A107
 Laboratório
 **********
+B312
+Auditório
+**********

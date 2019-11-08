@@ -7,6 +7,7 @@ import com.pengrad.telegrambot.request.*;
 import com.pengrad.telegrambot.response.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -25,11 +26,10 @@ public class Main {
 
         String mensagem = "";
         CommandController commandCurrent = null;                            /*Comando em andamento inicia como nulo*/
-        CommandController[] commands = new CommandController[16];           /*Array de controladores*/
+        List<CommandController> commands = new ArrayList<CommandController>();           /*Array de controladores*/
 
         /*Todos os controladores implementados devem ser adicionados no array*/
-        commands[0] = new CadastroLocalizacaoController();
-
+        commands.add(new CadastroLocalizacaoController());
 
         //loop infinito pode ser alterado por algum timer de intervalo curto
         while (true){
@@ -52,30 +52,35 @@ public class Main {
                 /* --- INICIO TRATAMENTO DE MENSAGENS --- */
 
                 if(commandCurrent == null) {                                            /*Verifica se existe algum comendo em andamendo*/
-                    int cont = 0;
-                    while (cont < commands.length) {                                        /*Verifica cada um dos controladores*/
-                        if(commands[cont] != null && commands[cont].getComando().equals(update.message().text())){
-                            commandCurrent = commands[cont];                               /*O commando em andamendo torna-se o que o usuario solicitou*/
-                            mensagem = commandCurrent.conversar(update.message().text());   /*Inicia a troca de mensagens*/
+                    for (CommandController controlador: commands) {                     /*Verifica cada um dos controladores*/
+                        if(controlador.getComando().equals(update.message().text())){
+                            commandCurrent = controlador;                               /*O commando em andamendo torna-se o que o usuario solicitou*/
                             break;
                         }
-                        cont++;
                     }
-                    if(commandCurrent == null) {                                        /*Se o comando atual continuar nulo, o comando solicitado nao existe*/
-                        mensagem = "comando invalido";
+
+                    if(commandCurrent != null){
+                        mensagem = commandCurrent.conversar(update.message().text());   /*Inicia a troca de mensagens*/
+                    }else{
+                        mensagem = "Desculpa, ainda não entendo esse comando..";
                     }
                 }else{
                     if(update.message().text().equals("/cancelar")){                    /*Verifica se o usuario solicitou cancelamento da operacao em andamento*/
-                        mensagem = "Operacao cancelada";
+                        mensagem = "Tudo bem! Operacao cancelada.";
                         commandCurrent.reset();
                         commandCurrent = null;
                     }else{
-                        mensagem = commandCurrent.conversar(update.message().text());   /*A mensagem que o usuario enviou é tratada pelo
-                                                                                        controlador da tarefa em andamento*/
+                        if(update.message().text().charAt(0) == '/') {
+                            mensagem = "Para iniciarmos uma outra operacao, você deve usar o comando /cancelar. Assim, " +
+                                        "o processo atual será interrompido. Caso contrário, iremos prosseguir...";
+                        }else{
+                            mensagem = commandCurrent.conversar(update.message().text());   /*A mensagem que o usuario enviou é tratada pelo
+                                                                                            controlador da tarefa em andamento*/
 
-                        if(commandCurrent.getEtapaAtual() == commandCurrent.getTotalEtapas()+1){        /*Se a ultima etapa for concluida, o controlador é resetado*/
-                            commandCurrent.reset();
-                            commandCurrent = null;
+                            if(commandCurrent.getEtapaAtual() == commandCurrent.getTotalEtapas()+1){        /*Se a ultima etapa for concluida, o controlador é resetado*/
+                                commandCurrent.reset();
+                                commandCurrent = null;
+                            }
                         }
                     }
                 }
