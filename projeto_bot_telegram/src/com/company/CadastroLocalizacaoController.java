@@ -1,5 +1,9 @@
 package com.company;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class CadastroLocalizacaoController extends CommandController {
 
     Localizacao localizacao;                             /*Objeto que o controlador trata*/
@@ -12,7 +16,7 @@ public class CadastroLocalizacaoController extends CommandController {
     /*De acordo com a etapa corrente, a mensagem fornecida é tratada e
     as informacoes do objeto do comando são adicionadas */
     @Override
-    public String conversar(String mensagemRecebida) {
+    public String conversar(String mensagemRecebida) throws IOException {
         String texto = "";
         switch (getEtapaAtual()){
             case 1:
@@ -39,6 +43,13 @@ public class CadastroLocalizacaoController extends CommandController {
                 break;
             case 6:
                 if(mensagemRecebida.equals("s")){               /*Verifica se o usuario aprovou a insercao de dados=*/
+
+                    /*Salva informacoes no arquivo*/
+                    BufferedWriter arq = new BufferedWriter(new FileWriter("localicazao.txt", true));
+                    arq.write(localizacao.getNome() + "\n" + localizacao.getDescricao() + "\n**********");
+                    arq.newLine();
+                    arq.close();
+
                     texto = "Fim do processo";
                     setEtapaAtual(getEtapaAtual() + 1);
                 }else if(mensagemRecebida.equals("n")){

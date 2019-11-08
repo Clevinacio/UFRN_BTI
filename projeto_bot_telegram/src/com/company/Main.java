@@ -6,10 +6,11 @@ import com.pengrad.telegrambot.model.request.ChatAction;
 import com.pengrad.telegrambot.request.*;
 import com.pengrad.telegrambot.response.*;
 
+import java.io.IOException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //Criação do objeto bot com as informações de acesso
         TelegramBot bot = new TelegramBot("1029513435:AAE3c0Dgz-YByWCdYeIxp2kvyBZV8XjzJvw");
         //objeto responsável por receber as mensagens

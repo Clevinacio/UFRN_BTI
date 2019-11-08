@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.IOException;
+
 public abstract class CommandController {
     private final String comando;
     private int etapaAtual;
@@ -11,7 +13,7 @@ public abstract class CommandController {
         etapaAtual = 1;
     }
 
-    public abstract String conversar(String mensagemRecebida);
+    public abstract String conversar(String mensagemRecebida) throws IOException;
 
     public String getComando() {
         return comando;
