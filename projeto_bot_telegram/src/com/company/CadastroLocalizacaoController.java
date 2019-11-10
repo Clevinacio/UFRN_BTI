@@ -3,6 +3,8 @@ package com.company;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CadastroLocalizacaoController extends CommandController {
 
@@ -16,11 +18,11 @@ public class CadastroLocalizacaoController extends CommandController {
     /*De acordo com a etapa corrente, a mensagem fornecida é tratada e
     as informacoes do objeto do comando são adicionadas */
     @Override
-    public String conversar(String mensagemRecebida) throws IOException {
-        String texto = "";
+    public List<String> conversar(String mensagemRecebida) throws IOException {
+        List<String> texto = new ArrayList<String>();
         switch (getEtapaAtual()){
             case 1:
-                texto = "Me diz o nome do local";               /*Determina a mensagem que sera enviada para o usuario*/
+                texto.add("Me diz o nome do local");               /*Determina a mensagem que sera enviada para o usuario*/
                 setEtapaAtual(getEtapaAtual() + 1);             /*Incrementa a etapa, que só sera executada quando o usuario fornecer uma resposta*/
                 break;
             case 2:
@@ -29,7 +31,7 @@ public class CadastroLocalizacaoController extends CommandController {
                 texto = conversar(mensagemRecebida);            /*A resposta sendo validada, o proximo passo é chamado*/
                 break;
             case 3:
-                texto = "Me da mais detalhes sobre esse lugar";
+                texto.add("Me da mais detalhes sobre esse lugar");
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 4:
@@ -38,7 +40,7 @@ public class CadastroLocalizacaoController extends CommandController {
                 texto = conversar(mensagemRecebida);            /*Apos fornecer a ultima informacao, os datos sao listados para validacao*/
                 break;
             case 5:
-                texto = confirmarOperacao();
+                texto.add(confirmarOperacao());
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 6:
@@ -50,17 +52,17 @@ public class CadastroLocalizacaoController extends CommandController {
                     arq.newLine();
                     arq.close();
 
-                    texto = "Fim do processo";
+                    texto.add("Fim do processo");
                     setEtapaAtual(getEtapaAtual() + 1);
                 }else if(mensagemRecebida.toLowerCase().equals("n")){
-                    texto = "Processo cancelado";
+                    texto.add("Processo cancelado");
                     setEtapaAtual(getEtapaAtual() + 1);
                 }else {
-                    texto = "Resposta invalida";
+                    texto.add("Resposta invalida");
                 }
                 break;
             default:
-                texto = "etapa inválida";
+                texto.add("Etapa inválida");
                 break;
         }
         return texto;

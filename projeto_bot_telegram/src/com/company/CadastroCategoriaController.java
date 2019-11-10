@@ -1,6 +1,8 @@
 package com.company;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CadastroCategoriaController extends CommandController {
 
@@ -14,11 +16,11 @@ public class CadastroCategoriaController extends CommandController {
     /*De acordo com a etapa corrente, a mensagem fornecida é tratada e
     as informacoes do objeto do comando são adicionadas */
     @Override
-    public String conversar(String mensagemRecebida) throws IOException {
-        String texto = "";
+    public List<String> conversar(String mensagemRecebida) throws IOException {
+        List<String> texto = new ArrayList<String>();
         switch (getEtapaAtual()){
             case 1:
-                texto = "Preciso do nome da nova categoria de bens";               /*Determina a mensagem que sera enviada para o usuario*/
+                texto.add("Preciso do nome da nova categoria de bens");               /*Determina a mensagem que sera enviada para o usuario*/
                 setEtapaAtual(getEtapaAtual() + 1);             /*Incrementa a etapa, que só sera executada quando o usuario fornecer uma resposta*/
                 break;
             case 2:
@@ -27,7 +29,7 @@ public class CadastroCategoriaController extends CommandController {
                 texto = conversar(mensagemRecebida);            /*A resposta sendo validada, o proximo passo é chamado*/
                 break;
             case 3:
-                texto = "Me da mais detalhes sobre essa categoria";
+                texto.add("Me da mais detalhes sobre essa categoria");
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 4:
@@ -36,7 +38,7 @@ public class CadastroCategoriaController extends CommandController {
                 texto = conversar(mensagemRecebida);            /*Apos fornecer a ultima informacao, os datos sao listados para validacao*/
                 break;
             case 5:
-                texto = confirmarOperacao();
+                texto.add(confirmarOperacao());
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 6:
@@ -50,18 +52,19 @@ public class CadastroCategoriaController extends CommandController {
                     arq.newLine();
                     arq.close();
 
-                    texto = "A essa categoria foi atribuído o código: " + categoria.getCodigo();
+                    texto.add("A essa categoria foi atribuído o código " + categoria.getCodigo());
+                    texto.add("Fim do processo");
 
                     setEtapaAtual(getEtapaAtual() + 1);
                 }else if(mensagemRecebida.toLowerCase().equals("n")){
-                    texto = "Processo cancelado";
+                    texto.add("Processo cancelado");
                     setEtapaAtual(getEtapaAtual() + 1);
                 }else {
-                    texto = "Resposta invalida";
+                    texto.add("Resposta invalida");
                 }
                 break;
             default:
-                texto = "etapa inválida";
+                texto.add("Etapa inválida");
                 break;
         }
         return texto;

@@ -17,14 +17,14 @@ public class Main {
         //objeto responsável por receber as mensagens
         GetUpdatesResponse updatesResponse;
         //objeto responsável por gerenciar o envio de respostas
-        SendResponse sendResponse;
+        SendResponse sendResponse = null;
         //objeto responsável por gerenciar o envio de ações do chat
         BaseResponse baseResponse;
         //controle de off-set, isto é, a partir deste ID será lido as mensagens pendentes na fila
         int m=0;
 
 
-        String mensagem = "";
+        List<String> mensagens = new ArrayList<String>();
         CommandController commandCurrent = null;                            /*Comando em andamento inicia como nulo*/
         List<CommandController> commands = new ArrayList<CommandController>();           /*Array de controladores*/
 
@@ -61,21 +61,21 @@ public class Main {
                     }
 
                     if(commandCurrent != null){
-                        mensagem = commandCurrent.conversar(update.message().text());   /*Inicia a troca de mensagens*/
+                        mensagens = commandCurrent.conversar(update.message().text());   /*Inicia a troca de mensagens*/
                     }else{
-                        mensagem = "Desculpa, ainda não entendo esse comando..";
+                        mensagens.add("Desculpa, ainda não entendo esse comando..");
                     }
                 }else{
                     if(update.message().text().equals("/cancelar")){                    /*Verifica se o usuario solicitou cancelamento da operacao em andamento*/
-                        mensagem = "Tudo bem! Operacao cancelada.";
+                        mensagens.add("Tudo bem! Operacao cancelada.");
                         commandCurrent.reset();
                         commandCurrent = null;
                     }else{
                         if(update.message().text().charAt(0) == '/') {
-                            mensagem = "Para iniciarmos uma outra operacao, você deve usar o comando /cancelar. Assim, " +
-                                        "o processo atual será interrompido. Caso contrário, iremos prosseguir...";
+                            mensagens.add("Para iniciarmos uma outra operacao, você deve usar o comando /cancelar. Assim, " +
+                                          "o processo atual será interrompido. Caso contrário, iremos prosseguir...");
                         }else{
-                            mensagem = commandCurrent.conversar(update.message().text());   /*A mensagem que o usuario enviou é tratada pelo
+                            mensagens = commandCurrent.conversar(update.message().text());   /*A mensagem que o usuario enviou é tratada pelo
                                                                                             controlador da tarefa em andamento*/
 
                             if(commandCurrent.getEtapaAtual() == commandCurrent.getTotalEtapas()+1){        /*Se a ultima etapa for concluida, o controlador é resetado*/
@@ -88,12 +88,15 @@ public class Main {
 
                 /* --- FIM --- */
 
-                //envio da mensagem de resposta
-                sendResponse = bot.execute(new SendMessage(update.message().chat().id(), mensagem));
+                for (String mensagem : mensagens) {
+                    //envio da mensagem de resposta
+                    sendResponse = bot.execute(new SendMessage(update.message().chat().id(), mensagem));
+                }
+
                 //verificação de mensagem enviada com sucesso
                 System.out.println("Mensagem Enviada?" + sendResponse.isOk());
 
-                mensagem = "";
+                mensagens.clear();
             }
         }
     }

@@ -10,3 +10,7 @@ Objeto de uso compartilhado
 Material de limpeza
 Utensílios de uso dos terceirizados
 **********
+3
+Automóvel
+Veículos de uso institucional
+**********
