@@ -1,16 +1,14 @@
 package com.company;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
-public class CadastroLocalizacaoController extends CommandController {
+public class CadastroCategoriaController extends CommandController {
 
-    Localizacao localizacao;                             /*Objeto que o controlador trata*/
+    Categoria categoria;                             /*Objeto que o controlador trata*/
 
-    public CadastroLocalizacaoController() {
-        super("/addlocal", 6);                     /*Determina o comando do controlador e quantas etapas possui*/
-        localizacao = new Localizacao();
+    public CadastroCategoriaController() {
+        super("/addcategoria", 6);                     /*Determina o comando do controlador e quantas etapas possui*/
+        categoria = new Categoria();
     }
 
     /*De acordo com a etapa corrente, a mensagem fornecida é tratada e
@@ -20,20 +18,20 @@ public class CadastroLocalizacaoController extends CommandController {
         String texto = "";
         switch (getEtapaAtual()){
             case 1:
-                texto = "Me diz o nome do local";               /*Determina a mensagem que sera enviada para o usuario*/
+                texto = "Preciso do nome da nova categoria de bens";               /*Determina a mensagem que sera enviada para o usuario*/
                 setEtapaAtual(getEtapaAtual() + 1);             /*Incrementa a etapa, que só sera executada quando o usuario fornecer uma resposta*/
                 break;
             case 2:
-                localizacao.setNome(mensagemRecebida);
+                categoria.setNome(mensagemRecebida);
                 setEtapaAtual(getEtapaAtual() + 1);
                 texto = conversar(mensagemRecebida);            /*A resposta sendo validada, o proximo passo é chamado*/
                 break;
             case 3:
-                texto = "Me da mais detalhes sobre esse lugar";
+                texto = "Me da mais detalhes sobre essa categoria";
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 4:
-                localizacao.setDescricao(mensagemRecebida);
+                categoria.setDescricao(mensagemRecebida);
                 setEtapaAtual(getEtapaAtual() + 1);
                 texto = conversar(mensagemRecebida);            /*Apos fornecer a ultima informacao, os datos sao listados para validacao*/
                 break;
@@ -44,13 +42,16 @@ public class CadastroLocalizacaoController extends CommandController {
             case 6:
                 if(mensagemRecebida.toLowerCase().equals("s")){               /*Verifica se o usuario aprovou a insercao de dados=*/
 
+                    categoria.setCodigo(definirCodigo());                       /*Atribui codigo da nova categoria*/
+
                     /*Salva informacoes no arquivo*/
-                    BufferedWriter arq = new BufferedWriter(new FileWriter("localizacao.txt", true));
-                    arq.write(localizacao.getNome() + "\n" + localizacao.getDescricao() + "\n**********");
+                    BufferedWriter arq = new BufferedWriter(new FileWriter("categoria.txt", true));
+                    arq.write(categoria.getCodigo() + "\n" + categoria.getNome() + "\n" + categoria.getDescricao() + "\n**********");
                     arq.newLine();
                     arq.close();
 
-                    texto = "Fim do processo";
+                    texto = "A essa categoria foi atribuído o código: " + categoria.getCodigo();
+
                     setEtapaAtual(getEtapaAtual() + 1);
                 }else if(mensagemRecebida.toLowerCase().equals("n")){
                     texto = "Processo cancelado";
@@ -68,14 +69,22 @@ public class CadastroLocalizacaoController extends CommandController {
 
     @Override
     protected String confirmarOperacao() {
-        String texto = "Os dados passados foram \n\nNome: " + localizacao.getNome() + "\nDescricao: " + localizacao.getDescricao();
+        String texto = "Os dados passados foram \n\nNome: " + categoria.getNome() + "\nDescricao: " + categoria.getDescricao();
         texto = texto + "\n\nDeseja salvar esta operacao? (s/n)";
         return texto;
     }
 
     @Override
     protected void reset() {                        /*Limpa todos os dados do controlador*/
-        localizacao = new Localizacao();
+        categoria = new Categoria();
         setEtapaAtual(1);
+    }
+
+    /*Verifica quantas linhas tem o arquivo de categorias cadastradas e determina o código para uma nova*/
+    private int definirCodigo() throws IOException {
+        File arqCategoria = new File("categoria.txt");
+        LineNumberReader linhaLeitura = new LineNumberReader(new FileReader(arqCategoria));
+        linhaLeitura.skip(arqCategoria.length());
+        return linhaLeitura.getLineNumber()/4;
     }
 }

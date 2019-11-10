@@ -30,6 +30,7 @@ public class Main {
 
         /*Todos os controladores implementados devem ser adicionados no array*/
         commands.add(new CadastroLocalizacaoController());
+        commands.add(new CadastroCategoriaController());
 
         //loop infinito pode ser alterado por algum timer de intervalo curto
         while (true){

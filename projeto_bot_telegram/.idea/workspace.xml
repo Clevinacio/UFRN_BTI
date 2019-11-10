@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbc837f-64c4-42d5-b5d8-efe06758e6af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/categoria.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localizacao.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/CadastroCategoriaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localicazao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/localicazao.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localicazao.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroLocalizacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroLocalizacaoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CadastroLocalizacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CadastroLocalizacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,6 +58,11 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
