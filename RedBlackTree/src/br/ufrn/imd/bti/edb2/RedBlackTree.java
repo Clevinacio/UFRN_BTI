@@ -19,6 +19,6 @@ public class RedBlackTree<T extends Comparable<T>> {
             parent.setRight(insert(node, parent.getRight()));
         }
 
-        return balance(parent);
+        return parent;
     }
 }
