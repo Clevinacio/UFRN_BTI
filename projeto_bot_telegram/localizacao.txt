@@ -1,3 +1,6 @@
 B115
 Laboratório dos cursos técnicos
 **********
+Sala
+Sala de aula
+**********
