@@ -26,11 +26,13 @@ public class Main {
 
         List<String> mensagens = new ArrayList<String>();
         CommandController commandCurrent = null;                            /*Comando em andamento inicia como nulo*/
-        List<CommandController> commands = new ArrayList<CommandController>();           /*Array de controladores*/
+        List<CommandController> commands = new ArrayList<CommandController>();              /*Lista de controladores*/
 
-        /*Todos os controladores implementados devem ser adicionados no array*/
+        /*Todos os controladores implementados devem ser adicionados na lista*/
         commands.add(new CadastroLocalizacaoController());
         commands.add(new CadastroCategoriaController());
+        commands.add(new ListaCategoriaController());
+        commands.add(new ListaLocalizacaoController());
 
         //loop infinito pode ser alterado por algum timer de intervalo curto
         while (true){
@@ -62,6 +64,10 @@ public class Main {
 
                     if(commandCurrent != null){
                         mensagens = commandCurrent.conversar(update.message().text());   /*Inicia a troca de mensagens*/
+                        if(commandCurrent.getEtapaAtual() == commandCurrent.getTotalEtapas()+1){        /*Se a ultima etapa for concluida, o controlador é resetado*/
+                            commandCurrent.reset();
+                            commandCurrent = null;
+                        }
                     }else{
                         mensagens.add("Desculpa, ainda não entendo esse comando..");
                     }

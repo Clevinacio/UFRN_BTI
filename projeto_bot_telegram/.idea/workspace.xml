@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afbc837f-64c4-42d5-b5d8-efe06758e6af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/ListaCategoriaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/ListaLocalizacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localizacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/localizacao.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/META-INF/projeto_bot_telegram.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroCategoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroCategoriaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroLocalizacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroLocalizacaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Categoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CommandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CommandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
