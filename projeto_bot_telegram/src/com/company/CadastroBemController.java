@@ -1,9 +1,8 @@
 package com.company;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class CadastroBemController extends CommandController {
@@ -11,7 +10,7 @@ public class CadastroBemController extends CommandController {
     Bem bem;
 
     public CadastroBemController() {
-        super("/addbem", 8);
+        super("/addbem", 12);
         bem = new Bem();
     }
 
@@ -68,19 +67,28 @@ public class CadastroBemController extends CommandController {
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 8:
+                int codigo;
+
                 try {
-                    Categoria testeCategoria = new Categoria();
-                    testeCategoria.setNome("teste_categoria");
-                    testeCategoria.setCodigo(Integer.parseInt(mensagemRecebida));
-                    bem.setCategoria(testeCategoria);
+                    codigo = Integer.parseInt(mensagemRecebida);
                 } catch (NumberFormatException e){
                     texto.add("Nesse momento eu preciso que você informe apenas número");
                     texto.add("Vamos tentar novamente!");
                     break;
                 }
 
-                setEtapaAtual(getEtapaAtual() + 1);
-                texto = conversar(mensagemRecebida);
+                List<Categoria> categorias = listaCategorias();                                  //Recebe lista de elementos do respectivo arquivo
+
+                Categoria categoria = buscaCategoria(categorias, codigo);                       //Busca a categoria desejada pelo código informado
+
+                if(categoria == null){
+                    texto.add("Por favor, informe um dos códigos da lista acima");
+                    texto.add("Caso a categoria desejada não esteja entre as listadas, cancele a operacao (/cancelar) e adicione uma nova categoria (/addcategoria)");
+                }else {
+                    bem.setCategoria(categoria);
+                    setEtapaAtual(getEtapaAtual() + 1);
+                    texto = conversar(mensagemRecebida);
+                }
                 break;
             case 9:
                 texto.add("Abaixo são listadas os locais já cadastradas");
@@ -128,6 +136,47 @@ public class CadastroBemController extends CommandController {
                 break;
         }
         return texto;
+    }
+
+    private Categoria buscaCategoria(List<Categoria> categorias, int codigo) {
+        Categoria categoria = null;
+        for (Categoria current : categorias) {                                                  //Percorre a lista de categoria
+            if(codigo == current.getCodigo()) {                                                 //Ao encontrar, a busca é finalizada, retornando a categoria solicitada
+                categoria = current;
+                break;
+            }
+        }
+
+        return categoria;
+    }
+
+    private List<Categoria> listaCategorias() throws IOException,FileNotFoundException {
+
+        int counterBreak = 0;                                                                   //Guarda número da linha atual
+
+        List<Categoria> categorias = new LinkedList<Categoria>();                               //Guarda categorias que estão no arquivo
+
+        Categoria current = new Categoria();                                                    //Categoria atual
+
+        BufferedReader br = new BufferedReader(new FileReader("categoria.txt"));        //Indica arquivo para leitura
+
+        while (br.ready()) {                                                                    //Percorre linhas do arquivo
+            counterBreak++;
+
+            if(counterBreak % 4 == 0) {                                                         //Resto zero indica fim de uma categoria
+                categorias.add(current);                                                        //Categoria atual é adiciona a lista
+                current = new Categoria();                                                      //Nova categoria é criada
+                br.readLine();                                                                  //Se remover dá erro
+            } else if(counterBreak % 4 == 1) {                                                  //Resto 1 - Código
+                current.setCodigo(Integer.parseInt(br.readLine()));
+            } else if(counterBreak % 4 == 2) {                                                  //Resto 2 - Nome
+                current.setNome(br.readLine());
+            }else if(counterBreak % 4 == 3) {                                                   //Resto 3 - Descricao
+                current.setDescricao(br.readLine());
+            }
+        }
+
+        return categorias;
     }
 
     @Override

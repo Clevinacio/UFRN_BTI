@@ -1,16 +1,16 @@
 0
 Equipamento
 Material de uso dos terceirizados
-**********
+********************
 1
 Móvel
 Objeto de uso compartilhado
-**********
+********************
 2
 Material de limpeza
 Utensílios de uso dos terceirizados
-**********
+********************
 3
 Automóvel
 Veículos de uso institucional
-**********
+********************

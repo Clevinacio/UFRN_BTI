@@ -4,3 +4,9 @@ Nova máquina de laboratório para uso do professor
 1
 B115
 ********************
+102829
+Computador
+Uso compartilhado pelos professoresb
+2
+1
+********************
