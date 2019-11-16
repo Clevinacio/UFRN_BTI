@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afbc837f-64c4-42d5-b5d8-efe06758e6af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroBemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroBemController.class" afterDir="false" />
+    <list default="true" id="89330b5d-5713-41e9-a9de-c0837df137c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/bem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bem.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/CadastroBemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CadastroBemController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
