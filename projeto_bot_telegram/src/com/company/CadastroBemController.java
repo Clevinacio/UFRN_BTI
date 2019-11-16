@@ -84,6 +84,7 @@ public class CadastroBemController extends CommandController {
 
                 if(categoria == null){
                     texto.add("Por favor, informe um dos códigos da lista acima");
+                    texto.add("Caso a categoria desejada não esteja entre as listadas, cancele a operacao (/cancelar) e adicione uma nova categoria (/addcategoria)");
                 }else {
                     bem.setCategoria(categoria);
                     setEtapaAtual(getEtapaAtual() + 1);
@@ -143,46 +144,6 @@ public class CadastroBemController extends CommandController {
                 break;
         }
         return texto;
-    }
-
-    private Localizacao buscaLocalizacao(List<Localizacao> locais, String nome) {
-        Localizacao local = null;
-        for (Localizacao current : locais) {                                                  //Percorre a lista de categoria
-            if(nome.equals(current.getNome())) {                                                 //Ao encontrar, a busca é finalizada, retornando a categoria solicitada
-                local = current;
-                break;
-            }
-        }
-
-        return local;
-    }
-
-    private List<Localizacao> listaLocais() throws IOException {
-        int counterBreak = 0;                                                                   //Guarda número da linha atual
-
-        List<Localizacao> locais = new LinkedList<Localizacao>();                               //Guarda locais que estão no arquivo
-
-        Localizacao current = new Localizacao();                                                //Categoria atual
-
-        BufferedReader br = new BufferedReader(new FileReader("localizacao.txt"));     //Indica arquivo para leitura
-
-        while (br.ready()) {                                                                    //Percorre linhas do arquivo
-            counterBreak++;
-
-            if(counterBreak % 3 == 0) {                                                         //Resto zero indica fim de uma localizacao
-                locais.add(current);                                                            //Localizacao atual é adiciona a lista
-                current = new Localizacao();                                                    //Nova localizacao é criada
-                br.readLine();                                                                  //Se remover dá erro
-            } else if(counterBreak % 3 == 1) {                                                  //Resto 1 - Nome
-                current.setNome(br.readLine());
-            } else if(counterBreak % 3 == 2) {                                                  //Resto 2 - Descricao
-                current.setDescricao(br.readLine());
-            }
-        }
-
-        System.out.println(locais.size());
-
-        return locais;
     }
 
     private Categoria buscaCategoria(List<Categoria> categorias, int codigo) {
