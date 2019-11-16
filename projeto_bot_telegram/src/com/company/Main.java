@@ -31,6 +31,7 @@ public class Main {
         /*Todos os controladores implementados devem ser adicionados na lista*/
         commands.add(new CadastroLocalizacaoController());
         commands.add(new CadastroCategoriaController());
+        commands.add(new CadastroBemController());
         commands.add(new ListaCategoriaController());
         commands.add(new ListaLocalizacaoController());
 

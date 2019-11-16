@@ -4,3 +4,6 @@ Laboratório dos cursos técnicos
 Sala
 Sala de aula
 **********
+A101
+Laboratório
+********************

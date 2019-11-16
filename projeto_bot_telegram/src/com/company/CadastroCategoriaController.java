@@ -48,7 +48,7 @@ public class CadastroCategoriaController extends CommandController {
 
                     /*Salva informacoes no arquivo*/
                     BufferedWriter arq = new BufferedWriter(new FileWriter("categoria.txt", true));
-                    arq.write(categoria.getCodigo() + "\n" + categoria.getNome() + "\n" + categoria.getDescricao() + "\n**********");
+                    arq.write(categoria.getCodigo() + "\n" + categoria.getNome() + "\n" + categoria.getDescricao() + "\n********************");
                     arq.newLine();
                     arq.close();
 

@@ -48,7 +48,7 @@ public class CadastroLocalizacaoController extends CommandController {
 
                     /*Salva informacoes no arquivo*/
                     BufferedWriter arq = new BufferedWriter(new FileWriter("localizacao.txt", true));
-                    arq.write(localizacao.getNome() + "\n" + localizacao.getDescricao() + "\n**********");
+                    arq.write(localizacao.getNome() + "\n" + localizacao.getDescricao() + "\n********************");
                     arq.newLine();
                     arq.close();
 
