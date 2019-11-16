@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="afbc837f-64c4-42d5-b5d8-efe06758e6af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categoria.txt" beforeDir="false" afterPath="$PROJECT_DIR$/categoria.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localizacao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/localizacao.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroBemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroBemController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/CadastroBemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CadastroBemController.java" afterDir="false" />
     </list>
