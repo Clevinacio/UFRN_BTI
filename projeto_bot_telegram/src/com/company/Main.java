@@ -34,6 +34,7 @@ public class Main {
         commands.add(new CadastroBemController());
         commands.add(new ListaCategoriaController());
         commands.add(new ListaLocalizacaoController());
+        commands.add(new BuscaBemCodigoController());
 
         //loop infinito pode ser alterado por algum timer de intervalo curto
         while (true){

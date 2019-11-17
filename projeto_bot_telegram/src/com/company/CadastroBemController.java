@@ -81,7 +81,7 @@ public class CadastroBemController extends CommandController {
 
                 List<Categoria> categorias = aux.listaCategorias();                                  //Recebe lista de elementos do respectivo arquivo
 
-                Categoria categoria = buscaCategoria(categorias, codigo);                       //Busca a categoria desejada pelo código informado
+                Categoria categoria = aux.buscaCategoria(categorias, codigo);                       //Busca a categoria desejada pelo código informado
 
                 if(categoria == null){
                     texto.add("Por favor, informe um dos códigos da lista acima");
@@ -106,7 +106,7 @@ public class CadastroBemController extends CommandController {
             case 10:
                 List<Localizacao> locais = aux.listaLocais();                                  //Recebe lista de elementos do respectivo arquivo
 
-                Localizacao local = buscaLocalizacao(locais, mensagemRecebida);                       //Busca a localizacao desejada pelo nome informado
+                Localizacao local = aux.buscaLocalizacao(locais, mensagemRecebida);                       //Busca a localizacao desejada pelo nome informado
 
                 if(local == null){
                     texto.add("Por favor, informe um dos nomes da lista acima");
@@ -144,30 +144,6 @@ public class CadastroBemController extends CommandController {
                 break;
         }
         return texto;
-    }
-
-    private Localizacao buscaLocalizacao(List<Localizacao> locais, String nome) {
-        Localizacao local = null;
-        for (Localizacao current : locais) {                                                  //Percorre a lista de categoria
-            if(nome.equals(current.getNome())) {                                                 //Ao encontrar, a busca é finalizada, retornando a categoria solicitada
-                local = current;
-                break;
-            }
-        }
-
-        return local;
-    }
-
-    private Categoria buscaCategoria(List<Categoria> categorias, int codigo) {
-        Categoria categoria = null;
-        for (Categoria current : categorias) {                                                  //Percorre a lista de categoria
-            if(codigo == current.getCodigo()) {                                                 //Ao encontrar, a busca é finalizada, retornando a categoria solicitada
-                categoria = current;
-                break;
-            }
-        }
-
-        return categoria;
     }
 
     @Override
