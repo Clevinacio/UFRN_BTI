@@ -101,7 +101,7 @@ public class FuncoesUteisController {
     public Localizacao buscaLocalizacao(List<Localizacao> locais, String nome) {
         Localizacao local = null;
         for (Localizacao current : locais) {                                                  //Percorre a lista de categoria
-            if (nome.equals(current.getNome())) {                                                 //Ao encontrar, a busca é finalizada, retornando a categoria solicitada
+            if (nome.equalsIgnoreCase(current.getNome())) {                                                 //Ao encontrar, a busca é finalizada, retornando a categoria solicitada
                 local = current;
                 break;
             }
