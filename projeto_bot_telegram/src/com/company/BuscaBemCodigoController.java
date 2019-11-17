@@ -50,8 +50,10 @@ public class BuscaBemCodigoController extends CommandController {
                         "Categoria: "+found.getCategoria().getNome()+"\n" +
                         "Localização: "+found.getLocalizacao().getNome());
 
+                setEtapaAtual(getEtapaAtual() + 1);
+                break;
         }
-        return null;
+        return texto;
     }
 
     public Bem buscaBemCod(List<Bem> bens, int cod) {
