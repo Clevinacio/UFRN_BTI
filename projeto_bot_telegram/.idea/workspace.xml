@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89330b5d-5713-41e9-a9de-c0837df137c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bem.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/BuscaBemCodigoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/BuscaBemLocalizacaoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FuncoesUteisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/CadastroBemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CadastroBemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../roteador/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../roteador/.idea/codestream.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +113,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="afbc837f-64c4-42d5-b5d8-efe06758e6af" name="Default Changelist" comment="" />
+      <changelist id="89330b5d-5713-41e9-a9de-c0837df137c6" name="Default Changelist" comment="" />
       <created>1572014413813</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -118,6 +124,7 @@
       <workItem from="1572995176894" duration="2430000" />
       <workItem from="1573474782238" duration="1439000" />
       <workItem from="1573597540150" duration="583000" />
+      <workItem from="1574003251613" duration="2056000" />
     </task>
     <servers />
   </component>

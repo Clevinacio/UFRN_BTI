@@ -8,6 +8,7 @@ import java.util.List;
 public class CadastroBemController extends CommandController {
 
     Bem bem;
+    FuncoesUteisController aux;
 
     public CadastroBemController() {
         super("/addbem", 12);
@@ -78,7 +79,7 @@ public class CadastroBemController extends CommandController {
                     break;
                 }
 
-                List<Categoria> categorias = listaCategorias();                                  //Recebe lista de elementos do respectivo arquivo
+                List<Categoria> categorias = aux.listaCategorias();                                  //Recebe lista de elementos do respectivo arquivo
 
                 Categoria categoria = buscaCategoria(categorias, codigo);                       //Busca a categoria desejada pelo código informado
 
@@ -103,7 +104,7 @@ public class CadastroBemController extends CommandController {
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 10:
-                List<Localizacao> locais = listaLocais();                                  //Recebe lista de elementos do respectivo arquivo
+                List<Localizacao> locais = aux.listaLocais();                                  //Recebe lista de elementos do respectivo arquivo
 
                 Localizacao local = buscaLocalizacao(locais, mensagemRecebida);                       //Busca a localizacao desejada pelo nome informado
 
@@ -157,34 +158,6 @@ public class CadastroBemController extends CommandController {
         return local;
     }
 
-    private List<Localizacao> listaLocais() throws IOException {
-        int counterBreak = 0;                                                                   //Guarda número da linha atual
-
-        List<Localizacao> locais = new LinkedList<Localizacao>();                               //Guarda locais que estão no arquivo
-
-        Localizacao current = new Localizacao();                                                //Categoria atual
-
-        BufferedReader br = new BufferedReader(new FileReader("localizacao.txt"));     //Indica arquivo para leitura
-
-        while (br.ready()) {                                                                    //Percorre linhas do arquivo
-            counterBreak++;
-
-            if(counterBreak % 3 == 0) {                                                         //Resto zero indica fim de uma localizacao
-                locais.add(current);                                                            //Localizacao atual é adiciona a lista
-                current = new Localizacao();                                                    //Nova localizacao é criada
-                br.readLine();                                                                  //Se remover dá erro
-            } else if(counterBreak % 3 == 1) {                                                  //Resto 1 - Nome
-                current.setNome(br.readLine());
-            } else if(counterBreak % 3 == 2) {                                                  //Resto 2 - Descricao
-                current.setDescricao(br.readLine());
-            }
-        }
-
-        System.out.println(locais.size());
-
-        return locais;
-    }
-
     private Categoria buscaCategoria(List<Categoria> categorias, int codigo) {
         Categoria categoria = null;
         for (Categoria current : categorias) {                                                  //Percorre a lista de categoria
@@ -195,35 +168,6 @@ public class CadastroBemController extends CommandController {
         }
 
         return categoria;
-    }
-
-    private List<Categoria> listaCategorias() throws IOException,FileNotFoundException {
-
-        int counterBreak = 0;                                                                   //Guarda número da linha atual
-
-        List<Categoria> categorias = new LinkedList<Categoria>();                               //Guarda categorias que estão no arquivo
-
-        Categoria current = new Categoria();                                                    //Categoria atual
-
-        BufferedReader br = new BufferedReader(new FileReader("categoria.txt"));        //Indica arquivo para leitura
-
-        while (br.ready()) {                                                                    //Percorre linhas do arquivo
-            counterBreak++;
-
-            if(counterBreak % 4 == 0) {                                                         //Resto zero indica fim de uma categoria
-                categorias.add(current);                                                        //Categoria atual é adiciona a lista
-                current = new Categoria();                                                      //Nova categoria é criada
-                br.readLine();                                                                  //Se remover dá erro
-            } else if(counterBreak % 4 == 1) {                                                  //Resto 1 - Código
-                current.setCodigo(Integer.parseInt(br.readLine()));
-            } else if(counterBreak % 4 == 2) {                                                  //Resto 2 - Nome
-                current.setNome(br.readLine());
-            }else if(counterBreak % 4 == 3) {                                                   //Resto 3 - Descricao
-                current.setDescricao(br.readLine());
-            }
-        }
-
-        return categorias;
     }
 
     @Override
