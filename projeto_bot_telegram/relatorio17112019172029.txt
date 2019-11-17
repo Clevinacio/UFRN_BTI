@@ -1,0 +1,81 @@
+RELATÒRIO do dia 17/11/2019 17:20:29
+Ordenado por Localização
+---------------
+Código: 1844472
+Nome: Computador
+Descrição: Nova máquina de laboratório para uso do professor
+Categoria: Móvel
+Localização: B115
+-
+Código: 102829
+Nome: Computador
+Descrição: Uso compartilhado pelos professoresb
+Categoria: Material de limpeza
+Localização: B115
+-
+Código: 1829
+Nome: Teste
+Descrição: Teste1
+Categoria: Móvel
+Localização: B115
+-
+Código: 10
+Nome: Teste121
+Descrição: Teste
+Categoria: Automóvel
+Localização: B115
+-
+
+Ordenado por Categoria
+---------------
+Código: 10
+Nome: Teste121
+Descrição: Teste
+Categoria: Automóvel
+Localização: B115
+-
+Código: 102829
+Nome: Computador
+Descrição: Uso compartilhado pelos professoresb
+Categoria: Material de limpeza
+Localização: B115
+-
+Código: 1844472
+Nome: Computador
+Descrição: Nova máquina de laboratório para uso do professor
+Categoria: Móvel
+Localização: B115
+-
+Código: 1829
+Nome: Teste
+Descrição: Teste1
+Categoria: Móvel
+Localização: B115
+-
+
+Bens por Nome:
+---------------
+Código: 102829
+Nome: Computador
+Descrição: Uso compartilhado pelos professoresb
+Categoria: Material de limpeza
+Localização: B115
+-
+Código: 1844472
+Nome: Computador
+Descrição: Nova máquina de laboratório para uso do professor
+Categoria: Móvel
+Localização: B115
+-
+Código: 1829
+Nome: Teste
+Descrição: Teste1
+Categoria: Móvel
+Localização: B115
+-
+Código: 10
+Nome: Teste121
+Descrição: Teste
+Categoria: Automóvel
+Localização: B115
+-

@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Comparator;
+
 public class Bem {
     private int codigo;
     private String nome;
@@ -54,4 +56,5 @@ public class Bem {
     public void setLocalizacao(Localizacao localizacao) {
         this.localizacao = localizacao;
     }
+
 }

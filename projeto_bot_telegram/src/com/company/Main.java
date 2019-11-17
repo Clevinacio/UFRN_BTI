@@ -37,6 +37,7 @@ public class Main {
         commands.add(new BuscaBemCodigoController());
         commands.add(new BuscaBemLocalizacaoController());
         commands.add(new BuscaBemCategoriaController());
+        commands.add(new GerarRelatorioArquivoController());
 
         //loop infinito pode ser alterado por algum timer de intervalo curto
         while (true){
