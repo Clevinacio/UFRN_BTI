@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89330b5d-5713-41e9-a9de-c0837df137c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/BuscaBemCategoriaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bem.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/BuscaBemLocalizacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BuscaBemLocalizacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FuncoesUteisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FuncoesUteisController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,7 +120,7 @@
       <workItem from="1572995176894" duration="2430000" />
       <workItem from="1573474782238" duration="1439000" />
       <workItem from="1573597540150" duration="583000" />
-      <workItem from="1574003251613" duration="9004000" />
+      <workItem from="1574003251613" duration="9895000" />
     </task>
     <servers />
   </component>
