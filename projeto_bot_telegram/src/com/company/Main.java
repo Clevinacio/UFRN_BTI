@@ -34,6 +34,7 @@ public class Main {
         commands.add(new CadastroBemController());
         commands.add(new ListaCategoriaController());
         commands.add(new ListaLocalizacaoController());
+        commands.add(new ListaBemController());
         commands.add(new BuscaBemCodigoController());
         commands.add(new BuscaBemLocalizacaoController());
         commands.add(new BuscaBemCategoriaController());
