@@ -8,7 +8,7 @@ import java.util.List;
 public class CadastroBemController extends CommandController {
 
     Bem bem;
-    FuncoesUteisController aux;
+    FuncoesUteisController aux = new FuncoesUteisController();
 
     public CadastroBemController() {
         super("/addbem", 12);
@@ -24,19 +24,31 @@ public class CadastroBemController extends CommandController {
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 2:
+                int codigo;
 
                 /*Adicionar aqui verificacao se o codigo passada ja se encontra entre os cadastrados*/
 
                 try {
-                    bem.setCodigo(Integer.parseInt(mensagemRecebida));
+                    codigo = Integer.parseInt(mensagemRecebida);
                 } catch (NumberFormatException e){
                     texto.add("Nesse momento eu preciso que você informe apenas número");
                     texto.add("Vamos tentar novamente!");
                     break;
                 }
 
-                setEtapaAtual(getEtapaAtual() + 1);
-                texto = conversar(mensagemRecebida);
+                List<Bem> bens = aux.listaBens();
+                BuscaBemCodigoController buscaController = new BuscaBemCodigoController();
+                Bem result = buscaController.buscaBemCod(bens, codigo);
+
+                if(result == null){
+                    bem.setCodigo(codigo);
+                    setEtapaAtual(getEtapaAtual() + 1);
+                    texto = conversar(mensagemRecebida);
+                }else {
+                    texto.add("O código informado pertence a um bem já cadastrado (" + result.getNome() + ")");
+                    texto.add("Por favor, informe um código válido");
+                }
+
                 break;
             case 3:
                 texto.add("Preciso agora do nome do bem");
@@ -69,7 +81,6 @@ public class CadastroBemController extends CommandController {
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 8:
-                int codigo;
 
                 try {
                     codigo = Integer.parseInt(mensagemRecebida);
@@ -92,7 +103,7 @@ public class CadastroBemController extends CommandController {
                 }
                 break;
             case 9:
-                texto.add("Abaixo são listadas os locais já cadastradas");
+                texto.add("Abaixo são listados os locais já cadastradas");
 
                 ListaLocalizacaoController listaLocalizacao = new ListaLocalizacaoController();
 
