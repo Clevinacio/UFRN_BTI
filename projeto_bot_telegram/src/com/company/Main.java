@@ -34,11 +34,12 @@ public class Main {
         commands.add(new CadastroBemController());
         commands.add(new ListaCategoriaController());
         commands.add(new ListaLocalizacaoController());
+        commands.add(new ListaBemController());
         commands.add(new BuscaBemCodigoController());
         commands.add(new BuscaBemLocalizacaoController());
         commands.add(new BuscaBemCategoriaController());
         commands.add(new GerarRelatorioArquivoController());
-
+        commands.add(new GerarRelatorioTelaController());
         //loop infinito pode ser alterado por algum timer de intervalo curto
         while (true){
             //executa comando no Telegram para obter as mensagens pendentes a partir de um off-set (limite inicial)

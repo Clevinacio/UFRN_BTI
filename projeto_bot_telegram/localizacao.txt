@@ -7,3 +7,9 @@ Sala de aula
 A101
 Laboratório
 ********************
+Casa
+Lugar onde moro
+********************
+Sala
+Lugar que fica a tv
+********************
