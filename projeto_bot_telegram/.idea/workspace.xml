@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89330b5d-5713-41e9-a9de-c0837df137c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/relatorio17112019172029.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/BemCategoriaComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/BemLocalizacaoComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/BemNomeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/GerarRelatorioArquivoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Bem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Bem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Bem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Bem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="89330b5d-5713-41e9-a9de-c0837df137c6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +116,7 @@
       <workItem from="1573474782238" duration="1439000" />
       <workItem from="1573597540150" duration="583000" />
       <workItem from="1574003251613" duration="14395000" />
+      <workItem from="1574455588598" duration="8000" />
     </task>
     <servers />
   </component>
