@@ -19,9 +19,9 @@ public class Trie {
     public void insert(String word) {
         int c = 0;
         TrieNode temp = root;
-        TrieNode son = root.getChildren().get((Character) word.charAt(c));
+        TrieNode son = temp.getChildren().get((Character) word.charAt(c));
         while (c <= word.length()-1) {
-            if (son == null || root.isEmpty()) {
+            if (son == null || temp.isEmpty()) {
                 if (c == word.length()-1) {
                     TrieNode knot = new TrieNode(word);
                     temp.getChildren().put((Character) word.charAt(c), knot);
@@ -32,6 +32,8 @@ public class Trie {
                 temp = temp.getChildren().get((Character) word.charAt(c));
                 c++;
             }else {
+                temp = temp.getChildren().get((Character) word.charAt(c));
+                son = temp.getChildren().get((Character) word.charAt(c));
                 c++;
             }
         }

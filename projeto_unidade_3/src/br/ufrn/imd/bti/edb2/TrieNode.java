@@ -3,7 +3,7 @@ package br.ufrn.imd.bti.edb2;
 import java.util.HashMap;
 
 public class TrieNode {
-    boolean isWord;
+    private boolean isWord;
     private HashMap<Character, TrieNode> children;
     private String word;
 

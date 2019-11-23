@@ -11,9 +11,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Trie t = new Trie();
         String word = "amar";
+        String word1 = "amor";
         t.insert(word);
+        t.insert(word1);
         char key = 'a';
-        System.out.println(key+" "+t.getRoot().getChildren().get(key).getChildren().get('m').isWord);
+        System.out.println(key+" "+t.getRoot().getChildren().get(key).getChildren().get('m').getChildren().get('o').getChildren().get('r').isWord());
+        System.out.println(key+" "+t.getRoot().getChildren().get(key).getChildren().get('m').getChildren().get('o').getChildren().get('r').isEmpty());
 
 
 
