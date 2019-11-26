@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Bem {
     private int codigo;
