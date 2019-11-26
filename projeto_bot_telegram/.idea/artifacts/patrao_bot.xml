@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="patrao_bot">
-    <output-path>$PROJECT_DIR$/out/artifacts/patrao_bot</output-path>
-    <root id="archive" name="patrao_bot.war" />
-  </artifact>
-</component>

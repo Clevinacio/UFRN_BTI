@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="botzera">
+    <output-path>$PROJECT_DIR$/out/artifacts/botzera</output-path>
+    <root id="archive" name="botzera.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="projeto_bot_telegram" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="KotlinJavaRuntime" />
+          <element id="library" level="project" name="Telegram API" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
