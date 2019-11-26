@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f157bab-c96c-4c1f-b05a-7e4c3d2a976d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bem.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/botzera/botzera.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/botzera/botzera.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/bti/lp2/controllers/ApagaBemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/bti/lp2/controllers/ApagaBemController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1574781533676</updated>
       <workItem from="1574781535084" duration="4672000" />
+      <workItem from="1574805818516" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="add método apagabem">
       <created>1574782980427</created>
