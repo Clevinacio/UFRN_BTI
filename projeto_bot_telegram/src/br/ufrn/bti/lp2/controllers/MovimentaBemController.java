@@ -67,8 +67,17 @@ public class MovimentaBemController extends CommandController {
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 3:
+                int codigo;
 
-                bemMov = buscaBemCod(bens, Integer.parseInt(mensagemRecebida));
+                try {
+                    codigo = Integer.parseInt(mensagemRecebida);
+                } catch (NumberFormatException e){
+                    texto.add("Nesse momento eu preciso que você informe apenas número");
+                    texto.add("Vamos tentar novamente!");
+                    break;
+                }
+
+                bemMov = buscaBemCod(bens, codigo);
                 texto.add("Para qual local o bem deve ser movido?");
                 ListaLocalizacaoController listaLocalizacao2 = new ListaLocalizacaoController();
                 texto.add(listaLocalizacao2.conversar("listagem de locais").get(0));
