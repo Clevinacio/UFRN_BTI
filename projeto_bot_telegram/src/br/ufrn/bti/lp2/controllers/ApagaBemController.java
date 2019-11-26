@@ -56,7 +56,17 @@ public class ApagaBemController extends CommandController {
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 3:
-                bem = buscaBemCod(bens, Integer.parseInt(mensagemRecebida));
+
+                try {
+                    codigo = Integer.parseInt(mensagemRecebida);
+                } catch (NumberFormatException e){
+                    texto.add("Nesse momento eu preciso que você informe apenas número");
+                    texto.add("Vamos tentar novamente!");
+                    break;
+                }
+
+                bem = buscaBemCod(bens, codigo);
+
                 if(bem == null)
                 {
                     System.out.println("bem não existente ou código inválido. Tente novamente ou digite /cancelar para sair. ");
