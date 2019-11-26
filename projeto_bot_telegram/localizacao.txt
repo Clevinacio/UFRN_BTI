@@ -13,3 +13,6 @@ Lugar onde moro
 Sala
 Lugar que fica a tv
 ********************
+Sala A101
+Sala de aula
+********************
