@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ApagaBemController extends CommandController {
     public ApagaBemController() {
-        super("/apagabem", 3);
+        super("/apagabem", 4);
     }
 
     @Override
@@ -27,51 +27,63 @@ public class ApagaBemController extends CommandController {
         switch (getEtapaAtual())
         {
             case 1:
-                texto.add("Vamos ver em qual local está seu bem");
-                texto.add(lista.conversar("listagem de bens").get(0));
+                texto.add("Das localizaçãos listadas a baixo digite qual você quer listar os bens para movimentar");
+                ListaLocalizacaoController listaLocalizacao = new ListaLocalizacaoController();
+                texto.add(listaLocalizacao.conversar("listagem de locais").get(0));
                 setEtapaAtual(getEtapaAtual() + 1);
                 break;
             case 2:
-                codigo = Integer.parseInt(mensagemRecebida);
+                String local = mensagemRecebida;
 
-                for (Bem current:bens)
-                {
-                    if(current.getCodigo() == codigo)
-                    {
-                        bem = current;
-                        setEtapaAtual(getEtapaAtual() + 1);
-                        break;
-                    }
+                List<Bem> found = buscabemLocal(bens,local);
+
+                if (found.isEmpty()) {
+                    texto.add("Acho que a localização que você botou não existe");
+                    texto.add("Tenta novamente, mas se quiser sair, digita /cancelar e " +
+                            "cadastra um bem novo com /addbem e a localização que você tá tentando");
+                    break;
                 }
-                System.out.println("Bem não existente! Tente novamente com Bem válido.");
+
+                texto.add("Bens encontrados:\n\n");
+                for (Bem current : found) {
+                    texto.add("Código: "+current.getCodigo()+"\n" +
+                            "Nome: "+current.getNome()+"\n" +
+                            "Descrição: "+current.getDescricao()+"\n" +
+                            "Categoria: "+current.getCategoria().getNome()+"\n" +
+                            "Localização: "+current.getLocalizacao().getNome()+"\n\n");
+                }
+                texto.add("Digite o codigo do bem a ser removido");
+                setEtapaAtual(getEtapaAtual() + 1);
+                break;
             case 3:
-                texto.add("Tem certeza que deseja apagar a categoria? (s/n)");
-                if (mensagemRecebida == "S" || mensagemRecebida == "s")
+                bem = buscaBemCod(bens, Integer.parseInt(mensagemRecebida));
+                if(bem == null)
                 {
-                    bens.remove(bem);
-                    /*Salva informacoes no arquivo*/
-                    BufferedWriter arq = new BufferedWriter(new FileWriter("bem.txt"));
+                    System.out.println("bem não existente ou código inválido. Tente novamente ou digite /cancelar para sair. ");
 
-                    for (Bem current : bens)
-                    {
-                        arq.write(current.getCodigo());
-                        arq.write(current.getNome());
-                        arq.write(current.getDescricao());
-                        arq.write(current.getCategoria().getNome());
-                        arq.write(current.getLocalizacao().getNome());
-                        arq.write("********************");
-                        arq.newLine();
-                    }
-                    arq.close();
-                    texto.add("Fim do processo");
+                }else
+                    bens.remove(bem);
+                /*Salva informacoes no arquivo*/
+                BufferedWriter arq = new BufferedWriter(new FileWriter("bem.txt"));
+
+                for (Bem current : bens)
+                {
+                    arq.write(current.getCodigo() + "\n" + current.getNome() + "\n" + current.getDescricao() + "\n" + current.getCategoria().getCodigo()
+                            + "\n" + current.getLocalizacao().getNome() + "\n********************");
+                    arq.newLine();;
                 }
-                System.out.println("operação cancelada");
+                arq.close();
+                texto.add("Bem apagado com sucesso");
+                texto.add("Fim do processo");
+                setEtapaAtual(getEtapaAtual() + 1);
             default:
                 System.out.println("Operação inválida");
+                break;
         }
 
         return texto;
     }
+
 
     @Override
     protected String confirmarOperacao() {
@@ -81,5 +93,24 @@ public class ApagaBemController extends CommandController {
     @Override
     public void reset() {
 
+    }
+    public List<Bem> buscabemLocal(List<Bem> bens, String local) {
+        List<Bem> result = new ArrayList<Bem>();
+        for (Bem current : bens) {
+            if (local.equalsIgnoreCase(current.getLocalizacao().getNome())) {
+                result.add(current);
+            }
+        }
+
+        return result;
+    }
+    public Bem buscaBemCod(List<Bem> bens, int cod) {
+        Bem bem = null;
+        for (Bem current : bens) {
+            if (cod == current.getCodigo()) {
+                bem = current;
+            }
+        }
+        return bem;
     }
 }

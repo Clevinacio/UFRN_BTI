@@ -7,34 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f157bab-c96c-4c1f-b05a-7e4c3d2a976d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/ufrn/bti/lp2/controllers/ApagaBemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bem.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/botzera/botzera.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/botzera/botzera.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/META-INF/projeto_bot_telegram.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/comparators/BemCategoriaComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/comparators/BemCategoriaComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/comparators/BemLocalizacaoComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/comparators/BemLocalizacaoComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/comparators/BemNomeComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/comparators/BemNomeComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/BuscaBemCodigoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/BuscaBemCodigoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/BuscaBemDescricaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/BuscaBemDescricaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/BuscaBemNomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/BuscaBemNomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/CadastroBemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/CadastroBemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/CadastroCategoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/CadastroCategoriaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/CadastroLocalizacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/CadastroLocalizacaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/FuncoesUteisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/FuncoesUteisController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/GerarRelatorioArquivoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/GerarRelatorioArquivoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/GerarRelatorioTelaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/GerarRelatorioTelaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/ListaBemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/ListaBemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/ListaCategoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/ListaCategoriaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/ListaLocalizacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/ListaLocalizacaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/MovimentaBemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/controllers/MovimentaBemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/exec/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/exec/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/interfaces/CommandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/interfaces/CommandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/objects/Bem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/objects/Bem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/objects/Categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/objects/Categoria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/objects/Localizacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/br/ufrn/bti/lp2/objects/Localizacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/MovimentaBemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/ufrn/bti/lp2/exec/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/bti/lp2/exec/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/ufrn/bti/lp2/controllers/ApagaBemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/ufrn/bti/lp2/controllers/ApagaBemController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Raul Santos &lt;raul.soutos96@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1U9vH0abHZGvWDodZM1umuNixbo" />
@@ -108,8 +89,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574781533676</updated>
-      <workItem from="1574781535084" duration="1271000" />
+      <workItem from="1574781535084" duration="4672000" />
     </task>
+    <task id="LOCAL-00001" summary="add método apagabem">
+      <created>1574782980427</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574782980428</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add método apagabem" />
+    <option name="LAST_COMMIT_MESSAGE" value="add método apagabem" />
   </component>
 </project>
