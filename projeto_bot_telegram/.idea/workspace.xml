@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="unnamed" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a55bef5-63e3-46e2-a986-26f201494c74" name="Default Changelist" comment="">
+    <list default="true" id="7f157bab-c96c-4c1f-b05a-7e4c3d2a976d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/MovimentaBemController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/MovimentaBemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Bem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Bem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BemCategoriaComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BemCategoriaComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BemLocalizacaoComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BemLocalizacaoComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BemNomeComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BemNomeComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BuscaBemCodigoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BuscaBemCodigoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BuscaBemDescricaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BuscaBemDescricaoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BuscaBemNomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/BuscaBemNomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroBemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroBemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroCategoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroCategoriaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroLocalizacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CadastroLocalizacaoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Categoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Categoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CommandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/CommandController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/FuncoesUteisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/FuncoesUteisController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/GerarRelatorioArquivoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/GerarRelatorioArquivoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/GerarRelatorioTelaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/GerarRelatorioTelaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/ListaBemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/ListaBemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/ListaCategoriaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/ListaCategoriaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/ListaLocalizacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/ListaLocalizacaoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Localizacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Localizacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_bot_telegram/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Bem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Bem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../projeto_unidade_3/.idea/workspace.xml" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,54 +55,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="projeto_bot_telegram" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="0a55bef5-63e3-46e2-a986-26f201494c74" name="Default Changelist" comment="" />
-      <created>1574612733567</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1574612733567</updated>
-      <workItem from="1574612742681" duration="1410000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

@@ -13,7 +13,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
         //Criação do objeto bot com as informações de acesso
-        TelegramBot bot = new TelegramBot("1029513435:AAE3c0Dgz-YByWCdYeIxp2kvyBZV8XjzJvw");
+        TelegramBot bot = new TelegramBot("1062514776:AAGEcO85cKyZE__qHzVh8OkeEQNLacKxN7c");
         //objeto responsável por receber as mensagens
         GetUpdatesResponse updatesResponse;
         //objeto responsável por gerenciar o envio de respostas
@@ -35,6 +35,7 @@ public class Main {
         commands.add(new ListaCategoriaController());
         commands.add(new ListaLocalizacaoController());
         commands.add(new ListaBemController());
+        commands.add(new MovimentaBemController());
         commands.add(new BuscaBemCodigoController());
         commands.add(new BuscaBemDescricaoController());
         commands.add(new BuscaBemNomeController());
