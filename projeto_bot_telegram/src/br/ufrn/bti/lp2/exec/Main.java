@@ -43,6 +43,7 @@ public class Main {
         commands.add(new BuscaBemNomeController());
         commands.add(new GerarRelatorioArquivoController());
         commands.add(new GerarRelatorioTelaController());
+        commands.add(new ApagaBemController());
         //loop infinito pode ser alterado por algum timer de intervalo curto
         while (true){
             //executa comando no Telegram para obter as mensagens pendentes a partir de um off-set (limite inicial)
