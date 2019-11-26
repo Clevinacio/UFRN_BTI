@@ -17,8 +17,8 @@ public class Main {
         char key = 'a';
         System.out.println(key+" "+t.getRoot().getChildren().get(key).getChildren().get('m').getChildren().get('o').getChildren().get('r').isWord());
         System.out.println(key+" "+t.getRoot().getChildren().get(key).getChildren().get('m').getChildren().get('o').getChildren().get('r').isEmpty());
-
-
+        TrieNode result = t.search("amarei");
+        System.out.println(result.getWord());
 
 //        BufferedReader br;
 //        String lineRead;
@@ -35,7 +35,7 @@ public class Main {
 //                t.insert(lineRead);
 //            }
 //
-//            List<String> words = t.autoComplete(args[1],args[2]);
+//        List<String> words = t.autoComplete(args[1], Integer.parseInt(args[2]));
 //
 //            for (String word : words) {
 //                System.out.println(word);

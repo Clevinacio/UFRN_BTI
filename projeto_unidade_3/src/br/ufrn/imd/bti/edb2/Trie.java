@@ -39,23 +39,37 @@ public class Trie {
         }
     }
 
-    public void search(String word) {
+    public TrieNode search(String word) {
         int c = 0;
-        TrieNode result;
+        TrieNode temp = root;
         while (c <= word.length()-1) {
-            result = root.getChildren().get(word.charAt(c));
-
+            TrieNode result = temp.getChildren().get(word.charAt(c));
             if (result == null) {
                 System.out.println("palavra não existe");
-                return;
+                 return null;
             }
 
-
+            if (result.isWord() && result.getWord().equals(word)) {
+                return result;
+            }
+            c++;
+            temp = result;
         }
-
+        System.out.println("Palavra não existe");
+        return null;
     }
 
-    public List<String> autoComplete(String arg, String arg1) {
+    public boolean remove(String word) {
+        TrieNode result = search(word);
+        if (result == null) {
+            System.out.println("Palavra não existe");
+            return false;
+        }
+
+        return false;
+    }
+
+    public List<String> autoComplete(String prefix, int quantity) {
 
         return null;
     }

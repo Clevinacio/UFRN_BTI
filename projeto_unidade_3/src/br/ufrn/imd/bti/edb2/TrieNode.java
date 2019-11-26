@@ -31,8 +31,8 @@ public class TrieNode {
         return isWord;
     }
 
-    public void setIsWord(boolean value) {
-        isWord = value;
+    public void setIsWord() {
+        isWord = !isWord;
     }
 
     public void setWord(String word) {
