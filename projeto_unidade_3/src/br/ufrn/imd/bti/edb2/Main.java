@@ -10,15 +10,23 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Trie t = new Trie();
-        String word = "amar";
-        String word1 = "amor";
-        t.insert(word);
-        t.insert(word1);
-        char key = 'a';
-        System.out.println(key+" "+t.getRoot().getChildren().get(key).getChildren().get('m').getChildren().get('o').getChildren().get('r').isWord());
-        System.out.println(key+" "+t.getRoot().getChildren().get(key).getChildren().get('m').getChildren().get('o').getChildren().get('r').isEmpty());
-        TrieNode result = t.search("amarei");
-        System.out.println(result.getWord());
+        BufferedReader file = new BufferedReader(new FileReader("palavras.txt"));
+
+        while (file.ready()) {
+            t.insert(file.readLine());
+        }
+
+        System.out.println("Search: "+t.search("a"));
+
+        List<String> results = t.autoComplete("a");
+
+        if (results == null) {
+            System.out.println("Deu erro boy");
+            return;
+        }
+        for (String word : results) {
+            System.out.println(word);
+        }
 
 //        BufferedReader br;
 //        String lineRead;

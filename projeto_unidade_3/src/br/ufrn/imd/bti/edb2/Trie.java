@@ -1,8 +1,7 @@
 package br.ufrn.imd.bti.edb2;
 
-import com.sun.scenario.animation.shared.TimerReceiver;
-import sun.java2d.xr.XRRenderer;
-
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Trie {
@@ -39,43 +38,82 @@ public class Trie {
         }
     }
 
-    public TrieNode search(String word) {
+    public boolean search(String word) {
         int c = 0;
         TrieNode temp = root;
         while (c <= word.length()-1) {
             TrieNode result = temp.getChildren().get(word.charAt(c));
             if (result == null) {
-                System.out.println("palavra não existe");
-                 return null;
+                 return false;
             }
 
             if (result.isWord() && result.getWord().equals(word)) {
-                return result;
+                return true;
             }
             c++;
             temp = result;
         }
-        System.out.println("Palavra não existe");
-        return null;
-    }
-
-    public boolean remove(String word) {
-        TrieNode result = search(word);
-        if (result == null) {
-            System.out.println("Palavra não existe");
-            return false;
-        }
-
         return false;
     }
+
+    public List<String> autoComplete(String prefix) {
+        List<String> results = new ArrayList<String>();
+        List<TrieNode> knots = new ArrayList<>();
+        int c = 0;
+        TrieNode temp = root;
+        TrieNode result = null;
+
+        while (c <= prefix.length() - 1) {
+            result = temp.getChildren().get(prefix.charAt(c));
+            if (result == null) {
+                return null;
+            }
+
+            if (c == prefix.length() - 1) {
+                break;
+            }
+            temp = result;
+            c++;
+        }
+
+        knots.add(result);
+//        System.out.println(result.getChildren().get('a').isEmpty());
+
+        getAllWords(results, knots);
+
+        return results;
+    }
+
+    private void getAllWords(List<String> results, List<TrieNode> knots) {
+        if (knots.size() == 0) {
+            return;
+        }
+        System.out.println(knots.get(0).isEmpty());
+        TrieNode knot = knots.get(0);
+        if (knot == null) {
+            return;
+        }
+
+        if (knot.isWord()) {
+            results.add(knot.getWord());
+        }
+
+        for (Character key : knot.getChildren().keySet()) {
+            knots.add(knot.getChildren().get(key));
+        }
+
+        knots.remove(knot);
+
+        getAllWords(results,knots);
+    }
+
 
     public List<String> autoComplete(String prefix, int quantity) {
 
         return null;
     }
 
-    public List<String> autoComplete(String arg) {
+    public void remove(String word) {
 
-        return null;
     }
 }
