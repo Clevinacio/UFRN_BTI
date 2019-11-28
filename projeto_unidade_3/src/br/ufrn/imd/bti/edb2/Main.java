@@ -9,48 +9,62 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+
         Trie t = new Trie();
-        BufferedReader file = new BufferedReader(new FileReader("palavras.txt"));
+        BufferedReader br;
+        if (args.length > 0) {
+            try {
+                br = new BufferedReader(new FileReader(args[0]));
+            } catch (FileNotFoundException e) {
+                System.out.println("Arquivo não encontrado");
+                return;
+            }
 
-        while (file.ready()) {
-            t.insert(file.readLine());
+            while (br.ready()) {
+                t.insert(br.readLine());
+            }
+            if (args.length == 3) {
+                List<String> words = t.autoComplete(args[1], Integer.parseInt(args[2]));
+                if (words == null) {
+                    System.out.println("Nenhuma palavra encontrada");
+                    return;
+                }
+
+                for (String word : words) {
+                    System.out.println(word);
+                }
+                return;
+            }
+            if (args.length == 2) {
+                List<String> words = t.autoComplete(args[1]);
+                if (words == null) {
+                    System.out.println("Nenhuma palavra encontrada");
+                    return;
+                }
+
+                for (String word : words) {
+                    System.out.println(word);
+                }
+                return;
+            } else {
+                System.out.println("Falta argumentos");
+                return;
+            }
+
+        } else {
+            System.out.println("Nenhum argumento passado. Abrindo interface gráfica");
+            try {
+                br = new BufferedReader(new FileReader("palavras.txt"));
+            } catch (FileNotFoundException e) {
+                System.out.println("Arquivo de palavras não encontrado. Encerrando");
+                return;
+            }
+
+            while (br.ready()) {
+                t.insert(br.readLine());
+            }
+
+            InterfaceComplete ic = new InterfaceComplete(t);
         }
-
-        System.out.println("Search: "+t.search("a"));
-
-        List<String> results = t.autoComplete("a");
-
-        if (results == null) {
-            System.out.println("Deu erro boy");
-            return;
-        }
-        for (String word : results) {
-            System.out.println(word);
-        }
-
-//        BufferedReader br;
-//        String lineRead;
-//        if (args.length > 0) {
-//            try {
-//                br = new BufferedReader(new FileReader(args[0]));
-//            } catch (FileNotFoundException e) {
-//                System.out.println("Aruivo não encontrado");
-//                return;
-//            }
-//
-//            while (br.readLine() != null) {
-//                lineRead = br.readLine();
-//                t.insert(lineRead);
-//            }
-//
-//        List<String> words = t.autoComplete(args[1], Integer.parseInt(args[2]));
-//
-//            for (String word : words) {
-//                System.out.println(word);
-//            }
-//
-//        } else {
-//            System.out.println("Nenhum argumento passado");
-//        }
     }
 }

@@ -1,7 +1,7 @@
 package br.ufrn.imd.bti.edb2;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Collections;
 import java.util.List;
 
 public class Trie {
@@ -16,23 +16,36 @@ public class Trie {
     }
 
     public void insert(String word) {
+        if (root == null) {
+            this.root = new TrieNode("");
+        }
+
+        if (word.isEmpty()) {
+            return;
+        }
+
         int c = 0;
         TrieNode temp = root;
-        TrieNode son = temp.getChildren().get((Character) word.charAt(c));
+        TrieNode next = null;
         while (c <= word.length()-1) {
-            if (son == null || temp.isEmpty()) {
-                if (c == word.length()-1) {
+            if (temp.getChildren().get((Character) word.charAt(c)) == null) {
+                if (c == word.length() - 1) {
                     TrieNode knot = new TrieNode(word);
                     temp.getChildren().put((Character) word.charAt(c), knot);
                     return;
                 }
                 TrieNode knot = new TrieNode();
                 temp.getChildren().put((Character) word.charAt(c), knot);
-                temp = temp.getChildren().get((Character) word.charAt(c));
+                temp = knot;
                 c++;
-            }else {
-                temp = temp.getChildren().get((Character) word.charAt(c));
-                son = temp.getChildren().get((Character) word.charAt(c));
+            } else {
+                if (c == word.length() - 1) {
+                    temp.getChildren().get((Character) word.charAt(c)).setIsWord();
+                    temp.getChildren().get((Character) word.charAt(c)).setWord(word);
+                    return;
+                }
+                next = temp.getChildren().get((Character) word.charAt(c));
+                temp = next;
                 c++;
             }
         }
@@ -57,7 +70,7 @@ public class Trie {
     }
 
     public List<String> autoComplete(String prefix) {
-        List<String> results = new ArrayList<String>();
+        List<String> results = new ArrayList<>();
         List<TrieNode> knots = new ArrayList<>();
         int c = 0;
         TrieNode temp = root;
@@ -77,18 +90,37 @@ public class Trie {
         }
 
         knots.add(result);
-//        System.out.println(result.getChildren().get('a').isEmpty());
 
         getAllWords(results, knots);
+        WordLengthComparator wc = new WordLengthComparator();
+        Collections.sort(results, wc);
 
         return results;
+    }
+
+    public List<String> autoComplete(String prefix, int quantity) {
+        List<String> limitedResults = new ArrayList<>();
+        List<String> results = autoComplete(prefix);
+        int c = 0;
+
+        if (results == null) {
+            return null;
+        }
+        for (String word : results) {
+            if (c < quantity) {
+                limitedResults.add(word);
+                c++;
+            }
+        }
+
+        return limitedResults;
     }
 
     private void getAllWords(List<String> results, List<TrieNode> knots) {
         if (knots.size() == 0) {
             return;
         }
-        System.out.println(knots.get(0).isEmpty());
+
         TrieNode knot = knots.get(0);
         if (knot == null) {
             return;
@@ -105,15 +137,5 @@ public class Trie {
         knots.remove(knot);
 
         getAllWords(results,knots);
-    }
-
-
-    public List<String> autoComplete(String prefix, int quantity) {
-
-        return null;
-    }
-
-    public void remove(String word) {
-
     }
 }
