@@ -1,0 +1,7 @@
+<h2 class="m5">Escolhas</h2>
+<p *ngFor="let question of questions; index as i">
+  <strong>Questão {{ i + 1 }}:</strong>
+  <br />
+  {{ question.statement }}
+  <strong>{{ question.options[answers[i]] }}</strong>
+</p>

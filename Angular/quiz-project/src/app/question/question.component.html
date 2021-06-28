@@ -1,0 +1,4 @@
+<h1>{{statement}}</h1>
+<button [ngClass]="{ selected: i === selection }" *ngFor="let option of options; index as i" (click)="select.emit(i)">
+  {{ option }}
+</button>

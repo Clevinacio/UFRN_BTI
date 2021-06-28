@@ -1,0 +1,17 @@
+<div *ngIf="mode === 'question'; else results">
+  <div class="panel question">
+    <p class="m5">Questão {{ current + 1 }} de {{ questions.length }}</p>
+    <question [statement]="questions[current].statement" [options]="questions[current].options"
+      [selection]="answers[current]" (select)="select($event)">
+    </question>
+  </div>
+  <button class="submitBtn" (click)="next()">Próxima questão</button>
+</div>
+
+
+<ng-template #results>
+  <div class="panel results">
+    <results [questions]="questions" [answers]="answers"></results>
+  </div>
+  <button (click)="reset()" class="submitBtn">Reinicia</button>
+</ng-template>
